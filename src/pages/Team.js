@@ -3,6 +3,8 @@ import Riley from '../assets/images/headshots/riley.jpg';
 import Adeel from '../assets/images/headshots/adeel.jpg';
 import Sohil from '../assets/images/headshots/sohil.jpeg';
 import Aaron from '../assets/images/headshots/aaron.png';
+import Eric from '../assets/images/headshots/Eric_Kolte.jpeg';
+import Doug from '../assets/images/headshots/doug.jpeg';
 import './Team.css'; // CSS file for styling
 
 function Team() {
@@ -16,12 +18,22 @@ function Team() {
             <div className="team-member">
               <img src={Aaron} alt="Team Member" />
               <h3>Aaron Borger</h3>
-              <p>Co-founder & CEO</p>
+              <p>Founder & CEO</p>
+            </div>
+            <div className="team-member">
+              <img src={Doug} alt="Team Member" />
+              <h3>Doug Kohl</h3>
+              <p>COO</p>
+            </div>
+            <div className="team-member">
+              <img src={Eric} alt="Team Member" />
+              <h3>Eric Kolte</h3>
+              <p>CPO</p>
             </div>
             <div className="team-member">
               <img src={Sohil} alt="Team Member" />
               <h3>Sohil Pokharna</h3>
-              <p>Co-founder and Engineer</p>
+              <p>Founding Engineer</p>
             </div>
             <div className="team-member">
               <img src={Riley} alt="Team Member" />
