@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.b6a98f3f.css",
-    "main.js": "/static/js/main.180b2681.js",
+    "main.css": "/static/css/main.eb34002e.css",
+    "main.js": "/static/js/main.152ac318.js",
+    "static/media/single_arm_docking.mp4": "/static/media/single_arm_docking.86ccbb1e6c2cb9309138.mp4",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/free-float-cube-grasp.mp4": "/static/media/free-float-cube-grasp.de7edf13ee586a3d401b.mp4",
     "static/media/single_arm_cube_catch.mp4": "/static/media/single_arm_cube_catch.b2745facaa692d43fdbf.mp4",
@@ -12,15 +13,18 @@
     "static/media/ai_view_ar3_catch.mp4": "/static/media/ai_view_ar3_catch.e7aa48ff9725b053fe3d.mp4",
     "static/media/riley.jpg": "/static/media/riley.3efcd46521a088b570f5.jpg",
     "static/media/aaron.png": "/static/media/aaron.03de90844b2ad004f698.png",
+    "static/media/Doug.jpg": "/static/media/Doug.373ab2ee5654a27e51f2.jpg",
     "static/media/adeel.jpg": "/static/media/adeel.e7879601c8015f638d33.jpg",
+    "static/media/free_floating_static.png": "/static/media/free_floating_static.bc7fa14d1f795ffec881.png",
     "static/media/sohil.jpeg": "/static/media/sohil.26da4753de5b277bc37f.jpeg",
+    "static/media/Eric_Kolte.jpeg": "/static/media/Eric_Kolte.37b7f227404355ef66a8.jpeg",
     "static/media/logo_white.png": "/static/media/logo_white.60a8ecfca744f903bb53.png",
     "index.html": "/index.html",
-    "main.b6a98f3f.css.map": "/static/css/main.b6a98f3f.css.map",
-    "main.180b2681.js.map": "/static/js/main.180b2681.js.map"
+    "main.eb34002e.css.map": "/static/css/main.eb34002e.css.map",
+    "main.152ac318.js.map": "/static/js/main.152ac318.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6a98f3f.css",
-    "static/js/main.180b2681.js"
+    "static/css/main.eb34002e.css",
+    "static/js/main.152ac318.js"
   ]
 }
