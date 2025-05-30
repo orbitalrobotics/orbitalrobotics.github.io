@@ -12,6 +12,8 @@ import free_float_grasp from "../assets/video/free-float-cube-grasp.mp4"
 import pose_est from "../assets/video/pose_estimation_fast.mp4"
 import single_arm_grasp from "../assets/video/single_arm_cube_catch.mp4"
 import single_arm_planning from "../assets/video/single_arm_planning.mp4"
+import single_arm_docking from "../assets/video/single_arm_docking.mp4"
+import free_floating_image from "../assets/images/free_floating_static.png"
 
 function Item(props)
 {
@@ -31,6 +33,12 @@ function Solutions(props) {
         //     name: "Deep Reinforcement Learning",
         //     description: "Hello World!"
         // },
+        {
+            image: free_floating_image,
+            name: "Free Floating Servicer",
+            description: "Free Floating Servicer"
+
+        },
         {
             video: ar3_ai_view_catch,
             name: "AI Powered Catching with Computer Vision",
@@ -65,11 +73,16 @@ function Solutions(props) {
             video: single_arm_planning,
             name: "Real time Motion Planning",
             description: "Real time Motion Planning",
+        },
+
+        {
+            video: single_arm_docking,
+            name: "AI Powered Docking",
+            description: "AI Powered Docking",
         }
     ]
 
     return (
-
         <div className="solutions-container">
             <div className="solutions-background">
                 <div className="solutions-content">
@@ -77,17 +90,26 @@ function Solutions(props) {
                     <p>
                         Cutting-edge robotic technologies tailored to solve complex challenges across industries.
                     </p>
-
+    
                     {
-                        items.map( (item, i) => <Item key={i} item={item} /> )
+                        items.map((item, i) => (
+                            <div className='video-container' key={i}>
+                                <p>{item.name}</p>
+                                <div className='video-wrapper'>
+                                    {item.video ? (
+                                        <video src={item.video} autoPlay loop muted />
+                                    ) : (
+                                        <img src={item.image} alt={item.name} />
+                                    )}
+                                </div>
+                            </div>
+                        ))
                     }
-
+    
                 </div>
             </div>
         </div>
-
-
     );
-}
+                }
 
 export default Solutions;
