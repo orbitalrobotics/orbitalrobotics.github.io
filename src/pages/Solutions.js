@@ -14,6 +14,9 @@ import single_arm_grasp from "../assets/video/single_arm_cube_catch.mp4"
 import single_arm_planning from "../assets/video/single_arm_planning.mp4"
 import single_arm_docking from "../assets/video/single_arm_docking.mp4"
 import free_floating_image from "../assets/images/free_floating_static.png"
+import hubble_capture_v1 from "../assets/video/hubble_capture_v1.mp4"
+import monte_carlo_satellite_control_img from "../assets/video/monte_carlo_satellite_control.gif"
+import titans_module_deployment_v2 from "../assets/video/titans_module_deployment_v2.mp4"
 
 function Item(props)
 {
@@ -74,11 +77,25 @@ function Solutions(props) {
             name: "Real time Motion Planning",
             description: "Real time Motion Planning",
         },
-
         {
             video: single_arm_docking,
             name: "AI Powered Docking",
             description: "AI Powered Docking",
+        },
+        {
+            video: hubble_capture_v1,
+            name: "Hubble Capture With Model Predictive Reinforcement Learning",
+            description: "AI Powered Docking",
+        },
+        {
+            image: monte_carlo_satellite_control_img,
+            name: "Monte Carlo Simulation of Satellite Relative Translation and Attitude Control with Model Predictive Reinforcement Learning",
+            description: "Monte Carlo Simulation of Satellite Relative Translation and Attitude Control with Model Predictive Reinforcement Learning",
+        },
+        {
+            video: titans_module_deployment_v2,
+            name: "Module Deployment",
+            description: "Module Deployment",
         }
     ]
 
