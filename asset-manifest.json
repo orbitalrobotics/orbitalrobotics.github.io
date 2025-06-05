@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.eb34002e.css",
-    "main.js": "/static/js/main.152ac318.js",
+    "main.js": "/static/js/main.8c278b5a.js",
     "static/media/single_arm_docking.mp4": "/static/media/single_arm_docking.86ccbb1e6c2cb9309138.mp4",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/free-float-cube-grasp.mp4": "/static/media/free-float-cube-grasp.de7edf13ee586a3d401b.mp4",
@@ -9,6 +9,9 @@
     "static/media/single_arm_planning.mp4": "/static/media/single_arm_planning.76759cccbd7f8a81b839.mp4",
     "static/media/dual_arm_ik_obj_grasp.mp4": "/static/media/dual_arm_ik_obj_grasp.0160a0fafce058637efd.mp4",
     "static/media/ar3_catch.mp4": "/static/media/ar3_catch.31d49ba1a6e46ac96d52.mp4",
+    "static/media/titans_module_deployment_v2.mp4": "/static/media/titans_module_deployment_v2.88189f72df05ba04253d.mp4",
+    "static/media/hubble_capture_v1.mp4": "/static/media/hubble_capture_v1.cc1c7f824cd6054eb5fe.mp4",
+    "static/media/monte_carlo_satellite_control.gif": "/static/media/monte_carlo_satellite_control.d689153a5d26f12100e4.gif",
     "static/media/ai_catch_montage.mp4": "/static/media/ai_catch_montage.5f89f5a656254fe661b0.mp4",
     "static/media/ai_view_ar3_catch.mp4": "/static/media/ai_view_ar3_catch.e7aa48ff9725b053fe3d.mp4",
     "static/media/riley.jpg": "/static/media/riley.3efcd46521a088b570f5.jpg",
@@ -21,10 +24,10 @@
     "static/media/logo_white.png": "/static/media/logo_white.60a8ecfca744f903bb53.png",
     "index.html": "/index.html",
     "main.eb34002e.css.map": "/static/css/main.eb34002e.css.map",
-    "main.152ac318.js.map": "/static/js/main.152ac318.js.map"
+    "main.8c278b5a.js.map": "/static/js/main.8c278b5a.js.map"
   },
   "entrypoints": [
     "static/css/main.eb34002e.css",
-    "static/js/main.152ac318.js"
+    "static/js/main.8c278b5a.js"
   ]
 }
