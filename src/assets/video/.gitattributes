@@ -1,4 +1,0 @@
-hubble_capture_v1.mp4 filter=lfs diff=lfs merge=lfs -text
-monte_carlo_satellite_control.gif filter=lfs diff=lfs merge=lfs -text
-titans_module_deployment_v2.mp4 filter=lfs diff=lfs merge=lfs -text
-*.mp4 filter=lfs diff=lfs merge=lfs -text
