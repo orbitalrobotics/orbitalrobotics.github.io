@@ -1,49 +1,185 @@
 import React from 'react';
+import './Team.css';
+
 import Riley from '../assets/images/headshots/riley.jpg';
 import Adeel from '../assets/images/headshots/adeel.jpg';
 import Sohil from '../assets/images/headshots/sohil.jpeg';
 import Aaron from '../assets/images/headshots/aaron.png';
-import Eric from '../assets/images/headshots/Eric_Kolte.jpeg';
 import Doug from '../assets/images/headshots/Doug.jpg';
-import './Team.css'; // CSS file for styling
+import Brice from '../assets/images/headshots/Brice_H.jpg';
+import Gordon from '../assets/images/headshots/Gordon-dp.jpg';
+import John from '../assets/images/headshots/John_Brendel.jpg';
+import Don from '../assets/images/headshots/Don.jpeg';
+
+const teamMembers = [
+  {
+    name: "Aaron Borger",
+    title: "Founder & CEO",
+    image: Aaron,
+    bio: [
+      "Aaron is the CEO of Orbital Robotics, where he leads the development of AI-powered robotic systems",
+      "for satellite servicing and in-orbit spacecraft assembly.",
+      "Prior to founding Orbital Robotics, he served as Lead Software Engineer for Blue Origin’s BE-7 lunar lander engine",
+      "and established a prognostics team that pioneered deep learning algorithms to predict rocket engine degradation.",
+      "His work in space robotics began during his undergraduate years, launching suborbital AI-powered robotic arms",
+      "that autonomously captured tumbling objects in microgravity using computer vision and reinforcement learning."
+    ],
+  },
+  {
+    name: "Doug Kohl",
+    title: "COO",
+    image: Doug,
+    bio: [
+      "Doug is a veteran aerospace operations leader with over 40 years of experience in reusable spacecraft systems,",
+      "from Space Shuttle recovery and refurbishment to next-generation lunar systems.",
+      "He has led mission-critical operations for NASA and Blue Origin, specializing in the recovery,",
+      "refurbishment, and flight readiness of human-rated spacecraft with a focus on advancing sustainable lunar exploration."
+    ],
+  },
+  {
+    name: "Don Feeney",
+    title: "Technical Writer",
+    image: Don,
+    bio: [
+      "Don is a strategic business and technology professional specializing in",
+      "commercial partnerships, licensing agreements,and SBIR/STTR proposal development.",
+      "With a strong focus on securing funding and driving commercialization efforts,",
+      "Don bridges the gap between innovative technology development and market application.",
+      "His expertise includes crafting compelling proposals, fostering collaborative relationships,",
+      "and advancing projects from concept to scalable solutions."
+    ]
+  },
+  {
+    name: "Sohil Pokharna",
+    title: "Founding Engineer",
+    image: Sohil,
+    bio: [
+      "Sohil is a highly skilled software engineer currently working at Blue Origin,",
+      "where he contributes to flight-critical autonomous systems.",
+      "He brings extensive experience in AI-driven navigation, embedded systems, and",
+      "control software from roles at Google, MaxLinear, and Lawrence Berkeley National Laboratory.",
+      "At Google, he developed thermal and electrical analysis frameworks for hardware optimization;",
+      "at MaxLinear, he automated power estimation workflows for digital IC design.", 
+      "He has also supported robotics startups with real-time firmware integration and worked on experimental energy systems at national labs.",
+      "Sohil leads the development of Orbital Robotics’ ASTRA-P and NavIQ platforms,",
+      "enabling perception,autonomy, and adaptive control for in-orbit robotics."
+    ],
+  },
+
+  {
+    name: "Riley Mark",
+    title: "Founding Engineer",
+    image: Riley,
+    bio: [
+      "Riley is a systems-oriented engineer with specialized expertise in space-grade",
+      "hardware development and modular robotic actuation systems. As a key contributor to Orbital Robotics’ mechanical and electrical subsystems,",
+      "Riley leads the detailed design and fabrication of critical components for on-orbit robotic assemblies.",
+      "His work includes end-to-end CAD modeling, finite element analysis (FEA) for structural and thermal resilience, and coordination of prototype builds",
+      "using aerospace-grade composites, including components fabricated by Orbital Composites.",
+      "A proven problem solver with a background in rigorous applied research, Riley integrates academic precision with hands-on execution,",
+      "ensuring design robustness and manufacturability under the extreme constraints of space environments.",
+      "His leadership has directly advanced the technical maturity of our core hardware systems."
+    ],
+  },
+  {
+    name: "Adeel Qureshi",
+    title: "Founding Engineer",
+    image: Adeel,
+    bio: [
+      "Lead Software Engineer for Blue Origin’s BE-4 Engine",
+      "Software Engineer on Blue Origin Prognostics and Health Management Team",
+      "Computer Engineering Bachelors",
+    ],
+  },
+];
+
+const advisors = [
+  {
+    name: "Dr. Gordon Roesler",
+    image: Gordon,
+    bio: [
+      "Dr. Roesler is a leading expert in space robotics and infrastructure, with over two",
+      "decades of experience advancing space systems through government, academia, and industry.",
+      "As former Program Manager at DARPA, he led the Robotic Servicing of Geosynchronous Satellites (RSGS)",
+      "program, shaping the future of in-orbit servicing and autonomy. He is the founder and President of Robots",
+      "in Space LLC, where he advocates for expanding the space economy through new capabilities in robotics, infrastructure, and mission architecture.", 
+      "Dr. Roesler has held senior technical and leadership roles at the University of New South Wales,",
+      "USC’s Information Sciences Institute, Booz Allen Hamilton, and SAIC, bringing expertise in satellite systems,",
+      "ocean robotics, unmanned energy distribution, and defense technology. His work bridges science, policy, and innovation,",
+      "with a long-standing focus on enabling sustainable and scalable operations in space."
+    ],
+  },
+  {
+    name: "Brice Howard",
+    image: Brice,
+    bio: [
+      "Brice is a seasoned executive and systems engineer with over 20 years of experience",
+      "delivering mission-critical technologies across aerospace, robotics, and advanced engineering.", 
+      "As Co-Founder and President of Novium Ltd, he leads the development of in-space robotics and logistics solutions",
+      "for next-generation satellite platforms, serving civil, defense, and commercial sectors.", 
+      "His career spans leadership roles at Nexus Technologies, Intuitive Machines, NASA, and Bigelow Aerospace",
+      "where he architected autonomous systems, scaled high-performance teams, and delivered flight-rated hardware.",
+      "Known for aligning deep technical fluency with strategic vision, Mr. Howard brings a rare ability to bridge",
+      "innovation and execution across complex, cross-disciplinary domains."
+    ],
+  },
+  {
+    name: "John Brendel",
+    image: John,
+    bio: [
+      "Former Blue Origin Principal Structures Engineer",
+      "Former Propulsion at Virgin Galactic, SpaceX, and NASA",
+    ],
+  },
+];
 
 function Team() {
   return (
     <div className="team-container">
-      <div className='team-background'>
+      <div className="team-background">
         <div className="team-content">
-          <h1>Meet the <g><b><i>Orbital Robotics</i></b></g> Team</h1>
+          <h1>
+            Meet the <span className="highlight">Orbital Robotics</span> Team
+          </h1>
           <p>Bringing you top engineering talent from the Space Industry</p>
+
           <section className="team-section">
-            <div className="team-member">
-              <img src={Aaron} alt="Team Member" />
-              <h3>Aaron Borger</h3>
-              <p>Founder & CEO</p>
-            </div>
-            <div className="team-member">
-              <img src={Doug} alt="Team Member" />
-              <h3>Doug Kohl</h3>
-              <p>COO</p>
-            </div>
-            {/* <div className="team-member">
-              <img src={Eric} alt="Team Member" />
-              <h3>Eric Kolte</h3>
-              <p>CPO</p>
-            </div> */}
-            <div className="team-member">
-              <img src={Sohil} alt="Team Member" />
-              <h3>Sohil Pokharna</h3>
-              <p>Founding Engineer</p>
-            </div>
-            <div className="team-member">
-              <img src={Riley} alt="Team Member" />
-              <h3>Riley Mark</h3>
-              <p>Founding Engineer</p>
-            </div>
-            <div className="team-member">
-              <img src={Adeel} alt="Team Member" />
-              <h3>Adeel Qureshi</h3>
-              <p>Founding Engineer</p>
+            {teamMembers.map((member, index) => (
+              <div key={index} className="member-row align-top">
+                <div className="team-member align-left">
+                  <img src={member.image} alt={member.name} />
+                  <h3>{member.name}</h3>
+                  <p>{member.title}</p>
+                </div>
+                <div className="member-bio">
+                  <ul>
+                    {member.bio.map((line, i) => (
+                      <li key={i}>{line}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </section>
+
+          <section className="team-section">
+            <h2 style={{ color: '#6EF0CD', textAlign: 'center', marginTop: '5vh' }}>Advisors & Consultants</h2>
+            <div className="advisor-section">
+              {advisors.map((advisor, index) => (
+                <div key={index} className="member-row advisor-row align-top">
+                  <div className="team-member advisor align-left">
+                    <img src={advisor.image} alt={advisor.name} />
+                    <h3>{advisor.name}</h3>
+                  </div>
+                  <div className="member-bio">
+                    <ul>
+                      {advisor.bio.map((line, i) => (
+                        <li key={i}>{line}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
         </div>

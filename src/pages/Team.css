@@ -8,7 +8,6 @@
   align-items: center;
   padding-top: 1rem;
   position: relative;
-  /* overflow-y: auto; */
   display: flex;
   overflow-x: hidden;
 }
@@ -16,8 +15,6 @@
 .team-background {
   background-color: #000000;
   width: 100%;
-  /* margin: auto; */
-  /* padding: 20px; */
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -35,7 +32,6 @@
   text-align: center;
   margin-top: 12.5vh;
   color: #cccccc;
-  /* Slightly lighter for subheaders */
   font-weight: 200;
   margin-bottom: 8vh;
   padding-left: 1vw;
@@ -58,27 +54,43 @@
   padding-left: 1vw;
   padding-right: 1vw;
   font-weight: 300;
-  /* max-width: 700px; */
 }
 
 .team-section {
   margin-top: 10vh;
 }
 
+.member-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 60px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
 .team-member {
-  padding-top: 2rem;
-  display: grid;
+  flex: 0 0 auto;
   width: 200px;
-  margin: 20px;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .team-member img {
+  display: block;
+  width: 100%;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
-  /* display: none; */
-  place-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
+
 
 .team-member h3 {
   font-size: 1.1em;
@@ -89,7 +101,62 @@
 }
 
 .team-member p {
-  padding-top: 0%;
   font-size: 0.9em;
   color: #6EF0CD;
+  text-align: center;
+  margin: 0;
+}
+
+.advisor-section .team-member p {
+  display: none;
+}
+
+.member-bio {
+  flex: 1;
+  color: #cccccc;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-top: 0.25rem;
+}
+
+.member-bio ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.member-bio ul li::before {
+  content: "";
+  margin-right: 0;
+}
+
+/* Hide modal elements (not used anymore) */
+.modal-overlay,
+.modal-content {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .member-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-member,
+  .member-bio {
+    width: 90%;
+    text-align: center;
+  }
+
+  .team-member h3,
+  .team-member p,
+  .member-bio ul {
+    text-align: center;
+  }
+
+  .member-bio {
+    padding-top: 1rem;
+  }
 }
