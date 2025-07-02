@@ -10,9 +10,9 @@ import pose_est from "../assets/video/pose_estimation_fast.mp4";
 import single_arm_grasp from "../assets/video/single_arm_cube_catch.mp4";
 import single_arm_planning from "../assets/video/single_arm_planning.mp4";
 import single_arm_docking from "../assets/video/single_arm_docking.mp4";
-import hubble_capture_v1 from "../assets/video/hubble_capture_v1.mp4";
+import hubble_capture_v1 from "../assets/video/hubble_capture_compressed.mp4";
 import monte_carlo_satellite_control_img from "../assets/video/monte_carlo_satellite_control.gif";
-import titans_module_deployment_v2 from "../assets/video/titans_module_deployment_v2.mp4";
+import titans_module_deployment_v2 from "../assets/video/titans_module_deployment_compressed.mp4";
 
 function About() {
     const items = [
