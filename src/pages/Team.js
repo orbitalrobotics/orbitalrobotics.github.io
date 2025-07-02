@@ -17,12 +17,7 @@ const teamMembers = [
     title: "Founder & CEO",
     image: Aaron,
     bio: [
-      "Aaron is the CEO of Orbital Robotics, where he leads the development of AI-powered robotic systems",
-      "for satellite servicing and in-orbit spacecraft assembly.",
-      "Prior to founding Orbital Robotics, he served as Lead Software Engineer for Blue Origin’s BE-7 lunar lander engine",
-      "and established a prognostics team that pioneered deep learning algorithms to predict rocket engine degradation.",
-      "His work in space robotics began during his undergraduate years, launching suborbital AI-powered robotic arms",
-      "that autonomously captured tumbling objects in microgravity using computer vision and reinforcement learning."
+      "Aaron is the CEO of Orbital Robotics, where he leads the development of AI-powered robotic systems for satellite servicing and in-orbit spacecraft assembly. Prior to founding Orbital Robotics, he served as Lead Software Engineer for Blue Origin’s BE-7 lunar lander engine and established a prognostics team that pioneered deep learning algorithms to predict rocket engine degradation. His work in space robotics began during his undergraduate years, launching suborbital AI-powered robotic arms that autonomously captured tumbling objects in microgravity using computer vision and reinforcement learning."
     ],
   },
   {
@@ -30,10 +25,7 @@ const teamMembers = [
     title: "COO",
     image: Doug,
     bio: [
-      "Doug is a veteran aerospace operations leader with over 40 years of experience in reusable spacecraft systems,",
-      "from Space Shuttle recovery and refurbishment to next-generation lunar systems.",
-      "He has led mission-critical operations for NASA and Blue Origin, specializing in the recovery,",
-      "refurbishment, and flight readiness of human-rated spacecraft with a focus on advancing sustainable lunar exploration."
+      "Doug is a veteran aerospace operations leader with over 40 years of experience in reusable spacecraft systems from Space Shuttle recovery and refurbishment to next-generation lunar systems He has led mission-critical operations for NASA and Blue Origin, specializing in the recovery refurbishment, and flight readiness of human-rated spacecraft with a focus on advancing sustainable lunar exploration."
     ],
   },
   {
@@ -41,12 +33,7 @@ const teamMembers = [
     title: "Technical Writer",
     image: Don,
     bio: [
-      "Don is a strategic business and technology professional specializing in",
-      "commercial partnerships, licensing agreements,and SBIR/STTR proposal development.",
-      "With a strong focus on securing funding and driving commercialization efforts,",
-      "Don bridges the gap between innovative technology development and market application.",
-      "His expertise includes crafting compelling proposals, fostering collaborative relationships,",
-      "and advancing projects from concept to scalable solutions."
+      "Don is a strategic business and technology professional specializing in commercial partnerships, licensing agreements,and SBIR/STTR proposal development. With a strong focus on securing funding and driving commercialization efforts, Don bridges the gap between innovative technology development and market application. His expertise includes crafting compelling proposals, fostering collaborative relationships, and advancing projects from concept to scalable solutions."
     ]
   },
   {
@@ -54,15 +41,7 @@ const teamMembers = [
     title: "Founding Engineer",
     image: Sohil,
     bio: [
-      "Sohil is a highly skilled software engineer currently working at Blue Origin,",
-      "where he contributes to flight-critical autonomous systems.",
-      "He brings extensive experience in AI-driven navigation, embedded systems, and",
-      "control software from roles at Google, MaxLinear, and Lawrence Berkeley National Laboratory.",
-      "At Google, he developed thermal and electrical analysis frameworks for hardware optimization;",
-      "at MaxLinear, he automated power estimation workflows for digital IC design.", 
-      "He has also supported robotics startups with real-time firmware integration and worked on experimental energy systems at national labs.",
-      "Sohil leads the development of Orbital Robotics’ ASTRA-P and NavIQ platforms,",
-      "enabling perception,autonomy, and adaptive control for in-orbit robotics."
+      "Sohil is a highly skilled software engineer currently working at Blue Origin where he contributes to flight-critical autonomous systems He brings extensive experience in AI-driven navigation, embedded systems, an control software from roles at Google, MaxLinear, and Lawrence Berkeley National Laboratory At Google, he developed thermal and electrical analysis frameworks for hardware optimization at MaxLinear, he automated power estimation workflows for digital IC design. He has also supported robotics startups with real-time firmware integration and worked on experimental energy systems at national labs Sohil leads the development of Orbital Robotics’ ASTRA-P and NavIQ platforms enabling perception,autonomy, and adaptive control for in-orbit robotics."
     ],
   },
 
@@ -71,14 +50,7 @@ const teamMembers = [
     title: "Founding Engineer",
     image: Riley,
     bio: [
-      "Riley is a systems-oriented engineer with specialized expertise in space-grade",
-      "hardware development and modular robotic actuation systems. As a key contributor to Orbital Robotics’ mechanical and electrical subsystems,",
-      "Riley leads the detailed design and fabrication of critical components for on-orbit robotic assemblies.",
-      "His work includes end-to-end CAD modeling, finite element analysis (FEA) for structural and thermal resilience, and coordination of prototype builds",
-      "using aerospace-grade composites, including components fabricated by Orbital Composites.",
-      "A proven problem solver with a background in rigorous applied research, Riley integrates academic precision with hands-on execution,",
-      "ensuring design robustness and manufacturability under the extreme constraints of space environments.",
-      "His leadership has directly advanced the technical maturity of our core hardware systems."
+      "Riley is a systems-oriented engineer with specialized expertise in space-grade hardware development and modular robotic actuation systems. As a key contributor to Orbital Robotics’ mechanical and electrical subsystems, Riley leads the detailed design and fabrication of critical components for on-orbit robotic assemblies. His work includes end-to-end CAD modeling, finite element analysis (FEA) for structural and thermal resilience, and coordination of prototype builds using aerospace-grade composites, including components fabricated by Orbital Composites. A proven problem solver with a background in rigorous applied research, Riley integrates academic precision with hands-on execution, ensuring design robustness and manufacturability under the extreme constraints of space environments. His leadership has directly advanced the technical maturity of our core hardware systems."
     ],
   },
   {
@@ -98,29 +70,14 @@ const advisors = [
     name: "Dr. Gordon Roesler",
     image: Gordon,
     bio: [
-      "Dr. Roesler is a leading expert in space robotics and infrastructure, with over two",
-      "decades of experience advancing space systems through government, academia, and industry.",
-      "As former Program Manager at DARPA, he led the Robotic Servicing of Geosynchronous Satellites (RSGS)",
-      "program, shaping the future of in-orbit servicing and autonomy. He is the founder and President of Robots",
-      "in Space LLC, where he advocates for expanding the space economy through new capabilities in robotics, infrastructure, and mission architecture.", 
-      "Dr. Roesler has held senior technical and leadership roles at the University of New South Wales,",
-      "USC’s Information Sciences Institute, Booz Allen Hamilton, and SAIC, bringing expertise in satellite systems,",
-      "ocean robotics, unmanned energy distribution, and defense technology. His work bridges science, policy, and innovation,",
-      "with a long-standing focus on enabling sustainable and scalable operations in space."
+      "Dr. Roesler is a leading expert in space robotics and infrastructure, with over two decades of experience advancing space systems through government, academia, and industry. As former Program Manager at DARPA, he led the Robotic Servicing of Geosynchronous Satellites (RSGS) program, shaping the future of in-orbit servicing and autonomy. He is the founder and President of Robots in Space LLC, where he advocates for expanding the space economy through new capabilities in robotics, infrastructure, and mission architecture Dr. Roesler has held senior technical and leadership roles at the University of New South Wales, USC’s Information Sciences Institute, Booz Allen Hamilton, and SAIC, bringing expertise in satellite systems, ocean robotics, unmanned energy distribution, and defense technology. His work bridges science, policy, and innovation, with a long-standing focus on enabling sustainable and scalable operations in space."
     ],
   },
   {
     name: "Brice Howard",
     image: Brice,
     bio: [
-      "Brice is a seasoned executive and systems engineer with over 20 years of experience",
-      "delivering mission-critical technologies across aerospace, robotics, and advanced engineering.", 
-      "As Co-Founder and President of Novium Ltd, he leads the development of in-space robotics and logistics solutions",
-      "for next-generation satellite platforms, serving civil, defense, and commercial sectors.", 
-      "His career spans leadership roles at Nexus Technologies, Intuitive Machines, NASA, and Bigelow Aerospace",
-      "where he architected autonomous systems, scaled high-performance teams, and delivered flight-rated hardware.",
-      "Known for aligning deep technical fluency with strategic vision, Mr. Howard brings a rare ability to bridge",
-      "innovation and execution across complex, cross-disciplinary domains."
+      "Brice is a seasoned executive and systems engineer with over 20 years of experience delivering mission-critical technologies across aerospace, robotics, and advanced engineering As Co-Founder and President of Novium Ltd, he leads the development of in-space robotics and logistics solutions for next-generation satellite platforms, serving civil, defense, and commercial sectors. His career spans leadership roles at Nexus Technologies, Intuitive Machines, NASA, and Bigelow Aerospace where he architected autonomous systems, scaled high-performance teams, and delivered flight-rated hardware. Known for aligning deep technical fluency with strategic vision, Mr. Howard brings a rare ability to bridge innovation and execution across complex, cross-disciplinary domains."
     ],
   },
   {
