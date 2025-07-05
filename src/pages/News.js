@@ -17,7 +17,7 @@ function News() {
       <div className="news-background">
         <h1 className="news-header">News & Updates</h1>
         <div className="news-grid">
-          {newsItems.map((item, index) =A> (
+          {newsItems.map((item, index) => (
             <a
               key={index}
               href={item.link}
