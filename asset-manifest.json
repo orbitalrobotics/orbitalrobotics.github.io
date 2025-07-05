@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.0575c96c.css",
-    "main.js": "/static/js/main.2072c624.js",
+    "main.css": "/static/css/main.22ca489a.css",
+    "main.js": "/static/js/main.e9c090b3.js",
     "static/media/single_arm_docking.mp4": "/static/media/single_arm_docking.86ccbb1e6c2cb9309138.mp4",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/free-float-cube-grasp.mp4": "/static/media/free-float-cube-grasp.de7edf13ee586a3d401b.mp4",
     "static/media/single_arm_cube_catch.mp4": "/static/media/single_arm_cube_catch.b2745facaa692d43fdbf.mp4",
+    "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.9d4ac8885111319449fd.mp4",
     "static/media/single_arm_planning.mp4": "/static/media/single_arm_planning.76759cccbd7f8a81b839.mp4",
     "static/media/dual_arm_ik_obj_grasp.mp4": "/static/media/dual_arm_ik_obj_grasp.0160a0fafce058637efd.mp4",
     "static/media/ar3_catch.mp4": "/static/media/ar3_catch.31d49ba1a6e46ac96d52.mp4",
@@ -23,11 +24,11 @@
     "static/media/logo_white.png": "/static/media/logo_white.60a8ecfca744f903bb53.png",
     "static/media/Gordon-dp.jpg": "/static/media/Gordon-dp.76685206640375e6af17.jpg",
     "index.html": "/index.html",
-    "main.0575c96c.css.map": "/static/css/main.0575c96c.css.map",
-    "main.2072c624.js.map": "/static/js/main.2072c624.js.map"
+    "main.22ca489a.css.map": "/static/css/main.22ca489a.css.map",
+    "main.e9c090b3.js.map": "/static/js/main.e9c090b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.0575c96c.css",
-    "static/js/main.2072c624.js"
+    "static/css/main.22ca489a.css",
+    "static/js/main.e9c090b3.js"
   ]
 }
