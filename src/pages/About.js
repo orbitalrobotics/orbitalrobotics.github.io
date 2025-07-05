@@ -13,6 +13,7 @@ import single_arm_docking from "../assets/video/single_arm_docking.mp4";
 import hubble_capture_v1 from "../assets/video/hubble_capture_compressed.mp4";
 import monte_carlo_satellite_control_img from "../assets/video/monte_carlo_satellite_control.gif";
 import titans_module_deployment_v2 from "../assets/video/titans_module_deployment_compressed.mp4";
+import segementaiton_demo_2 from "../assets/video/segmentation_demo2.mp4";
 
 function About() {
     const items = [
@@ -63,6 +64,10 @@ function About() {
         {
             video: titans_module_deployment_v2,
             name: "Module Deployment"
+        },
+        {
+            video: segementaiton_demo_2,
+            name: "NavIQ few-shot semantic segmentation"
         }
     ];
 

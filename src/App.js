@@ -8,6 +8,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './pages/About';
+import News from './pages/News';
 import { HashRouter } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} /> 
+        <Route path="/news" element={<News />} />
       </Routes>
       <Footer />
     </HashRouter>
