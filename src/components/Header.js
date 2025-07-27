@@ -22,6 +22,8 @@ function Header() {
             <li><Link to="/solutions">Solutions</Link></li>
             <li><Link to="/About">About</Link></li>
             <li><Link to="/team">Team</Link></li>
+            <li><Link to="/advisor">Advisors</Link></li>
+            <li><Link to="/partner">Partners</Link></li>
             <li><Link to="/news">News</Link></li> 
             <li><Link to="/contact" >Contact</Link></li>
         </ul>
