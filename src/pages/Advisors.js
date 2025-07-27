@@ -2,6 +2,8 @@ import React from 'react';
 import Brice from '../assets/images/headshots/Brice_H.jpg';
 import Gordon from '../assets/images/headshots/Gordon-dp.jpg';
 import John from '../assets/images/headshots/John_Brendel.jpg';
+import Tim from '../assets/images/headshots/Tim_Pickens.jpeg';
+import Tolga from '../assets/images/headshots/Tolga_Ors.jpeg';
 import './Team.css';
 
 const advisors = [
@@ -28,9 +30,16 @@ const advisors = [
     ],
   },
   {
-    name: "Tim Pickens - Chief Propulsion Advisor",
-    image: null,
-    bio: ["Coming soon"],
+    name: "Tim Pickens",
+    image: Tim,
+    bio: [
+      "Tim Pickens is a pioneering force in space propulsion and private aerospace innovation, with over 25 years of experience shaping some of the most iconic space programs of the modern era. As Chief Propulsion Engineer for Burt Rutan’s SpaceShipOne, he led development of the hybrid rocket system that powered the first privately funded manned spaceflight—securing the $10M Ansari X-Prize and redefining commercial spaceflight.Tim has since contributed propulsion expertise to projects including Stratolaunch, Virgin Galactic’s SpaceShipTwo, and Virgin Orbit’s launch systems. Personally selected by Robert Bigelow, he led development of RCS thrusters for the BA330 space station and later served as Chief Propulsion Engineer for Bigelow Aerospace Huntsville. Through his current company, Pickens Scientific, he supports Blue Origin’s advanced propulsion R&D efforts.A serial entrepreneur, Tim founded Orion Propulsion—acquired by Dynetics in 2009—and Pickens Innovations, supporting Stratolaunch’s orbital systems. As an Associate Fellow of AIAA and recipient of numerous industry awards, he is also a passionate educator and community leader, known for promoting grassroots rocketry and inspiring the next generation of space pioneers. His work has been featured by the Discovery Channel, National Geographic, and Smithsonian Magazine."
+    ],
+  },
+  {
+    name: "Dr. Tolga Ors",
+    image: Tolga,
+    bio: [ "Dr. Tolga Ors is a space systems expert and strategic advisor with over 25 years of experience advancing satellite communications, AI, and robotics across industry and government. Holding an MSc and PhD in Satellite Communications from the University of Surrey, he has held leadership and technical roles at Intelsat, Inmarsat, OneWeb, AST SpaceMobile, CGI, the Alan Turing Institute, and the FAIR-Space hub.A recognized leader in space innovation strategy, Tolga has secured over £20 million in co-funding from the UK Space Agency and the European Space Agency to drive public-private partnerships that accelerate cutting-edge technologies. His work focuses on enabling startups to scale breakthrough ideas through sustainable implementation, with particular emphasis on AI-driven autonomy, robotics, and transformative mission architectures.As a frequent writer and thought leader, Tolga shares insights on emerging trends in the New Space ecosystem, spotlighting startup success stories and the future of space commercialization. He brings a unique blend of technical fluency, business acumen, and ecosystem foresight to help shape the next generation of space technologies."],
   },
 ];
 
