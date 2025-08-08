@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8fe40b39.css",
-    "main.js": "/static/js/main.a36c4dda.js",
+    "main.js": "/static/js/main.1d35a3a9.js",
     "static/media/single_arm_docking.mp4": "/static/media/single_arm_docking.86ccbb1e6c2cb9309138.mp4",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/free-float-cube-grasp.mp4": "/static/media/free-float-cube-grasp.de7edf13ee586a3d401b.mp4",
@@ -32,10 +32,10 @@
     "static/media/SpaceCopy_2.avif": "/static/media/SpaceCopy_2.ff6662b3ba3b16407f4c.avif",
     "index.html": "/index.html",
     "main.8fe40b39.css.map": "/static/css/main.8fe40b39.css.map",
-    "main.a36c4dda.js.map": "/static/js/main.a36c4dda.js.map"
+    "main.1d35a3a9.js.map": "/static/js/main.1d35a3a9.js.map"
   },
   "entrypoints": [
     "static/css/main.8fe40b39.css",
-    "static/js/main.a36c4dda.js"
+    "static/js/main.1d35a3a9.js"
   ]
 }
