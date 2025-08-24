@@ -18,7 +18,7 @@ const advisors = [
     name: "Brice Howard",
     image: Brice,
     bio: [
-      "Brice is a seasoned executive and systems engineer with over 20 years of experience delivering mission-critical technologies across aerospace, robotics, and advanced engineering. As Co-Founder and President of Novium Ltd, he leads the development of in-space robotics and logistics solutions for next-generation satellite platforms, serving civil, defense, and commercial sectors. His career spans leadership roles at Nexus Technologies, Intuitive Machines, NASA, and Bigelow Aerospace where he architected autonomous systems, scaled high-performance teams, and delivered flight-rated hardware. Known for aligning deep technical fluency with strategic vision, Mr. Howard brings a rare ability to bridge innovation and execution across complex, cross-disciplinary domains."
+      "Brice is a seasoned executive and systems engineer with over 20 years of experience delivering mission-critical technologies across aerospace, robotics, and advanced engineering. As the former Co-Founder and President of Novium Ltd, he leads the development of in-space robotics and logistics solutions for next-generation satellite platforms, serving civil, defense, and commercial sectors. His career spans leadership roles at Nexus Technologies, Intuitive Machines, NASA, and Bigelow Aerospace where he architected autonomous systems, scaled high-performance teams, and delivered flight-rated hardware. Known for aligning deep technical fluency with strategic vision, Mr. Howard brings a rare ability to bridge innovation and execution across complex, cross-disciplinary domains."
     ],
   },
   {

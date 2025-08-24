@@ -54,7 +54,7 @@ function Solutions() {
                         <h2 className="solution-heading">Orbital Operation Toolkits</h2>
 
                         <div className="solution-item">
-                            <h3>ASTRA-P</h3>
+                            <h3>ASTRA-P (Patent Pending)</h3>
                             <ul>
                                 <li>Autonomous Stable Trajectory Reinforcement Algorithm with Prediction</li>
                                 <li>Autonomous guidance and control framework to enable robust trajectory planning for rendezvous, proximity operations, docking, robotic manipulation, and terrain relative guidance (lunar and asteroids).</li>
@@ -62,7 +62,7 @@ function Solutions() {
                         </div>
 
                         <div className="solution-item">
-                            <h3>NavIQ</h3>
+                            <h3>NavIQ (Patent Pending)</h3>
                             <ul>
                                 <li>Intelligent vision-based perception software for resident space object and lunar/asteroid relative navigation.</li>
                                 {/* <li>Working with Orbital Composites to develop a 3D printing defect detection variation</li>

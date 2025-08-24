@@ -33,33 +33,33 @@ const teamMembers = [
       "Don is a strategic business and technology professional specializing in commercial partnerships, licensing agreements,and SBIR/STTR proposal development. With a strong focus on securing funding and driving commercialization efforts, Don bridges the gap between innovative technology development and market application. His expertise includes crafting compelling proposals, fostering collaborative relationships, and advancing projects from concept to scalable solutions."
     ]
   },
-  {
-    name: "Sohil Pokharna",
-    title: "Founding Engineer",
-    image: Sohil,
-    bio: [
-      "Sohil is a highly skilled software engineer currently working at Blue Origin where he contributes to flight-critical autonomous systems He brings extensive experience in AI-driven navigation, embedded systems, an control software from roles at Google, MaxLinear, and Lawrence Berkeley National Laboratory At Google, he developed thermal and electrical analysis frameworks for hardware optimization at MaxLinear, he automated power estimation workflows for digital IC design. He has also supported robotics startups with real-time firmware integration and worked on experimental energy systems at national labs Sohil leads the development of Orbital Robotics’ ASTRA-P and NavIQ platforms enabling perception,autonomy, and adaptive control for in-orbit robotics."
-    ],
-  },
+  // {
+  //   name: "Sohil Pokharna",
+  //   title: "Founding Engineer",
+  //   image: Sohil,
+  //   bio: [
+  //     "Sohil is a highly skilled software engineer currently working at Blue Origin where he contributes to flight-critical autonomous systems He brings extensive experience in AI-driven navigation, embedded systems, an control software from roles at Google, MaxLinear, and Lawrence Berkeley National Laboratory At Google, he developed thermal and electrical analysis frameworks for hardware optimization at MaxLinear, he automated power estimation workflows for digital IC design. He has also supported robotics startups with real-time firmware integration and worked on experimental energy systems at national labs Sohil leads the development of Orbital Robotics’ ASTRA-P and NavIQ platforms enabling perception,autonomy, and adaptive control for in-orbit robotics."
+  //   ],
+  // },
 
-  {
-    name: "Riley Mark",
-    title: "Founding Engineer",
-    image: Riley,
-    bio: [
-      "Riley is a systems-oriented engineer with specialized expertise in space-grade hardware development and modular robotic actuation systems. As a key contributor to Orbital Robotics’ mechanical and electrical subsystems, Riley leads the detailed design and fabrication of critical components for on-orbit robotic assemblies. His work includes end-to-end CAD modeling, finite element analysis (FEA) for structural and thermal resilience, and coordination of prototype builds using aerospace-grade composites, including components fabricated by Orbital Composites. A proven problem solver with a background in rigorous applied research, Riley integrates academic precision with hands-on execution, ensuring design robustness and manufacturability under the extreme constraints of space environments. His leadership has directly advanced the technical maturity of our core hardware systems."
-    ],
-  },
-  {
-    name: "Adeel Qureshi",
-    title: "Founding Engineer",
-    image: Adeel,
-    bio: [
-      "Lead Software Engineer for Blue Origin’s BE-4 Engine",
-      "Software Engineer on Blue Origin Prognostics and Health Management Team",
-      "Computer Engineering Bachelors",
-    ],
-  },
+  // {
+  //   name: "Riley Mark",
+  //   title: "Founding Engineer",
+  //   image: Riley,
+  //   bio: [
+  //     "Riley is a systems-oriented engineer with specialized expertise in space-grade hardware development and modular robotic actuation systems. As a key contributor to Orbital Robotics’ mechanical and electrical subsystems, Riley leads the detailed design and fabrication of critical components for on-orbit robotic assemblies. His work includes end-to-end CAD modeling, finite element analysis (FEA) for structural and thermal resilience, and coordination of prototype builds using aerospace-grade composites, including components fabricated by Orbital Composites. A proven problem solver with a background in rigorous applied research, Riley integrates academic precision with hands-on execution, ensuring design robustness and manufacturability under the extreme constraints of space environments. His leadership has directly advanced the technical maturity of our core hardware systems."
+  //   ],
+  // },
+  // {
+  //   name: "Adeel Qureshi",
+  //   title: "Founding Engineer",
+  //   image: Adeel,
+  //   bio: [
+  //     "Lead Software Engineer for Blue Origin’s BE-4 Engine",
+  //     "Software Engineer on Blue Origin Prognostics and Health Management Team",
+  //     "Computer Engineering Bachelors",
+  //   ],
+  // },
 ];
 
 
