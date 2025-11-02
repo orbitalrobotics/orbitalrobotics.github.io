@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8fe40b39.css",
-    "main.js": "/static/js/main.3f3427bd.js",
+    "main.js": "/static/js/main.dd3b03e4.js",
     "static/media/single_arm_docking.mp4": "/static/media/single_arm_docking.86ccbb1e6c2cb9309138.mp4",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/free-float-cube-grasp.mp4": "/static/media/free-float-cube-grasp.de7edf13ee586a3d401b.mp4",
@@ -10,7 +10,6 @@
     "static/media/single_arm_planning.mp4": "/static/media/single_arm_planning.76759cccbd7f8a81b839.mp4",
     "static/media/dual_arm_ik_obj_grasp.mp4": "/static/media/dual_arm_ik_obj_grasp.0160a0fafce058637efd.mp4",
     "static/media/ar3_catch.mp4": "/static/media/ar3_catch.31d49ba1a6e46ac96d52.mp4",
-    "static/media/inspection_control.gif": "/static/media/inspection_control.35a57f417426d1a6c062.gif",
     "static/media/hubble_capture_compressed.mp4": "/static/media/hubble_capture_compressed.651e4c24d5549d1712c1.mp4",
     "static/media/monte_carlo_satellite_control.gif": "/static/media/monte_carlo_satellite_control.d689153a5d26f12100e4.gif",
     "static/media/titans_module_deployment_compressed.mp4": "/static/media/titans_module_deployment_compressed.adaaa65a2e45c2bfb355.mp4",
@@ -34,10 +33,10 @@
     "static/media/Matrix.avif": "/static/media/Matrix.666a271bdf1adbc49a04.avif",
     "index.html": "/index.html",
     "main.8fe40b39.css.map": "/static/css/main.8fe40b39.css.map",
-    "main.3f3427bd.js.map": "/static/js/main.3f3427bd.js.map"
+    "main.dd3b03e4.js.map": "/static/js/main.dd3b03e4.js.map"
   },
   "entrypoints": [
     "static/css/main.8fe40b39.css",
-    "static/js/main.3f3427bd.js"
+    "static/js/main.dd3b03e4.js"
   ]
 }
