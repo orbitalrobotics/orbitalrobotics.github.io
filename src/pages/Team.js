@@ -25,14 +25,14 @@ const teamMembers = [
       "Doug is a veteran aerospace operations leader with over 40 years of experience in reusable spacecraft systems from Space Shuttle recovery and refurbishment to next-generation lunar systems He has led mission-critical operations for NASA and Blue Origin, specializing in the recovery refurbishment, and flight readiness of human-rated spacecraft with a focus on advancing sustainable lunar exploration."
     ],
   },
-  {
-    name: "Don Feeney",
-    title: "Technical Writer",
-    image: Don,
-    bio: [
-      "Don is a strategic business and technology professional specializing in commercial partnerships, licensing agreements,and SBIR/STTR proposal development. With a strong focus on securing funding and driving commercialization efforts, Don bridges the gap between innovative technology development and market application. His expertise includes crafting compelling proposals, fostering collaborative relationships, and advancing projects from concept to scalable solutions."
-    ]
-  },
+  // {
+  //   name: "Don Feeney",
+  //   title: "Technical Writer",
+  //   image: Don,
+  //   bio: [
+  //     "Don is a strategic business and technology professional specializing in commercial partnerships, licensing agreements,and SBIR/STTR proposal development. With a strong focus on securing funding and driving commercialization efforts, Don bridges the gap between innovative technology development and market application. His expertise includes crafting compelling proposals, fostering collaborative relationships, and advancing projects from concept to scalable solutions."
+  //   ]
+  // },
   // {
   //   name: "Sohil Pokharna",
   //   title: "Founding Engineer",

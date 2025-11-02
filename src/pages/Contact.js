@@ -22,7 +22,7 @@ function Contact() {
     <div className="contact-container">
       <div className="contact-background">
         <div className="contact-content">
-            <h1>aborger@orbital-robots.com</h1>
+            <h1>info@orbital-robots.com</h1>
             <p> For inquiries </p>
         </div>
       </div>

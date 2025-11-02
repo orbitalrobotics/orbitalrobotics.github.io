@@ -4,6 +4,8 @@ import Gordon from '../assets/images/headshots/Gordon-dp.jpg';
 import John from '../assets/images/headshots/John_Brendel.jpg';
 import Tim from '../assets/images/headshots/Tim_Pickens.jpeg';
 import Tolga from '../assets/images/headshots/Tolga_Ors.jpeg';
+import Chris from '../assets/images/headshots/Christopher_Sembroski.jpg';
+import Eric from '../assets/images/headshots/EricFelt.jpg';
 import './Team.css';
 
 const advisors = [
@@ -40,6 +42,16 @@ const advisors = [
     name: "Dr. Tolga Ors",
     image: Tolga,
     bio: [ "Dr. Tolga Ors is a space systems expert and strategic advisor with over 25 years of experience advancing satellite communications, AI, and robotics across industry and government. Holding an MSc and PhD in Satellite Communications from the University of Surrey, he has held leadership and technical roles at Intelsat, Inmarsat, OneWeb, AST SpaceMobile, CGI, the Alan Turing Institute, and the FAIR-Space hub.A recognized leader in space innovation strategy, Tolga has secured over £20 million in co-funding from the UK Space Agency and the European Space Agency to drive public-private partnerships that accelerate cutting-edge technologies. His work focuses on enabling startups to scale breakthrough ideas through sustainable implementation, with particular emphasis on AI-driven autonomy, robotics, and transformative mission architectures.As a frequent writer and thought leader, Tolga shares insights on emerging trends in the New Space ecosystem, spotlighting startup success stories and the future of space commercialization. He brings a unique blend of technical fluency, business acumen, and ecosystem foresight to help shape the next generation of space technologies."],
+  },
+  {
+    name: "Chris Sembroski",
+    image: Chris,
+    bio: [ "Chris Sembroski is a commercial astronaut who flew as a mission specialist on SpaceX’s Inspiration4, the first all-civilian mission to orbit. He previously worked as an avionics engineer at Blue Origin, where he contributed to the development of next-generation spaceflight systems. In addition to his industry roles, Chris serves as an Adjunct Faculty Member at Embry-Riddle Aeronautical University, sharing his expertise in aerospace engineering and inspiring the next generation of space professionals."],
+  },
+  {
+    name: "Eric Felt",
+    image: Eric,
+    bio: [ "Eric Felt is the former Director of the U.S. Air Force Research Laboratory (AFRL), where he led cutting-edge research and development efforts to advance national security and space technology. His leadership at AFRL helped drive innovation across aerospace systems, ensuring that scientific and engineering breakthroughs translated into mission-ready capabilities for the United States Air Force and the broader defense community."],
   },
 ];
 
