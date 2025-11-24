@@ -19,9 +19,17 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message. We will get back to you shortly.');
+
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject || 'Contact Form Submission');
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+
+    // Open user's email client
+    window.location.href = `mailto:info@orbital-robots.com?subject=${subject}&body=${body}`;
+
+    // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
@@ -61,7 +69,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-text-muted text-sm mb-1">Headquarters</p>
-                  <p className="text-white">San Francisco, CA</p>
+                  <p className="text-white">Puyallup, Washington</p>
                 </div>
               </div>
 

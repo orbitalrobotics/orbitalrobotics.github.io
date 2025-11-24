@@ -7,7 +7,7 @@ import AaronImg from '../assets/images/headshots/Aaron.png';
 import SohilImg from '../assets/images/headshots/sohil.jpeg';
 import RileyImg from '../assets/images/headshots/riley.jpg';
 import DougImg from '../assets/images/headshots/Doug.jpg';
-import TimImg from '../assets/images/headshots/Tim.jpg';
+import GordonImg from '../assets/images/headshots/Gordon-dp.jpg';
 import EricFeltImg from '../assets/images/headshots/EricFelt.jpg';
 import ChrisImg from '../assets/images/headshots/Christopher_Sembroski.jpg';
 import TolgaImg from '../assets/images/headshots/Tolga_Ors.jpeg';
@@ -52,7 +52,7 @@ const Team = () => {
       name: "Aaron (Cyborg) Borger",
       role: "Co-Founder & CEO",
       image: AaronImg,
-      bio: "Leads AI robotic systems for satellite servicing. Formerly Lead Software Engineer at Blue Origin (BE-7 engine) and deep learning pioneer. Expert in autonomous microgravity capture and reinforcement learning.",
+      bio: "Leads AI robotic systems for satellite servicing. Formerly Lead Software Engineer at Blue Origin (BE-7 engine) and deep learning pioneer. Aaron has launched 2 AI controlled arms to space and his SW has performed 100+ engine hotfires.",
       linkedin: "https://www.linkedin.com/in/aaron-borger/",
       email: "aborger@orbital-robots.com"
     },
@@ -68,7 +68,7 @@ const Team = () => {
       name: "Riley Mark",
       role: "Co-Founder & Engineer",
       image: RileyImg,
-      bio: "Specializes in space-grade hardware and modular actuation. Leads design and fabrication of critical subsystems. Ensures design robustness and manufacturability for space environments.",
+      bio: "Specializes in space-grade hardware and modular actuation. Leads design and fabrication of critical subsystems. Riley has launched 6 AI controlled arms to space.",
       linkedin: "https://www.linkedin.com/in/riley-mark/",
       email: "rmark@orbital-robots.com"
     },
@@ -76,7 +76,7 @@ const Team = () => {
       name: "Sohil Pokharna",
       role: "Co-Founder & Engineer",
       image: SohilImg,
-      bio: "Builds the autonomous software stack (ASTRA-P, NavIQ). Experience in AI navigation and embedded systems from Blue Origin and Google. Expert in flight-critical autonomy and real-time firmware.",
+      bio: "Builds the autonomous software stack (ASTRA-P, NavIQ). Sohil has experience integrating AI/ML with real world rocket engines hotfires.",
       linkedin: "https://www.linkedin.com/in/sohil-pokharna/",
       email: "spokharna@orbital-robots.com"
     }
@@ -84,11 +84,11 @@ const Team = () => {
 
   const advisors = [
     {
-      name: "Tim Pickens",
+      name: "Dr. Gordon Roesler",
       role: "Advisor",
-      image: TimImg,
-      bio: "Veteran aerospace entrepreneur and propulsion expert.",
-      linkedin: "https://www.linkedin.com/in/timpickens/"
+      image: GordonImg,
+      bio: "Former DARPA Program Manager for RSGS and leading expert in space robotics and infrastructure.",
+      linkedin: "https://www.linkedin.com/in/gordon-roesler-8b0a646/"
     },
     {
       name: "Eric Felt",

@@ -6,7 +6,7 @@ import SatelliteOSImg from '../assets/images/satellite-os.png';
 import AstroBotImg from '../assets/images/astrobot.png';
 import SwarmImg from '../assets/images/swarm-software.png';
 import ComingSoonImg from '../assets/images/coming_soon.png';
-import RoboticArmBlackImg from '../assets/images/robotic-arm-black.png';
+import RoboticArmBlackImg from '../assets/images/robotic-arm-black-fairings.png';
 import NavIQImg from '../assets/images/point_control.gif';
 
 // Import Videos
@@ -14,6 +14,8 @@ import Ar3CatchVideo from '../assets/video/ar3_catch.mp4';
 import HubbleCaptureVideo from '../assets/video/hubble_capture_compressed.mp4';
 import PoseEstimationVideo from '../assets/video/pose_estimation_fast.mp4';
 import TitansDeploymentVideo from '../assets/video/titans_module_deployment_compressed.mp4';
+import SegmentationDemoVideo from '../assets/video/segmentation_demo2.mp4';
+import SwarmGif from '../assets/images/multi-agent-inspection (1).gif';
 
 const ProductCard = ({ title, description, image, video, category, link }) => (
     <div className="group relative overflow-hidden rounded-2xl bg-surface border border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
@@ -102,8 +104,7 @@ const Products = () => {
             title: "AstroBot",
             category: "Hardware",
             description: "Autonomous free-flying vehicle for inspection and light-duty servicing. Equipped with advanced sensors and thrusters for precise proximity operations around sensitive assets.",
-            image: ComingSoonImg,
-            video: HubbleCaptureVideo
+            image: AstroBotImg,
         },
         {
             title: "Orbital Assembly",
@@ -125,19 +126,19 @@ const Products = () => {
             title: "SwarmSoftware",
             category: "Software",
             description: "Distributed intelligence for satellite constellations. Allows multiple assets to coordinate actions, share resources, and optimize mission objectives in real-time without ground intervention.",
-            image: SwarmImg
+            image: SwarmGif
         },
         {
             title: "NavIQ",
             category: "Software",
             description: "Advanced orbital dynamics and trajectory planning suite. Provides high-accuracy state estimation and maneuver planning for complex rendezvous and proximity operations.",
-            image: NavIQImg
+            video: SegmentationDemoVideo,
         },
         {
             title: "AstraP",
             category: "Software",
             description: "Propulsion management and optimization system. Maximizes fuel efficiency and station-keeping life through AI-driven thruster control and maneuver scheduling.",
-            image: ComingSoonImg
+            image: NavIQImg
         }
     ];
 

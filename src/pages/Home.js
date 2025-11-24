@@ -6,7 +6,7 @@ import Partners from '../components/Partners';
 import HeroBg from '../assets/images/hero-bg.png';
 import ComingSoonImg from '../assets/images/coming_soon.png';
 import SatelliteOSImg from '../assets/images/satellite-os.png';
-import RoboticArmBlackImg from '../assets/images/robotic-arm-black.png';
+import RoboticArmBlackImg from '../assets/images/robotic-arm-black-fairings.png';
 
 const Home = () => {
   return (

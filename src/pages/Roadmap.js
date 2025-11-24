@@ -66,10 +66,24 @@ const Roadmap = () => {
             status: "upcoming"
         },
         {
+            year: "2026",
+            quarter: "Q4",
+            title: "Space Station Assembly Demo",
+            description: "Demonstration of autonomous assembly capabilities for large-scale space structures.",
+            status: "upcoming"
+        },
+        {
             year: "2027",
             quarter: "Q1",
-            title: "Space Station Assembly Demo",
-            description: "Demonstration of autonomous assembly capabilities for large-scale space structures. Features dual-arm cooperation for Rendezvous, Proximity Operations, and Docking (RPOD).",
+            title: "RPOC Demo",
+            description: "Dual-arm cooperation for Rendezvous, Proximity Operations, and Capture (RPOC).",
+            status: "upcoming"
+        },
+        {
+            year: "2027",
+            quarter: "Q1",
+            title: "RPO Swarm Demo",
+            description: "Demonstration of coordinated swarm behavior for proximity operations.",
             status: "upcoming"
         }
     ];

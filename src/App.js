@@ -7,6 +7,8 @@ import Roadmap from './pages/Roadmap';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 import News from './pages/News';
+import StarcloudAnnouncement from './pages/news/StarcloudAnnouncement';
+import TechCrunchAnnouncement from './pages/news/TechCrunchAnnouncement';
 import './styles/global.css';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/team" element={<Team />} />
           <Route path="/news" element={<News />} />
+          <Route path="/news/starcloud-partnership" element={<StarcloudAnnouncement />} />
+          <Route path="/news/techcrunch-disrupt" element={<TechCrunchAnnouncement />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>

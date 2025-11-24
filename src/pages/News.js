@@ -4,9 +4,25 @@ import GeekWirePreview from '../assets/images/news/geekwire_preview.png';
 import SpaceOceanPreview from '../assets/images/news/space_ocean_preview.png';
 import YoutubePreview from '../assets/images/news/youtube_preview.png';
 import SpaceDirtPreview from '../assets/images/news/space_dirt_preview.png';
+import StarcloudPreview from '../assets/images/partners/Starcloud.png';
+import TechCrunchPreview from '../assets/images/news/techcrunch_original.jpg';
 
 const News = () => {
   const newsItems = [
+    {
+      title: "Orbital Robotics Partners with Starcloud on Space-Based AI",
+      summary: "Orbital Robotics signs an LOI with Starcloud to partner on space-based AI. The partnership aims to provide AI controlled robotic arms to aid with assembling, docking, maintaining and upgrading datacenter modules.",
+      link: "/#/news/starcloud-partnership",
+      source: "Orbital Robotics Blog",
+      image: StarcloudPreview
+    },
+    {
+      title: "Orbital Robotics at TechCrunch Disrupt 2025",
+      summary: "Orbital Robotics pitches at TechCrunch Disrupt 2025, showcasing AI solutions for space infrastructure. Watch the full pitch and learn more about our vision for the future of space.",
+      link: "/#/news/techcrunch-disrupt",
+      source: "TechCrunch Disrupt",
+      image: TechCrunchPreview
+    },
     {
       title: "Startup Radar: It's all about AI for early-stage Seattle companies",
       summary: "GeekWire highlights our work in AI for space robotics and how we're shaping the future of autonomous servicing in orbit.",

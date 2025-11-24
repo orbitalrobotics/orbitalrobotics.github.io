@@ -3,11 +3,11 @@ import React from 'react';
 // Import Partner Logos
 import Enduralock from '../assets/images/partners/Enduralock.png';
 import Matrix from '../assets/images/partners/Matrix.avif';
-import OrbitFab from '../assets/images/partners/OrbitFab.png';
+import OrbitFab from '../assets/images/partners/OrbitFab_logo.png';
 import SophiaSpace from '../assets/images/partners/Sophia_Space.png';
 import SpaceCopy from '../assets/images/partners/space_copy_white.png'; // Using white version for dark theme
 import SpaceOcean from '../assets/images/partners/Space_Ocean.jpeg';
-import Starcloud from '../assets/images/partners/Starcloud.png';
+import Starcloud from '../assets/images/partners/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.webp';
 import WilsonSonsini from '../assets/images/partners/Wilson Sonsini.png';
 import Nvidia from '../assets/images/partners/nvidia.jpg';
 import OrbitalComposites from '../assets/images/partners/orbitalcomposites.png';
@@ -40,7 +40,7 @@ const Partners = () => {
                             <img
                                 src={partner.logo}
                                 alt={partner.name}
-                                className="max-h-16 max-w-full object-contain"
+                                className={`max-h-16 max-w-full object-contain ${partner.name === 'Sophia Space' ? 'scale-150' : ''}`}
                             />
                         </div>
                     ))}
@@ -51,7 +51,7 @@ const Partners = () => {
                             <img
                                 src={partner.logo}
                                 alt={partner.name}
-                                className="max-h-16 max-w-full object-contain"
+                                className={`max-h-16 max-w-full object-contain ${partner.name === 'Sophia Space' ? 'scale-150' : ''}`}
                             />
                         </div>
                     ))}
