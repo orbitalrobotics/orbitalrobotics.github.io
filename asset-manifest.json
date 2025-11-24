@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b916507c.css",
-    "main.js": "/static/js/main.5d9ca8e0.js",
+    "main.js": "/static/js/main.af57ca67.js",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.9d4ac8885111319449fd.mp4",
     "static/media/ar3_catch.mp4": "/static/media/ar3_catch.31d49ba1a6e46ac96d52.mp4",
@@ -34,14 +34,15 @@
     "static/media/nvidia.jpg": "/static/media/nvidia.54dd05576cf13cb8462d.jpg",
     "static/media/Enduralock.png": "/static/media/Enduralock.7b355d192a41e8eb74d8.png",
     "static/media/Gordon-dp.jpg": "/static/media/Gordon-dp.76685206640375e6af17.jpg",
+    "static/media/StarCloud_White.png": "/static/media/StarCloud_White.eab646db6dab58b90b23.png",
     "static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.webp": "/static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.0e3dea03258cc1a00158.webp",
     "static/media/Matrix.avif": "/static/media/Matrix.666a271bdf1adbc49a04.avif",
     "index.html": "/index.html",
     "main.b916507c.css.map": "/static/css/main.b916507c.css.map",
-    "main.5d9ca8e0.js.map": "/static/js/main.5d9ca8e0.js.map"
+    "main.af57ca67.js.map": "/static/js/main.af57ca67.js.map"
   },
   "entrypoints": [
     "static/css/main.b916507c.css",
-    "static/js/main.5d9ca8e0.js"
+    "static/js/main.af57ca67.js"
   ]
 }
