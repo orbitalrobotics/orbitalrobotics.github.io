@@ -129,7 +129,7 @@ const Home = () => {
             <div className="md:w-1/2 md:pl-10">
               <h3 className="text-3xl font-bold text-white mb-4">Robotic Arms</h3>
               <p className="text-text-secondary text-lg mb-6">
-                High-precision robotic manipulators designed for on-orbit servicing and assembly.
+                Space-rated robotic manipulators designed for on-orbit servicing and assembly.
                 Featuring modular end-effectors and radiation-hardened electronics.
               </p>
               <ul className="space-y-3 mb-8">

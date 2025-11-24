@@ -4,7 +4,7 @@ import GeekWirePreview from '../assets/images/news/geekwire_preview.png';
 import SpaceOceanPreview from '../assets/images/news/space_ocean_preview.png';
 import YoutubePreview from '../assets/images/news/youtube_preview.png';
 import SpaceDirtPreview from '../assets/images/news/space_dirt_preview.png';
-import StarcloudPreview from '../assets/images/partners/Starcloud.png';
+import StarcloudPreview from '../assets/images/partners/StarCloud_White.png';
 import TechCrunchPreview from '../assets/images/news/techcrunch_original.jpg';
 
 const News = () => {

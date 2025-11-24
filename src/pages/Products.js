@@ -96,7 +96,7 @@ const Products = () => {
         {
             title: "Robotic Arms",
             category: "Hardware",
-            description: "High-precision robotic manipulators designed for on-orbit servicing, assembly, and manufacturing. Features modular end-effectors and radiation-hardened electronics for long-duration missions.",
+            description: "Space-rated robotic manipulators designed for on-orbit servicing, assembly, and manufacturing. Features modular end-effectors and radiation-hardened electronics for long-duration missions.",
             image: RoboticArmBlackImg,
             video: Ar3CatchVideo
         },

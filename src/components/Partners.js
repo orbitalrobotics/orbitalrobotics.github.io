@@ -7,7 +7,7 @@ import OrbitFab from '../assets/images/partners/OrbitFab_logo.png';
 import SophiaSpace from '../assets/images/partners/Sophia_Space.png';
 import SpaceCopy from '../assets/images/partners/space_copy_white.png'; // Using white version for dark theme
 import SpaceOcean from '../assets/images/partners/Space_Ocean.jpeg';
-import Starcloud from '../assets/images/partners/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.webp';
+import Starcloud from '../assets/images/partners/StarCloud_White.png';
 import WilsonSonsini from '../assets/images/partners/Wilson Sonsini.png';
 import Nvidia from '../assets/images/partners/nvidia.jpg';
 import OrbitalComposites from '../assets/images/partners/orbitalcomposites.png';
