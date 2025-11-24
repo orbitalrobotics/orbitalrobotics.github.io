@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.08d2fe6d.css",
-    "main.js": "/static/js/main.8d252021.js",
+    "main.css": "/static/css/main.b916507c.css",
+    "main.js": "/static/js/main.5d9ca8e0.js",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
+    "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.9d4ac8885111319449fd.mp4",
     "static/media/ar3_catch.mp4": "/static/media/ar3_catch.31d49ba1a6e46ac96d52.mp4",
     "static/media/point_control.gif": "/static/media/point_control.8c629b2615ea1649279a.gif",
+    "static/media/multi-agent-inspection (1).gif": "/static/media/multi-agent-inspection (1).2f155b9f2d1721dacaa1.gif",
     "static/media/hubble_capture_compressed.mp4": "/static/media/hubble_capture_compressed.651e4c24d5549d1712c1.mp4",
     "static/media/titans_module_deployment_compressed.mp4": "/static/media/titans_module_deployment_compressed.adaaa65a2e45c2bfb355.mp4",
+    "static/media/astrobot.png": "/static/media/astrobot.bd375b9a57dcd33931f1.png",
     "static/media/youtube_preview.png": "/static/media/youtube_preview.5c0d86b6cc2898849687.png",
     "static/media/geekwire_preview.png": "/static/media/geekwire_preview.a76c3edb2bb4cf271cc2.png",
     "static/media/space_ocean_preview.png": "/static/media/space_ocean_preview.1dd398016602829fbfdc.png",
@@ -18,10 +21,10 @@
     "static/media/satellite-os.png": "/static/media/satellite-os.495edd70f2d92a8914b4.png",
     "static/media/robotic-arm.png": "/static/media/robotic-arm.1dd88ac9013dc2694100.png",
     "static/media/coming_soon.png": "/static/media/coming_soon.2b86c750928919151705.png",
-    "static/media/Tim.jpg": "/static/media/Tim.04629c447d5c7d2a2d07.jpg",
-    "static/media/astrobot.png": "/static/media/astrobot.bc7fa14d1f795ffec881.png",
-    "static/media/robotic-arm-black.png": "/static/media/robotic-arm-black.ba24045ece2a26b954f4.png",
+    "static/media/OrbitFab_logo.png": "/static/media/OrbitFab_logo.debf2a0a496aaafa451d.png",
+    "static/media/robotic-arm-black-fairings.png": "/static/media/robotic-arm-black-fairings.074a66e8eb1f2670169a.png",
     "static/media/space_dirt_preview.png": "/static/media/space_dirt_preview.b587e767e67b8ef3f2d2.png",
+    "static/media/techcrunch_original.jpg": "/static/media/techcrunch_original.145f0a9e300935504207.jpg",
     "static/media/Tolga_Ors.jpeg": "/static/media/Tolga_Ors.ca26c7b5858cb04ac506.jpeg",
     "static/media/sohil.jpeg": "/static/media/sohil.26da4753de5b277bc37f.jpeg",
     "static/media/orbitalcomposites.png": "/static/media/orbitalcomposites.95d04d81777a9d5f1685.png",
@@ -30,13 +33,15 @@
     "static/media/space_copy_white.png": "/static/media/space_copy_white.d79924748e456b0571cf.png",
     "static/media/nvidia.jpg": "/static/media/nvidia.54dd05576cf13cb8462d.jpg",
     "static/media/Enduralock.png": "/static/media/Enduralock.7b355d192a41e8eb74d8.png",
+    "static/media/Gordon-dp.jpg": "/static/media/Gordon-dp.76685206640375e6af17.jpg",
+    "static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.webp": "/static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.0e3dea03258cc1a00158.webp",
     "static/media/Matrix.avif": "/static/media/Matrix.666a271bdf1adbc49a04.avif",
     "index.html": "/index.html",
-    "main.08d2fe6d.css.map": "/static/css/main.08d2fe6d.css.map",
-    "main.8d252021.js.map": "/static/js/main.8d252021.js.map"
+    "main.b916507c.css.map": "/static/css/main.b916507c.css.map",
+    "main.5d9ca8e0.js.map": "/static/js/main.5d9ca8e0.js.map"
   },
   "entrypoints": [
-    "static/css/main.08d2fe6d.css",
-    "static/js/main.8d252021.js"
+    "static/css/main.b916507c.css",
+    "static/js/main.5d9ca8e0.js"
   ]
 }
