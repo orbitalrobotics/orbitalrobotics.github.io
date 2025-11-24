@@ -1,36 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
-import Solutions from './pages/Solutions';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Roadmap from './pages/Roadmap';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import About from './pages/About';
 import News from './pages/News';
-import Advisor from './pages/Advisors';
-import Partners from './pages/Partners';
-import './App.css';
-import { HashRouter } from 'react-router-dom';
-
+import './styles/global.css';
 
 function App() {
   return (
-    <HashRouter >
-      <Header />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/solutions" element={<Solutions />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/advisor" element={<Advisor />} />
-        <Route path="/partner" element={<Partners />} />
-        <Route path="/contact" element={<Contact />} /> 
-        <Route path="/news" element={<News />} />
-      </Routes>
-      <Footer />
+    <HashRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/roadmap" element={<Roadmap />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Layout>
     </HashRouter>
-  )
+  );
 }
 
 export default App;
