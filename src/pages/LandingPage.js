@@ -4,11 +4,14 @@ import Solutions from './Solutions';
 import Team from './Team';
 import About from './About';
 import Contact from './Contact';
+import News from './News'
 import Splash from "../assets/images/logo_white.png"
 import videoBg from "../assets/video/single_arm_cube_catch.mp4"
 import cube_grasp from "../assets/video/free-float-cube-grasp.mp4"
 import { Link } from 'react-router-dom';
 import "./LandingPage.css"
+import Partners from './Partners';
+import Advisor from './Advisors';
 
 function LandingPage() {
   const [activeFeature, setActiveFeature] = useState(null);
@@ -78,10 +81,24 @@ function LandingPage() {
         <section id='team'>
           <Team />
         </section>
+        <div className="divider"></div>
+
+        <section id='advisors'>
+          < Advisor/>
+        </section>
+        <div className="divider"></div>
+        <section id='Partners'>
+          <Partners />
+        </section>
+        <div className="divider"></div>
+
+        <section id='News'>
+          <News />
+        </section>
 
         <div className="divider"></div>
 
-        <section id='team'>
+        <section id='Contact'>
           <Contact />
         </section>
 

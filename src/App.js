@@ -1,30 +1,33 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
-import Solutions from './pages/Solutions';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import Roadmap from './pages/Roadmap';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
-import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import About from './pages/About';
-import { HashRouter } from 'react-router-dom';
+import News from './pages/News';
+import StarcloudAnnouncement from './pages/news/StarcloudAnnouncement';
+import TechCrunchAnnouncement from './pages/news/TechCrunchAnnouncement';
+import './styles/global.css';
 
 function App() {
   return (
-    <HashRouter >
-      <Header />
-
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/solutions" element={<Solutions />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/contact" element={<Contact />} /> 
-      </Routes>
-      <Footer />
+    <HashRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/roadmap" element={<Roadmap />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/starcloud-partnership" element={<StarcloudAnnouncement />} />
+          <Route path="/news/techcrunch-disrupt" element={<TechCrunchAnnouncement />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Layout>
     </HashRouter>
-  )
+  );
 }
 
 export default App;

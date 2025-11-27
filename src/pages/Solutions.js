@@ -1,115 +1,101 @@
 import React from 'react';
-import './Solutions.css'; // CSS file for styling
+import './Solutions.css';
 
-import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@mui/material'
-
-import catch_montage from "../assets/video/ai_catch_montage.mp4"
-import ar3_ai_view_catch from "../assets/video/ai_view_ar3_catch.mp4"
-import ar3_catch from "../assets/video/ar3_catch.mp4"
-import dual_arm_ik from "../assets/video/dual_arm_ik_obj_grasp.mp4"
-import free_float_grasp from "../assets/video/free-float-cube-grasp.mp4"
-import pose_est from "../assets/video/pose_estimation_fast.mp4"
-import single_arm_grasp from "../assets/video/single_arm_cube_catch.mp4"
-import single_arm_planning from "../assets/video/single_arm_planning.mp4"
-import single_arm_docking from "../assets/video/single_arm_docking.mp4"
-import free_floating_image from "../assets/images/free_floating_static.png"
-
-function Item(props)
-{
-    return (
-        <div className='video-container'>
-            <p>{props.item.name}</p>
-            <div className='video-wrapper'><video src={props.item.video} autoPlay loop muted /></div>
-        </div>
-    )
-}
-
-function Solutions(props) {
-
-    var items = [
-        // {
-        //     video: catch_montage,
-        //     name: "Deep Reinforcement Learning",
-        //     description: "Hello World!"
-        // },
-        {
-            image: free_floating_image,
-            name: "Free Floating Servicer",
-            description: "Free Floating Servicer"
-
-        },
-        {
-            video: ar3_ai_view_catch,
-            name: "AI Powered Catching with Computer Vision",
-            description: "AI Powered Catching with Computer Vision"
-        },
-        {
-            video: ar3_catch,
-            name: "Deep Reinforcement Learning Grasp with Hardware",
-            description: "Deep Reinforcement Learning Grasp with Hardware"
-        },
-        {
-            video: dual_arm_ik,
-            name: "Physics Informed System Identification Based Inverse Kinematics",
-            description: "Physics Informed System Identification Based Inverse Kinematics"
-        },
-        {
-            video: free_float_grasp,
-            name: "AI Powered Motion and Grasp Planning",
-            description: "AI Powered Motion and Grasp Planning"
-        },
-        {
-            video: pose_est,
-            name: "Precise Pose Estimation",
-            description: "Probably the most random thing you have ever seen!"
-        },
-        {
-            video: single_arm_grasp,
-            name: "AI Powered Motion and Grasp Planning",
-            description: "AI Powered Motion and Grasp Planning"
-        },
-        {
-            video: single_arm_planning,
-            name: "Real time Motion Planning",
-            description: "Real time Motion Planning",
-        },
-
-        {
-            video: single_arm_docking,
-            name: "AI Powered Docking",
-            description: "AI Powered Docking",
-        }
-    ]
-
+function Solutions() {
     return (
         <div className="solutions-container">
             <div className="solutions-background">
                 <div className="solutions-content">
-                    <h1>Our Robotic Solutions</h1>
-                    <p>
-                        Cutting-edge robotic technologies tailored to solve complex challenges across industries.
-                    </p>
-    
-                    {
-                        items.map((item, i) => (
-                            <div className='video-container' key={i}>
-                                <p>{item.name}</p>
-                                <div className='video-wrapper'>
-                                    {item.video ? (
-                                        <video src={item.video} autoPlay loop muted />
-                                    ) : (
-                                        <img src={item.image} alt={item.name} />
-                                    )}
-                                </div>
-                            </div>
-                        ))
-                    }
-    
+                    <h1 className="solutions-title">Solutions</h1>
+
+                    <div className="solution-category">
+                        <h2 className="solution-heading">Orbital Services</h2>
+
+                        <div className="solution-item">
+                            <h3>Spacecraft Refueling</h3>
+                            <ul>
+                                <li>We provide on-orbit delivery of hydrazine propellant to extend satellite life and enable maneuvering without regret.</li>
+                                {/* <li>Life extension and maneuvering without regret enabler</li> */}
+                            </ul>
+                        </div>
+
+                        <div className="solution-item">
+                            <h3>Satellite Inspection, Reconnaissance & Surveillance</h3>
+                            <ul>
+                                <li>Our spacecraft conduct close-range, high-fidelity inspections and surveillance of resident space objects to support both commercial and defense applications</li>
+                            </ul>
+                        </div>
+
+                        <div className="solution-item">
+                            <h3>Satellite Repair & Upgrade</h3>
+                            <ul>
+                                <li>Coming Soon: We are developing capabilities for in-space satellite repair and modular hardware upgrades, minimizing the need for replacements and extending asset utility.</li>
+                            </ul>
+                        </div>
+
+                        <div className="solution-item">
+                            <h3>Orbital Station Assembly and Servicing</h3>
+                            <ul>
+                                <li>Coming Soon: We are building toward full-service support for the assembly, maintenance, and logistics of orbital stations to enable scalable infrastructure in space.</li>
+                            </ul>
+                        </div>
+
+                        <div className="solution-item">
+                            <h3>Space Debris Sentinel</h3>
+                            <ul>
+                                <li>Our spacecraft are designed to actively defend client assets from space debris.</li>
+                                <li>We capture hazardous debris that threatens satellite operations, helping to mitigate the need for collision avoidance maneuvers while contributing to the broader effort to reduce space debris in orbit.</li>
+                                {/* <li>Mitigates collision avoidance maneuvers while reducing space debris problem</li> */}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className="solution-category">
+                        <h2 className="solution-heading">Orbital Operation Toolkits</h2>
+
+                        <div className="solution-item">
+                            <h3>ASTRA-P (Patent Pending)</h3>
+                            <ul>
+                                <li>Autonomous Stable Trajectory Reinforcement Algorithm with Prediction</li>
+                                <li>Autonomous guidance and control framework to enable robust trajectory planning for rendezvous, proximity operations, docking, robotic manipulation, and terrain relative guidance (lunar and asteroids).</li>
+                            </ul>
+                        </div>
+
+                        <div className="solution-item">
+                            <h3>NavIQ (Patent Pending)</h3>
+                            <ul>
+                                <li>Intelligent vision-based perception software for resident space object and lunar/asteroid relative navigation.</li>
+                                {/* <li>Working with Orbital Composites to develop a 3D printing defect detection variation</li>
+                                <li>Working with Enduralock to develop a fastener pose estimation variation</li> */}
+                            </ul>
+                        </div>
+
+                        <div className="solution-item">
+                            <h3>Toolchanger</h3>
+                            <ul>
+                                <li>A standardized space qualified tool changer for ISAM companies.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className="solution-category">
+                        <h2 className="solution-heading">Ground Facilities</h2>
+
+                        <div className="solution-item">
+                            <h3>RPOD Hardware-in-the-Loop Verification Facility</h3>
+                            <ul>
+                                <li>Our state-of-the-art hardware-in-the-loop (HIL) facility emulates relative dynamics and contact dynamics in real-time by moving the client spacecraft relative to our free-flyer with a robotic arm mounted on perpendicular linear actuators. The HIL incorporates a high-fidelity digital twin that simulates spacecraft-arm dynamic coupling, contact dynamics, and visual input via ray-traced rendering.</li>
+                                {/* <li>Combines a digital twin of the system with robotic hardware capable of emulating relative motion between spacecraft</li>
+                                <li>Leverages Nvidia GPUs and includes multi-manipulator dynamics, contact dynamics, and high-fidelity ray tracing</li>
+                                <li>Enables full system verification including onboard cameras and perception systems in real time</li> */}
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     );
-                }
+}
 
 export default Solutions;
