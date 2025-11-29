@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.28a8938b.css",
-    "main.js": "/static/js/main.17d7a34a.js",
+    "main.css": "/static/css/main.d1a4394a.css",
+    "main.js": "/static/js/main.afdf8cf8.js",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.9d4ac8885111319449fd.mp4",
     "static/media/ar3_catch.mp4": "/static/media/ar3_catch.31d49ba1a6e46ac96d52.mp4",
@@ -38,11 +38,11 @@
     "static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.webp": "/static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.0e3dea03258cc1a00158.webp",
     "static/media/Matrix.avif": "/static/media/Matrix.666a271bdf1adbc49a04.avif",
     "index.html": "/index.html",
-    "main.28a8938b.css.map": "/static/css/main.28a8938b.css.map",
-    "main.17d7a34a.js.map": "/static/js/main.17d7a34a.js.map"
+    "main.d1a4394a.css.map": "/static/css/main.d1a4394a.css.map",
+    "main.afdf8cf8.js.map": "/static/js/main.afdf8cf8.js.map"
   },
   "entrypoints": [
-    "static/css/main.28a8938b.css",
-    "static/js/main.17d7a34a.js"
+    "static/css/main.d1a4394a.css",
+    "static/js/main.afdf8cf8.js"
   ]
 }
