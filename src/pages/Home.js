@@ -30,8 +30,8 @@ const Home = () => {
         {/* Content */}
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 leading-tight animate-fade-in-up">
-            Building the <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Ai empowered robot infrastructure</span> <br />
+            Building the intelligent <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">robotic infrastructure</span> <br />
             to expand humanity’s presence beyond Earth.
           </h1>
           <p className="text-xl md:text-2xl text-text-primary max-w-3xl mx-auto mb-10 font-light">
