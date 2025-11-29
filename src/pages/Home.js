@@ -61,8 +61,48 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <Partners />
+
+
+      {/* About Us Section */}
+      <section className="py-20 bg-surface relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Who We Are</h2>
+            <p className="text-xl text-text-primary max-w-3xl mx-auto mb-4">
+              Orbital Robotics: Seattle based company producing AI and robots for aerospace.
+            </p>
+            <p className="text-lg text-secondary font-medium max-w-3xl mx-auto">
+              Backed by Blue Origin and SpaceX engineers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+            {/* Experience */}
+            <div className="bg-background/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-primary/50 transition-all">
+              <h3 className="text-2xl font-bold text-white mb-4">Experience</h3>
+              <p className="text-text-secondary leading-relaxed">
+                Former Blue Origin leaders with experience from BE-7 Lunar Lander Engine, New Glenn, Orbital Reef, Blue Ring and 100+ space shuttle missions.
+              </p>
+            </div>
+
+            {/* Technology */}
+            <div className="bg-background/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-primary/50 transition-all">
+              <h3 className="text-2xl font-bold text-white mb-4">Technology</h3>
+              <p className="text-text-secondary leading-relaxed">
+                Six flight demonstrations of AI-controlled robotic arms through NASA and U.S. universities. TRL-4 patent pending system for autonomous spacecraft with robotic arms that uses vision-based navigation, neural network planning, and control.
+              </p>
+            </div>
+
+            {/* What We Do */}
+            <div className="bg-background/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-primary/50 transition-all">
+              <h3 className="text-2xl font-bold text-white mb-4">What We Do</h3>
+              <p className="text-text-secondary leading-relaxed">
+                Valuable satellites at end-of-life become space trash. We extend their life by refueling, repairing, and upgrading. We provide robotic arms, vision systems and AI powered GNC software so any spacecraft can perform RPOC.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Capabilities Section */}
       <section className="py-20 bg-background">
@@ -105,6 +145,15 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+
+
+
+      {/* Partners Section */}
+      <Partners />
+
+
 
       {/* Product Highlights Section */}
       <section className="py-20 bg-surface relative overflow-hidden">
@@ -196,7 +245,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div >
   );
 };
 

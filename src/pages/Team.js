@@ -11,6 +11,7 @@ import GordonImg from '../assets/images/headshots/Gordon-dp.jpg';
 import EricFeltImg from '../assets/images/headshots/EricFelt.jpg';
 import ChrisImg from '../assets/images/headshots/Christopher_Sembroski.jpg';
 import TolgaImg from '../assets/images/headshots/Tolga_Ors.jpeg';
+import BriceImg from '../assets/images/headshots/Brice_H.jpg';
 
 const TeamMember = ({ name, role, image, bio, linkedin, email }) => (
   <div className="bg-surface rounded-2xl p-6 border border-white/5 hover:border-primary/50 transition-all group text-center">
@@ -110,6 +111,13 @@ const Team = () => {
       image: TolgaImg,
       bio: "Expert in satellite communications and RF systems.",
       linkedin: "https://www.linkedin.com/in/tolgaors/"
+    },
+    {
+      name: "Brice Howard",
+      role: "Advisor",
+      image: BriceImg,
+      bio: "Over 20 years as an executive and technical leader in space and robotics, delivering mission-critical systems. Co-founder and President of Novium.",
+      linkedin: "https://www.linkedin.com/in/brice-howard/"
     }
   ];
 
