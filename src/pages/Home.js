@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaRocket, FaSatellite, FaRobot } from 'react-icons/fa';
 import SEO from '../components/SEO';
 import Partners from '../components/Partners';
-import HeroBg from '../assets/images/hero-bg.png';
+import HeroVideo from '../assets/video/Home_Page.mp4';
 import ComingSoonImg from '../assets/images/coming_soon.png';
 import SatelliteOSImg from '../assets/images/satellite-os.png';
 import RoboticArmBlackImg from '../assets/images/robotic-arm-black-fairings.png';
@@ -19,9 +19,12 @@ const Home = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={HeroBg}
-            alt="Orbital Robotics Hero"
+          <video
+            src={HeroVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background"></div>
@@ -35,7 +38,7 @@ const Home = () => {
             to expand humanity’s presence beyond Earth.
           </h1>
           <p className="text-xl md:text-2xl text-text-primary max-w-3xl mx-auto mb-10 font-light">
-            Enabling the next generation of space operations with autonomous robotics and advanced software.
+            Enabling the next generation of space operations with autonomous robotics and artificial intelligence.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
             <Link
@@ -72,7 +75,7 @@ const Home = () => {
               Orbital Robotics: Seattle based company producing AI and robots for aerospace.
             </p>
             <p className="text-lg text-secondary font-medium max-w-3xl mx-auto">
-              Backed by Blue Origin and SpaceX engineers.
+              Backed by former Blue Origin and SpaceX engineers.
             </p>
           </div>
 

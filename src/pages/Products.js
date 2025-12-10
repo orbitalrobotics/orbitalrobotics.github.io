@@ -17,7 +17,7 @@ import TitansDeploymentVideo from '../assets/video/titans_module_deployment_comp
 import SegmentationDemoVideo from '../assets/video/segmentation_demo2.mp4';
 import SwarmGif from '../assets/images/multi-agent-inspection (1).gif';
 
-const ProductCard = ({ title, description, image, video, category, link }) => (
+const ProductCard = ({ title, description, image, video, category, link, imageFit = "cover", imageBg = "" }) => (
     <div className="group relative overflow-hidden rounded-2xl bg-surface border border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
         <div className="aspect-w-16 aspect-h-9 overflow-hidden relative">
             {video && image !== ComingSoonImg && image !== RoboticArmBlackImg ? (
@@ -33,7 +33,7 @@ const ProductCard = ({ title, description, image, video, category, link }) => (
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    className={`w-full h-64 object-${imageFit} ${imageBg} transform group-hover:scale-105 transition-transform duration-700`}
                 />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
@@ -98,7 +98,9 @@ const Products = () => {
             category: "Hardware",
             description: "Space-rated robotic manipulators designed for on-orbit servicing, assembly, and manufacturing. Features modular end-effectors and radiation-hardened electronics for long-duration missions.",
             image: RoboticArmBlackImg,
-            video: Ar3CatchVideo
+            video: Ar3CatchVideo,
+            imageFit: "contain",
+            imageBg: "bg-black"
         },
         {
             title: "AstroBot",

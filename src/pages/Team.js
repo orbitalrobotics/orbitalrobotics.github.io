@@ -116,7 +116,7 @@ const Team = () => {
       name: "Brice Howard",
       role: "Advisor",
       image: BriceImg,
-      bio: "Over 20 years as an executive and technical leader in space and robotics, delivering mission-critical systems. Co-founder and President of Novium.",
+      bio: "Over 20 years as an executive and technical leader in space and robotics, delivering mission-critical systems. Former co-founder and President of Novium.",
       linkedin: "https://www.linkedin.com/in/brice-howard/"
     }
   ];
