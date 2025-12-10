@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.d1a4394a.css",
-    "main.js": "/static/js/main.afdf8cf8.js",
+    "main.css": "/static/css/main.4581dd43.css",
+    "main.js": "/static/js/main.c4aaf2fd.js",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
+    "static/media/Home_Page.mp4": "/static/media/Home_Page.0a819c24f84bf8f43a77.mp4",
     "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.9d4ac8885111319449fd.mp4",
     "static/media/ar3_catch.mp4": "/static/media/ar3_catch.31d49ba1a6e46ac96d52.mp4",
     "static/media/point_control.gif": "/static/media/point_control.8c629b2615ea1649279a.gif",
@@ -17,7 +18,6 @@
     "static/media/Aaron.png": "/static/media/Aaron.03de90844b2ad004f698.png",
     "static/media/Doug.jpg": "/static/media/Doug.373ab2ee5654a27e51f2.jpg",
     "static/media/swarm-software.png": "/static/media/swarm-software.120bfdb60875c6b49601.png",
-    "static/media/hero-bg.png": "/static/media/hero-bg.1c3730d1c1992d41ff21.png",
     "static/media/satellite-os.png": "/static/media/satellite-os.495edd70f2d92a8914b4.png",
     "static/media/robotic-arm.png": "/static/media/robotic-arm.1dd88ac9013dc2694100.png",
     "static/media/coming_soon.png": "/static/media/coming_soon.2b86c750928919151705.png",
@@ -38,11 +38,11 @@
     "static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.webp": "/static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.0e3dea03258cc1a00158.webp",
     "static/media/Matrix.avif": "/static/media/Matrix.666a271bdf1adbc49a04.avif",
     "index.html": "/index.html",
-    "main.d1a4394a.css.map": "/static/css/main.d1a4394a.css.map",
-    "main.afdf8cf8.js.map": "/static/js/main.afdf8cf8.js.map"
+    "main.4581dd43.css.map": "/static/css/main.4581dd43.css.map",
+    "main.c4aaf2fd.js.map": "/static/js/main.c4aaf2fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1a4394a.css",
-    "static/js/main.afdf8cf8.js"
+    "static/css/main.4581dd43.css",
+    "static/js/main.c4aaf2fd.js"
   ]
 }
