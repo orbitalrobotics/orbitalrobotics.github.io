@@ -124,7 +124,7 @@ const Team = () => {
       name: "Taylor Banks",
       role: "Advisor",
       image: TaylorImg,
-      bio: "Aerospace finance executive and strategist. Former CFO of Systima, leading its acquisition by Karman Space & Defense. Previously with Blue Origin and Relativity Space.",
+      bio: "Aerospace finance and accounting executive. Former CFO of Systima, leading its acquisition by Karman Space & Defense. Former Blue Origin finance and financial advisor for Relativity Space.",
       linkedin: "https://www.linkedin.com/in/taylor-banks/"
     }
   ];
