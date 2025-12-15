@@ -56,12 +56,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-2 bg-white rounded-full mt-2"></div>
-          </div>
-        </div>
+
       </section>
 
 
@@ -70,7 +65,7 @@ const Home = () => {
       <section className="py-20 bg-surface relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Who We Are</h2>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6">About Us</h2>
             <p className="text-xl text-text-primary max-w-3xl mx-auto mb-4">
               Orbital Robotics: Seattle based company producing AI and robots for aerospace.
             </p>
@@ -81,7 +76,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
             {/* Experience */}
-            <div className="bg-background/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-primary/50 transition-all">
+            <div className="bg-background/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-secondary/50 transition-all">
               <h3 className="text-2xl font-bold text-white mb-4">Experience</h3>
               <p className="text-text-secondary leading-relaxed">
                 Former Blue Origin leaders with experience from BE-7 Lunar Lander Engine, New Glenn, Orbital Reef, Blue Ring and 100+ space shuttle missions.
@@ -89,7 +84,7 @@ const Home = () => {
             </div>
 
             {/* Technology */}
-            <div className="bg-background/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-primary/50 transition-all">
+            <div className="bg-background/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-secondary/50 transition-all">
               <h3 className="text-2xl font-bold text-white mb-4">Technology</h3>
               <p className="text-text-secondary leading-relaxed">
                 Six flight demonstrations of AI-controlled robotic arms through NASA and U.S. universities. TRL-4 patent pending system for autonomous spacecraft with robotic arms that uses vision-based navigation, neural network planning, and control.
@@ -97,7 +92,7 @@ const Home = () => {
             </div>
 
             {/* What We Do */}
-            <div className="bg-background/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-primary/50 transition-all">
+            <div className="bg-background/50 backdrop-blur-sm p-8 rounded-2xl border border-white/5 hover:border-secondary/50 transition-all">
               <h3 className="text-2xl font-bold text-white mb-4">What We Do</h3>
               <p className="text-text-secondary leading-relaxed">
                 Valuable satellites at end-of-life become space trash. We extend their life by refueling, repairing, and upgrading. We provide robotic arms, vision systems and AI powered GNC software so any spacecraft can perform RPOC.
@@ -246,8 +241,24 @@ const Home = () => {
               </Link>
             </div>
           </div>
+
+
+          {/* View All Products CTA */}
+          {/* View All Products CTA */}
+          <div className="mt-20 text-center animate-fade-in-up">
+            <p className="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
+              Discover our complete range of hardware, software, and services designed for the future of space exploration.
+            </p>
+            <Link
+              to="/products"
+              className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-full text-lg font-medium transition-all transform hover:scale-105 shadow-lg hover:shadow-primary/50"
+            >
+              View Full Product Catalog
+              <span className="ml-2">→</span>
+            </Link>
+          </div>
         </div>
-      </section>
+      </section >
     </div >
   );
 };
