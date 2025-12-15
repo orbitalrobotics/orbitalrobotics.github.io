@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4581dd43.css",
-    "main.js": "/static/js/main.c4aaf2fd.js",
+    "main.css": "/static/css/main.31253c10.css",
+    "main.js": "/static/js/main.07110450.js",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/Home_Page.mp4": "/static/media/Home_Page.0a819c24f84bf8f43a77.mp4",
     "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.9d4ac8885111319449fd.mp4",
@@ -10,6 +10,7 @@
     "static/media/multi-agent-inspection (1).gif": "/static/media/multi-agent-inspection (1).2f155b9f2d1721dacaa1.gif",
     "static/media/hubble_capture_compressed.mp4": "/static/media/hubble_capture_compressed.651e4c24d5549d1712c1.mp4",
     "static/media/titans_module_deployment_compressed.mp4": "/static/media/titans_module_deployment_compressed.adaaa65a2e45c2bfb355.mp4",
+    "static/media/ai_view_ar3_catch.mp4": "/static/media/ai_view_ar3_catch.e7aa48ff9725b053fe3d.mp4",
     "static/media/astrobot.png": "/static/media/astrobot.bd375b9a57dcd33931f1.png",
     "static/media/youtube_preview.png": "/static/media/youtube_preview.5c0d86b6cc2898849687.png",
     "static/media/geekwire_preview.png": "/static/media/geekwire_preview.a76c3edb2bb4cf271cc2.png",
@@ -34,15 +35,16 @@
     "static/media/nvidia.jpg": "/static/media/nvidia.54dd05576cf13cb8462d.jpg",
     "static/media/Enduralock.png": "/static/media/Enduralock.7b355d192a41e8eb74d8.png",
     "static/media/Gordon-dp.jpg": "/static/media/Gordon-dp.76685206640375e6af17.jpg",
+    "static/media/TaylorBanks.jpeg": "/static/media/TaylorBanks.4a8ccb1d3015cd9778a1.jpeg",
     "static/media/StarCloud_White.png": "/static/media/StarCloud_White.eab646db6dab58b90b23.png",
     "static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.webp": "/static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.0e3dea03258cc1a00158.webp",
     "static/media/Matrix.avif": "/static/media/Matrix.666a271bdf1adbc49a04.avif",
     "index.html": "/index.html",
-    "main.4581dd43.css.map": "/static/css/main.4581dd43.css.map",
-    "main.c4aaf2fd.js.map": "/static/js/main.c4aaf2fd.js.map"
+    "main.31253c10.css.map": "/static/css/main.31253c10.css.map",
+    "main.07110450.js.map": "/static/js/main.07110450.js.map"
   },
   "entrypoints": [
-    "static/css/main.4581dd43.css",
-    "static/js/main.c4aaf2fd.js"
+    "static/css/main.31253c10.css",
+    "static/js/main.07110450.js"
   ]
 }
