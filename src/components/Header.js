@@ -52,7 +52,7 @@ function Header() {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-text-secondary hover:text-primary transition-colors font-medium"
+                className={`${location.pathname === link.path ? 'text-primary' : 'text-text-secondary'} hover:text-primary transition-colors font-medium`}
               >
                 {link.name}
               </Link>
@@ -82,7 +82,7 @@ function Header() {
           <Link
             key={link.name}
             to={link.path}
-            className="text-2xl text-white font-medium hover:text-primary transition-colors"
+            className={`text-2xl font-medium hover:text-primary transition-colors ${location.pathname === link.path ? 'text-primary' : 'text-white'}`}
             onClick={() => setIsOpen(false)}
           >
             {link.name}
