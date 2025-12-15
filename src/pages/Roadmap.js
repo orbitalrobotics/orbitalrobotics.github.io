@@ -2,24 +2,55 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
-const RoadmapItem = ({ year, quarter, title, description, status }) => (
-    <div className="relative pl-8 md:pl-0 md:w-1/2 md:ml-auto md:odd:ml-0 md:odd:mr-auto md:odd:text-right md:odd:pr-12 md:pr-0 md:pl-12 pb-12 group">
-        {/* Timeline Line */}
-        <div className="absolute top-0 left-0 md:left-1/2 h-full w-px bg-white/10 transform md:-translate-x-1/2"></div>
+const RoadmapItem = ({ year, quarter, title, description, status, index }) => {
+    const isLeftCard = index % 2 === 0;
 
-        {/* Timeline Dot */}
-        <div className={`absolute top-0 left-0 md:left-1/2 w-4 h-4 rounded-full transform -translate-x-1/2 border-2 ${status === 'completed' ? 'bg-primary border-primary' : status === 'current' ? 'bg-white border-white animate-pulse' : 'bg-background border-white/30'} z-10`}></div>
+    return (
+        <div className="relative flex flex-col md:flex-row items-center md:items-stretch group is-odd">
 
-        {/* Content */}
-        <div className="relative">
-            <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 ${status === 'completed' ? 'bg-primary/20 text-primary' : status === 'current' ? 'bg-white/10 text-white' : 'bg-white/5 text-text-muted'}`}>
-                {year} {quarter}
+            {/* Mobile: Timeline Line (Left) */}
+            <div className="md:hidden absolute left-8 top-0 h-full w-px bg-white/10"></div>
+            <div className={`md:hidden absolute left-8 top-8 w-4 h-4 rounded-full border-2 transform -translate-x-1/2 ${status === 'completed' ? 'bg-primary border-primary' : status === 'current' ? 'bg-white border-white animate-pulse' : 'bg-background border-white/30'} z-10`}></div>
+
+            {/* Desktop: Spacer for Alternating Layout */}
+            <div className="hidden md:block md:w-1/2 md:group-odd:order-2" />
+
+            {/* Desktop: Center Line & Dot */}
+            <div className="hidden md:flex absolute left-1/2 h-full w-8 flex-col items-center justify-start -translate-x-1/2 z-20">
+                {/* Line */}
+                <div className="h-full w-0.5 bg-gradient-to-b from-primary/50 to-secondary/50 group-last:bg-gradient-to-b group-last:from-primary/50 group-last:to-transparent"></div>
+                {/* Dot */}
+                <div className={`absolute top-10 w-4 h-4 rounded-full border-2 ${status === 'completed' ? 'bg-primary border-primary shadow-[0_0_10px_rgba(59,130,246,0.5)]' : status === 'current' ? 'bg-white border-white animate-pulse' : 'bg-background border-white/30'} box-content`}></div>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">{title}</h3>
-            <p className="text-text-secondary">{description}</p>
+
+            {/* Content Card Wrapper */}
+            <div className="relative w-full pl-16 md:pl-0 md:w-1/2 md:group-odd:order-1 md:group-odd:pr-16 md:group-even:order-3 md:group-even:pl-16 py-4">
+
+                {/* Desktop Connectors (Explicit Conditional) */}
+                {/* Odd (Left Card): Connector on Right Edge */}
+                {isLeftCard && (
+                    <div className="hidden md:block absolute top-12 right-0 h-0.5 w-16 bg-white/20 -translate-y-1/2"></div>
+                )}
+
+                {/* Even (Right Card): Connector on Left Edge */}
+                {!isLeftCard && (
+                    <div className="hidden md:block absolute top-12 left-0 h-0.5 w-16 bg-white/20 -translate-y-1/2"></div>
+                )}
+
+                {/* The Card */}
+                <div className={`relative p-6 rounded-2xl border transition-all duration-300 ${status === 'completed' ? 'bg-surface/50 border-primary/30 hover:border-primary hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]' : 'bg-surface border-white/10 hover:border-white/20'}`}>
+
+                    {/* Content */}
+                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 ${status === 'completed' ? 'bg-primary/20 text-primary' : status === 'current' ? 'bg-white/10 text-white' : 'bg-white/5 text-text-muted'}`}>
+                        {year} {quarter}
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">{title}</h3>
+                    <p className="text-text-secondary text-sm leading-relaxed">{description}</p>
+                </div>
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 const Roadmap = () => {
     const milestones = [
@@ -102,10 +133,9 @@ const Roadmap = () => {
                     </p>
                 </div>
 
-                {/* Timeline */}
-                <div className="relative max-w-4xl mx-auto mb-24">
+                <div className="relative max-w-5xl mx-auto mb-24 space-y-0">
                     {milestones.map((milestone, index) => (
-                        <RoadmapItem key={index} {...milestone} />
+                        <RoadmapItem key={index} {...milestone} index={index} />
                     ))}
                 </div>
 
