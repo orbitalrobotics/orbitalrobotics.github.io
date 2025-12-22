@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.31253c10.css",
-    "main.js": "/static/js/main.07110450.js",
+    "main.css": "/static/css/main.d04dbba5.css",
+    "main.js": "/static/js/main.15e4b1e3.js",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/Home_Page.mp4": "/static/media/Home_Page.0a819c24f84bf8f43a77.mp4",
     "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.9d4ac8885111319449fd.mp4",
     "static/media/ar3_catch.mp4": "/static/media/ar3_catch.31d49ba1a6e46ac96d52.mp4",
     "static/media/point_control.gif": "/static/media/point_control.8c629b2615ea1649279a.gif",
+    "static/media/in_space_segmentation_compressed.mp4": "/static/media/in_space_segmentation_compressed.c4bf4fabeb000c7b4177.mp4",
     "static/media/multi-agent-inspection (1).gif": "/static/media/multi-agent-inspection (1).2f155b9f2d1721dacaa1.gif",
     "static/media/hubble_capture_compressed.mp4": "/static/media/hubble_capture_compressed.651e4c24d5549d1712c1.mp4",
     "static/media/titans_module_deployment_compressed.mp4": "/static/media/titans_module_deployment_compressed.adaaa65a2e45c2bfb355.mp4",
@@ -40,11 +41,11 @@
     "static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.webp": "/static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.0e3dea03258cc1a00158.webp",
     "static/media/Matrix.avif": "/static/media/Matrix.666a271bdf1adbc49a04.avif",
     "index.html": "/index.html",
-    "main.31253c10.css.map": "/static/css/main.31253c10.css.map",
-    "main.07110450.js.map": "/static/js/main.07110450.js.map"
+    "main.d04dbba5.css.map": "/static/css/main.d04dbba5.css.map",
+    "main.15e4b1e3.js.map": "/static/js/main.15e4b1e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.31253c10.css",
-    "static/js/main.07110450.js"
+    "static/css/main.d04dbba5.css",
+    "static/js/main.15e4b1e3.js"
   ]
 }
