@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 import { services, hardwareProducts, softwareProducts } from '../data/productsData';
 import ComingSoonImg from '../assets/images/coming_soon.png';
 
-const ProductCard = ({ id, title, description, image, video, videos, category, imageFit = "cover", imageBg = "", onSaveScroll }) => {
+const ProductCard = ({ id, title, description, image, video, videos, category, imageFit = "cover", imageBg = "", videoFit = "cover", videoBg = "", videoPosition = "center", onSaveScroll }) => {
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
     const videoRef = useRef(null);
 
@@ -38,7 +38,8 @@ const ProductCard = ({ id, title, description, image, video, videos, category, i
                             muted
                             playsInline
                             onEnded={handleVideoEnded}
-                            className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                            className={`w-full h-64 object-${videoFit} ${videoBg} transform group-hover:scale-105 transition-transform duration-700`}
+                            style={{ objectPosition: videoPosition }}
                         />
                     ) : (
                         <img
@@ -47,7 +48,7 @@ const ProductCard = ({ id, title, description, image, video, videos, category, i
                             className={`w-full h-64 object-${imageFit} ${imageBg} transform group-hover:scale-105 transition-transform duration-700`}
                         />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none"></div>
                 </div>
                 <div className="p-8 relative z-10 flex flex-col flex-1">
                     <div className="text-xs font-bold tracking-wider text-primary uppercase mb-2">{category}</div>

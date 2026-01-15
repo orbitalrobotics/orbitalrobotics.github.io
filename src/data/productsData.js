@@ -13,6 +13,7 @@ import HubbleCaptureVideo from '../assets/video/hubble_capture_compressed.mp4';
 import PoseEstimationVideo from '../assets/video/pose_estimation_fast.mp4';
 import TitansDeploymentVideo from '../assets/video/titans_module_deployment_compressed.mp4';
 import SegmentationDemoVideo from '../assets/video/segmentation_demo2.mp4';
+import InSpaceSegmentationVideo from '../assets/video/in_space_segmentation_compressed.mp4';
 import SwarmGif from '../assets/images/multi-agent-inspection (1).gif';
 
 export const services = [
@@ -114,7 +115,9 @@ export const softwareProducts = [
         title: "NavIQ",
         category: "Software",
         description: "Advanced orbital dynamics and trajectory planning suite. Provides high-accuracy state estimation and maneuver planning for complex rendezvous and proximity operations.",
-        video: SegmentationDemoVideo,
+        video: InSpaceSegmentationVideo,
+        videoFit: "cover",
+        videoPosition: "bottom",
     },
     {
         id: 'astrap',

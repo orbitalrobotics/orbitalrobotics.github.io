@@ -1,9 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import SEO from '../components/SEO';
 import ComingSoonImg from '../assets/images/coming_soon.png';
 
+// Import specific product pages
+import NavIQ from './products/NavIQ';
+
+// Map of product IDs to their specific components
+const productPages = {
+    'naviq': NavIQ,
+};
+
 const ProductDetail = () => {
+    const { id } = useParams();
+
+    // Check if there's a specific page for this product
+    const SpecificProductPage = productPages[id];
+    if (SpecificProductPage) {
+        return <SpecificProductPage />;
+    }
+
+    // Default "Coming Soon" fallback
     return (
         <div className="min-h-screen bg-background pt-32 pb-20 flex flex-col items-center justify-center">
             <SEO title="Product Detail" />
