@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 import SEO from '../components/SEO';
 
 // Import images
-import AaronImg from '../assets/images/headshots/Aaron.png';
+import AaronImg from '../assets/images/headshots/aaron.png';
 import SohilImg from '../assets/images/headshots/sohil.jpeg';
 import RileyImg from '../assets/images/headshots/riley.jpg';
 import DougImg from '../assets/images/headshots/Doug.jpg';

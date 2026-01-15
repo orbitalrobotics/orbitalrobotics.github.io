@@ -1,14 +1,38 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import GeekWirePreview from '../assets/images/news/geekwire_preview.png';
+import GeekWire2026Preview from '../assets/images/news/geekwire_2026_preview.png';
 import SpaceOceanPreview from '../assets/images/news/space_ocean_preview.png';
 import YoutubePreview from '../assets/images/news/youtube_preview.png';
 import SpaceDirtPreview from '../assets/images/news/space_dirt_preview.png';
 import StarcloudPreview from '../assets/images/partners/StarCloud_White.png';
 import TechCrunchPreview from '../assets/images/news/techcrunch_original.jpg';
+import AerospaceCorpPreview from '../assets/images/news/aerospace_corp_preview.png';
+import CompanyLaunchTrackerPreview from '../assets/images/news/company_launch_tracker_preview.png';
 
 const News = () => {
   const newsItems = [
+    {
+      title: "Orbital Robotics reaches out with a plan for robotic arms that use AI",
+      summary: "GeekWire covers Orbital Robotics' mission to develop AI-powered robotic arms for space. CEO Aaron Borger discusses partnerships with the U.S. Space Force and plans to service the Hubble Space Telescope.",
+      link: "https://www.geekwire.com/2026/orbital-robotics-space-robotic-arms-ai/",
+      source: "GeekWire",
+      image: GeekWire2026Preview
+    },
+    {
+      title: "Startup Showcase: Orbital Robotics",
+      summary: "The Aerospace Corporation features Orbital Robotics in their startup showcase, highlighting the company's autonomous robotic arm and perception system for on-orbit refueling and repair, powered by their deep reinforcement learning algorithm.",
+      link: "https://aerospace.org/kickstage/startup-showcase-orbital-robotics",
+      source: "The Aerospace Corporation",
+      image: AerospaceCorpPreview
+    },
+    {
+      title: "Company Launch Tracker: Orbital Robotics",
+      summary: "Company Launch Tracker profiles Orbital Robotics, featuring CEO Aaron Borger and our mission to build AI-controlled space robots for national security, space construction, and off-world resource gathering.",
+      link: "https://companylaunchtracker.substack.com/p/company-launch-tracker-37",
+      source: "Company Launch Tracker",
+      image: CompanyLaunchTrackerPreview
+    },
     {
       title: "Orbital Robotics Partners with Starcloud on Space-Based AI",
       summary: "Orbital Robotics signs an LOI with Starcloud to partner on space-based AI. The partnership aims to provide AI controlled robotic arms to aid with assembling, docking, maintaining and upgrading datacenter modules.",
@@ -80,7 +104,7 @@ const News = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+                  className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
               </div>

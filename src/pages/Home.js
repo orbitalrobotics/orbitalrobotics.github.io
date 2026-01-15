@@ -4,7 +4,6 @@ import { FaRocket, FaSatellite, FaRobot } from 'react-icons/fa';
 import SEO from '../components/SEO';
 import Partners from '../components/Partners';
 import HeroVideo from '../assets/video/Home_Page.mp4';
-import ComingSoonImg from '../assets/images/coming_soon.png';
 import SatelliteOSImg from '../assets/images/satellite-os.png';
 import RoboticArmBlackImg from '../assets/images/robotic-arm-black-fairings.png';
 
@@ -13,7 +12,7 @@ const Home = () => {
     <div className="flex flex-col">
       <SEO
         title="Home"
-        description="Orbital Robotics is building the intelligent robotic infrastructure to expand humanity’s presence beyond Earth. Autonomous robotics and advanced software for the space economy."
+        description="Orbital Robotics is building the intelligent robotic infrastructure to expand humanity's presence beyond Earth. Autonomous robotics and advanced software for the space economy."
       />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -33,9 +32,8 @@ const Home = () => {
         {/* Content */}
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 leading-tight animate-fade-in-up">
-            Building the intelligent <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">robotic infrastructure</span> <br />
-            to expand humanity’s presence beyond Earth.
+            AI, Robotics and Autonomy <br />
+            for Orbital Logistics
           </h1>
           <p className="text-xl md:text-2xl text-text-primary max-w-3xl mx-auto mb-10 font-light">
             Enabling the next generation of space operations with autonomous robotics and artificial intelligence.
