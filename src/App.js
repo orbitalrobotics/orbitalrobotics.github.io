@@ -11,6 +11,7 @@ import News from './pages/News';
 import ProductDetail from './pages/ProductDetail';
 import StarcloudAnnouncement from './pages/news/StarcloudAnnouncement';
 import TechCrunchAnnouncement from './pages/news/TechCrunchAnnouncement';
+import SaveHubble from './pages/news/SaveHubble';
 import './styles/global.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/news/starcloud-partnership" element={<StarcloudAnnouncement />} />
           <Route path="/news/techcrunch-disrupt" element={<TechCrunchAnnouncement />} />
+          <Route path="/news/save-hubble" element={<SaveHubble />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>

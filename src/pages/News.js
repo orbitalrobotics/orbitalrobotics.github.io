@@ -9,9 +9,17 @@ import StarcloudPreview from '../assets/images/partners/StarCloud_White.png';
 import TechCrunchPreview from '../assets/images/news/techcrunch_original.jpg';
 import AerospaceCorpPreview from '../assets/images/news/aerospace_corp_preview.png';
 import CompanyLaunchTrackerPreview from '../assets/images/news/company_launch_tracker_preview.png';
+import SaveHubblePreview from '../assets/images/news/save_hubble_preview.png';
 
 const News = () => {
   const newsItems = [
+    {
+      title: "Save Hubble Coalition",
+      summary: "Join the Save Hubble Coalition - A collaborative effort to preserve one of humanity's greatest scientific achievements through innovative on-orbit servicing technology.",
+      link: "/#/news/save-hubble",
+      source: "Orbital Robotics",
+      image: SaveHubblePreview
+    },
     {
       title: "Orbital Robotics reaches out with a plan for robotic arms that use AI",
       summary: "GeekWire covers Orbital Robotics' mission to develop AI-powered robotic arms for space. CEO Aaron Borger discusses partnerships with the U.S. Space Force and plans to service the Hubble Space Telescope.",
