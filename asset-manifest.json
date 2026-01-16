@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.eb2d3cad.css",
-    "main.js": "/static/js/main.c5e231ba.js",
+    "main.css": "/static/css/main.44ae554e.css",
+    "main.js": "/static/js/main.f65944e3.js",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/Home_Page.mp4": "/static/media/Home_Page.0a819c24f84bf8f43a77.mp4",
     "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.9d4ac8885111319449fd.mp4",
@@ -31,6 +31,9 @@
     "static/media/space_dirt_preview.png": "/static/media/space_dirt_preview.b587e767e67b8ef3f2d2.png",
     "static/media/techcrunch_original.jpg": "/static/media/techcrunch_original.145f0a9e300935504207.jpg",
     "static/media/Tolga_Ors.jpeg": "/static/media/Tolga_Ors.ca26c7b5858cb04ac506.jpeg",
+    "static/media/save_hubble_servicing.png": "/static/media/save_hubble_servicing.ec1e0546ce268736ff51.png",
+    "static/media/save_hubble_robotic_arm.png": "/static/media/save_hubble_robotic_arm.0090c00820794dc1daa6.png",
+    "static/media/save_hubble_preview.png": "/static/media/save_hubble_preview.4c641330a7ee40b81ce6.png",
     "static/media/sohil.jpeg": "/static/media/sohil.26da4753de5b277bc37f.jpeg",
     "static/media/orbitalcomposites.png": "/static/media/orbitalcomposites.95d04d81777a9d5f1685.png",
     "static/media/Wilson Sonsini.png": "/static/media/Wilson Sonsini.56b5efdc9af118ccd71e.png",
@@ -44,11 +47,11 @@
     "static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.webp": "/static/media/Starcloud-Black-Logo-Transparent-Background-NAME_LOGO.0e3dea03258cc1a00158.webp",
     "static/media/Matrix.avif": "/static/media/Matrix.666a271bdf1adbc49a04.avif",
     "index.html": "/index.html",
-    "main.eb2d3cad.css.map": "/static/css/main.eb2d3cad.css.map",
-    "main.c5e231ba.js.map": "/static/js/main.c5e231ba.js.map"
+    "main.44ae554e.css.map": "/static/css/main.44ae554e.css.map",
+    "main.f65944e3.js.map": "/static/js/main.f65944e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb2d3cad.css",
-    "static/js/main.c5e231ba.js"
+    "static/css/main.44ae554e.css",
+    "static/js/main.f65944e3.js"
   ]
 }
