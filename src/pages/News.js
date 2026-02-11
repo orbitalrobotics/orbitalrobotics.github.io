@@ -10,9 +10,17 @@ import TechCrunchPreview from '../assets/images/news/techcrunch_original.jpg';
 import AerospaceCorpPreview from '../assets/images/news/aerospace_corp_preview.png';
 import CompanyLaunchTrackerPreview from '../assets/images/news/company_launch_tracker_preview.png';
 import SaveHubblePreview from '../assets/images/news/save_hubble_preview.png';
+import SophiaSpacePreview from '../assets/images/news/sophia_space_preview.png';
 
 const News = () => {
   const newsItems = [
+    {
+      title: "Sophia Space and Orbital Robotics Announce Exploratory Collaboration on On-Orbit AI Compute and Robotic Manufacturing Concepts",
+      summary: "Sophia Space and Orbital Robotics announce a collaboration to explore on-orbit AI computing and robotic manufacturing. The partnership combines Sophia Space's modular orbital computing with Orbital Robotics' AI-enabled robotic spacecraft for future space infrastructure.",
+      link: "https://sophia.space/news/sophia-space-and-orbital-robotics-announce-exploratory-collaboration-on-on-orbit-ai-compute-and-robotic-manufacturing-concepts",
+      source: "Sophia Space",
+      image: SophiaSpacePreview
+    },
     {
       title: "Save Hubble Coalition",
       summary: "Join the Save Hubble Coalition - A collaborative effort to preserve one of humanity's greatest scientific achievements through innovative on-orbit servicing technology.",
