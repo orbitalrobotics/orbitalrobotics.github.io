@@ -11,7 +11,7 @@ import GordonImg from '../assets/images/headshots/Gordon-dp.jpg';
 import EricFeltImg from '../assets/images/headshots/EricFelt.jpg';
 import ChrisImg from '../assets/images/headshots/Christopher_Sembroski.jpg';
 import TolgaImg from '../assets/images/headshots/Tolga_Ors.jpeg';
-import BriceImg from '../assets/images/headshots/Brice_H.jpg';
+// import BriceImg from '../assets/images/headshots/Brice_H.jpg';
 import TaylorImg from '../assets/images/headshots/TaylorBanks.jpeg';
 
 const TeamMember = ({ name, role, image, bio, linkedin, email }) => (
@@ -113,13 +113,13 @@ const Team = () => {
       bio: "Expert in satellite communications and RF systems.",
       linkedin: "https://www.linkedin.com/in/tolgaors/"
     },
-    {
-      name: "Brice Howard",
-      role: "Advisor",
-      image: BriceImg,
-      bio: "Over 20 years as an executive and technical leader in space and robotics, delivering mission-critical systems. Former co-founder and President of Novium.",
-      linkedin: "https://www.linkedin.com/in/brice-howard/"
-    },
+    // {
+    //   name: "Brice Howard",
+    //   role: "Advisor",
+    //   image: BriceImg,
+    //   bio: "Over 20 years as an executive and technical leader in space and robotics, delivering mission-critical systems. Former co-founder and President of Novium.",
+    //   linkedin: "https://www.linkedin.com/in/brice-howard/"
+    // },
     {
       name: "Taylor Banks",
       role: "Advisor",
