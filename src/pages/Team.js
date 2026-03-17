@@ -59,14 +59,6 @@ const Team = () => {
       email: "aborger@orbital-robots.com"
     },
     {
-      name: "Doug Kohl",
-      role: "Co-Founder & COO",
-      image: DougImg,
-      bio: "Aerospace operations veteran with 40+ years experience (Space Shuttle to lunar systems). Led mission-critical operations for NASA and Blue Origin, specializing in human-rated spacecraft recovery and readiness.",
-      linkedin: "https://www.linkedin.com/in/doug-kohl-865553b/",
-      email: "dkohl@orbital-robots.com"
-    },
-    {
       name: "Riley Mark",
       role: "Co-Founder & Engineer",
       image: RileyImg,
@@ -91,6 +83,13 @@ const Team = () => {
       image: GordonImg,
       bio: "Former DARPA Program Manager for RSGS and leading expert in space robotics and infrastructure.",
       linkedin: "https://www.linkedin.com/in/gordon-roesler-8b0a646/"
+    },
+    {
+      name: "Doug Kohl",
+      role: "Advisor",
+      image: DougImg,
+      bio: "Aerospace operations veteran with 40+ years experience (Space Shuttle to lunar systems). Led mission-critical operations for NASA and Blue Origin, specializing in human-rated spacecraft recovery and readiness.",
+      linkedin: "https://www.linkedin.com/in/doug-kohl-865553b/"
     },
     {
       name: "Eric Felt",
