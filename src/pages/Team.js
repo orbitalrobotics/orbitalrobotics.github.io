@@ -1,6 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 import SEO from '../components/SEO';
+import AnimatedSection from '../components/motion/AnimatedSection';
+import StaggerContainer, { itemVariants } from '../components/motion/StaggerContainer';
 
 // Import images
 import AaronImg from '../assets/images/headshots/aaron.png';
@@ -11,13 +14,16 @@ import GordonImg from '../assets/images/headshots/Gordon-dp.jpg';
 import EricFeltImg from '../assets/images/headshots/EricFelt.jpg';
 import ChrisImg from '../assets/images/headshots/Christopher_Sembroski.jpg';
 import TolgaImg from '../assets/images/headshots/Tolga_Ors.jpeg';
-// import BriceImg from '../assets/images/headshots/Brice_H.jpg';
 import TaylorImg from '../assets/images/headshots/TaylorBanks.jpeg';
 
 const TeamMember = ({ name, role, image, bio, linkedin, email }) => (
-  <div className="bg-surface rounded-2xl p-6 border border-white/5 hover:border-primary/50 transition-all group text-center">
+  <motion.div
+    variants={itemVariants}
+    whileHover={{ y: -5 }}
+    className="bg-surface rounded-2xl p-6 border border-white/5 hover:border-primary/30 transition-all group text-center"
+  >
     <div className="w-32 h-32 mx-auto mb-6 relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full opacity-0 group-hover:opacity-20 transition-opacity blur-md"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full opacity-0 group-hover:opacity-20 transition-opacity blur-md" />
       <img
         src={image}
         alt={name}
@@ -45,7 +51,7 @@ const TeamMember = ({ name, role, image, bio, linkedin, email }) => (
         </a>
       )}
     </div>
-  </div>
+  </motion.div>
 );
 
 const Team = () => {
@@ -112,13 +118,6 @@ const Team = () => {
       bio: "Expert in satellite communications and RF systems.",
       linkedin: "https://www.linkedin.com/in/tolgaors/"
     },
-    // {
-    //   name: "Brice Howard",
-    //   role: "Advisor",
-    //   image: BriceImg,
-    //   bio: "Over 20 years as an executive and technical leader in space and robotics, delivering mission-critical systems. Former co-founder and President of Novium.",
-    //   linkedin: "https://www.linkedin.com/in/brice-howard/"
-    // },
     {
       name: "Taylor Banks",
       role: "Advisor",
@@ -135,31 +134,35 @@ const Team = () => {
         description="Meet the Orbital Robotics team - engineers, scientists, and visionaries dedicated to building the future of space infrastructure."
       />
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
+        <AnimatedSection className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-6">Our Team</h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
             A dedicated team of engineers and visionaries building the future of space.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Core Team */}
         <div className="mb-24">
-          <h2 className="text-3xl font-heading font-bold text-white mb-10 border-b border-white/10 pb-4">Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <AnimatedSection>
+            <h2 className="text-3xl font-heading font-bold text-white mb-10 border-b border-white/10 pb-4">Team</h2>
+          </AnimatedSection>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <TeamMember key={index} {...member} />
             ))}
-          </div>
+          </StaggerContainer>
         </div>
 
         {/* Advisors */}
         <div>
-          <h2 className="text-3xl font-heading font-bold text-white mb-10 border-b border-white/10 pb-4">Advisors</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <AnimatedSection>
+            <h2 className="text-3xl font-heading font-bold text-white mb-10 border-b border-white/10 pb-4">Advisors</h2>
+          </AnimatedSection>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {advisors.map((advisor, index) => (
               <TeamMember key={index} {...advisor} />
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </div>

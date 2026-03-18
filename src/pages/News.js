@@ -1,18 +1,37 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import AnimatedSection from '../components/motion/AnimatedSection';
+import StaggerContainer, { itemVariants } from '../components/motion/StaggerContainer';
 import GeekWirePreview from '../assets/images/news/geekwire_preview.png';
 import GeekWire2026Preview from '../assets/images/news/geekwire_2026_preview.png';
 import SpaceOceanPreview from '../assets/images/news/space_ocean_preview.png';
 import YoutubePreview from '../assets/images/news/youtube_preview.png';
+import UWTalkPreview from '../assets/images/news/uw_talk_preview.png';
 import SpaceDirtPreview from '../assets/images/news/space_dirt_preview.png';
 import StarcloudPreview from '../assets/images/partners/StarCloud_White.png';
 import TechCrunchPreview from '../assets/images/news/techcrunch_original.jpg';
 import AerospaceCorpPreview from '../assets/images/news/aerospace_corp_preview.png';
 import CompanyLaunchTrackerPreview from '../assets/images/news/company_launch_tracker_preview.png';
 import SaveHubblePreview from '../assets/images/news/save_hubble_preview.png';
+import SophiaSpacePreview from '../assets/images/news/sophia_orbital_robotics_announcement.png';
 
 const News = () => {
   const newsItems = [
+    {
+      title: "Sophia Space and Orbital Robotics Announce Exploratory Collaboration on On-Orbit AI Compute and Robotic Manufacturing Concepts",
+      summary: "Sophia Space and Orbital Robotics announce an exploratory collaboration to combine on-orbit AI compute capabilities with robotic manufacturing, advancing the future of autonomous space infrastructure.",
+      link: "https://sophia.space/news/sophia-space-and-orbital-robotics-announce-exploratory-collaboration-on-on-orbit-ai-compute-and-robotic-manufacturing-concepts",
+      source: "Sophia Space",
+      image: SophiaSpacePreview
+    },
+    {
+      title: "2026 Winter Robotics Colloquium: Aaron Borger (Orbital Robotics)",
+      summary: "Aaron Borger presents 'Orbital Robotics: AI, Robotics, and Autonomy for Orbital Logistics' at the UW Paul G. Allen School of Computer Science & Engineering's Winter 2026 Robotics Colloquium.",
+      link: "https://www.youtube.com/watch?v=6QD3XKtB4xE",
+      source: "UW Paul G. Allen School (YouTube)",
+      image: UWTalkPreview
+    },
     {
       title: "Save Hubble Coalition",
       summary: "Join the Save Hubble Coalition - A collaborative effort to preserve one of humanity's greatest scientific achievements through innovative on-orbit servicing technology.",
@@ -78,7 +97,7 @@ const News = () => {
     },
     {
       title: "Space Dirt: Orbital Robotics builds the next generation of autonomous rendezvous tech",
-      summary: "Space Dirt highlights Orbital Robotics for its work in developing autonomous rendezvous, proximity operations, and capture (RPOC) systems — key for on-orbit servicing, refueling, relocation, and debris removal. CEO Aaron Borger notes the company’s mission to enable high mobility and sustainable orbital operations.",
+      summary: "Space Dirt highlights Orbital Robotics for its work in developing autonomous rendezvous, proximity operations, and capture (RPOC) systems — key for on-orbit servicing, refueling, relocation, and debris removal. CEO Aaron Borger notes the company's mission to enable high mobility and sustainable orbital operations.",
       link: "https://spacedirt.beehiiv.com/p/october-s-space-dirt-month-end",
       source: "Space Dirt Newsletter",
       image: SpaceDirtPreview
@@ -92,21 +111,23 @@ const News = () => {
         description="Latest updates, press releases, and media coverage for Orbital Robotics."
       />
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
+        <AnimatedSection className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-6">News & Updates</h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
             Stay up to date with our latest milestones and media appearances.
           </p>
-        </div>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {newsItems.map((item, index) => (
-            <a
+            <motion.a
               key={index}
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-surface rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 flex flex-col"
+              className="group bg-surface rounded-2xl overflow-hidden border border-white/10 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10 flex flex-col"
             >
               <div className="h-48 overflow-hidden relative">
                 <img
@@ -114,7 +135,7 @@ const News = () => {
                   alt={item.title}
                   className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent" />
               </div>
               <div className="p-8 flex-1 flex flex-col">
                 <div className="text-xs font-bold tracking-wider text-primary uppercase mb-2">{item.source}</div>
@@ -124,9 +145,9 @@ const News = () => {
                   Read Article <span className="ml-2">→</span>
                 </span>
               </div>
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </div>
   );

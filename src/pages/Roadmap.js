@@ -1,46 +1,66 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import AnimatedSection from '../components/motion/AnimatedSection';
+import useInView from '../components/motion/useInView';
+
+const TimelineDot = ({ status, className }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    return (
+        <motion.div
+            ref={ref}
+            initial={{ scale: 0 }}
+            animate={isInView ? { scale: 1 } : { scale: 0 }}
+            transition={{ delay: 0.2, duration: 0.4, type: 'spring' }}
+            className={className}
+        />
+    );
+};
 
 const RoadmapItem = ({ year, quarter, title, description, status, index }) => {
     const isLeftCard = index % 2 === 0;
+    const direction = isLeftCard ? 'left' : 'right';
+
+    const dotClass = status === 'completed'
+        ? 'bg-primary border-primary shadow-[0_0_10px_rgba(14,165,233,0.5)]'
+        : status === 'current'
+            ? 'bg-white border-white animate-pulse'
+            : 'bg-background border-white/30';
 
     return (
-        <div className="relative flex flex-col md:flex-row items-center md:items-stretch group is-odd">
-
+        <AnimatedSection direction={direction} className="relative flex flex-col md:flex-row items-center md:items-stretch group is-odd">
             {/* Mobile: Timeline Line (Left) */}
-            <div className="md:hidden absolute left-8 top-0 h-full w-px bg-white/10"></div>
-            <div className={`md:hidden absolute left-8 top-8 w-4 h-4 rounded-full border-2 transform -translate-x-1/2 ${status === 'completed' ? 'bg-primary border-primary' : status === 'current' ? 'bg-white border-white animate-pulse' : 'bg-background border-white/30'} z-10`}></div>
+            <div className="md:hidden absolute left-8 top-0 h-full w-px bg-white/10" />
+            <TimelineDot
+                status={status}
+                className={`md:hidden absolute left-8 top-8 w-4 h-4 rounded-full border-2 transform -translate-x-1/2 ${dotClass} z-10`}
+            />
 
             {/* Desktop: Spacer for Alternating Layout */}
             <div className="hidden md:block md:w-1/2 md:group-odd:order-2" />
 
             {/* Desktop: Center Line & Dot */}
             <div className="hidden md:flex absolute left-1/2 h-full w-8 flex-col items-center justify-start -translate-x-1/2 z-20">
-                {/* Line */}
-                <div className="h-full w-0.5 bg-gradient-to-b from-primary/50 to-secondary/50 group-last:bg-gradient-to-b group-last:from-primary/50 group-last:to-transparent"></div>
-                {/* Dot */}
-                <div className={`absolute top-10 w-4 h-4 rounded-full border-2 ${status === 'completed' ? 'bg-primary border-primary shadow-[0_0_10px_rgba(59,130,246,0.5)]' : status === 'current' ? 'bg-white border-white animate-pulse' : 'bg-background border-white/30'} box-content`}></div>
+                <div className="h-full w-0.5 bg-gradient-to-b from-primary/50 to-secondary/50 group-last:bg-gradient-to-b group-last:from-primary/50 group-last:to-transparent" />
+                <TimelineDot
+                    status={status}
+                    className={`absolute top-10 w-4 h-4 rounded-full border-2 ${dotClass} box-content`}
+                />
             </div>
 
             {/* Content Card Wrapper */}
             <div className="relative w-full pl-16 md:pl-0 md:w-1/2 md:group-odd:order-1 md:group-odd:pr-16 md:group-even:order-3 md:group-even:pl-16 py-4">
-
-                {/* Desktop Connectors (Explicit Conditional) */}
-                {/* Odd (Left Card): Connector on Right Edge */}
                 {isLeftCard && (
-                    <div className="hidden md:block absolute top-12 right-0 h-0.5 w-16 bg-white/20 -translate-y-1/2"></div>
+                    <div className="hidden md:block absolute top-12 right-0 h-0.5 w-16 bg-white/20 -translate-y-1/2" />
                 )}
-
-                {/* Even (Right Card): Connector on Left Edge */}
                 {!isLeftCard && (
-                    <div className="hidden md:block absolute top-12 left-0 h-0.5 w-16 bg-white/20 -translate-y-1/2"></div>
+                    <div className="hidden md:block absolute top-12 left-0 h-0.5 w-16 bg-white/20 -translate-y-1/2" />
                 )}
 
-                {/* The Card */}
-                <div className={`relative p-6 rounded-2xl border transition-all duration-300 ${status === 'completed' ? 'bg-surface/50 border-primary/30 hover:border-primary hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]' : 'bg-surface border-white/10 hover:border-white/20'}`}>
-
-                    {/* Content */}
+                <div className={`relative p-6 rounded-2xl border transition-all duration-300 ${status === 'completed' ? 'bg-surface/50 border-primary/30 hover:border-primary hover:shadow-[0_0_20px_rgba(14,165,233,0.1)]' : 'bg-surface border-white/10 hover:border-white/20'}`}>
                     <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-2 ${status === 'completed' ? 'bg-primary/20 text-primary' : status === 'current' ? 'bg-white/10 text-white' : 'bg-white/5 text-text-muted'}`}>
                         {year} {quarter}
                     </div>
@@ -48,7 +68,7 @@ const RoadmapItem = ({ year, quarter, title, description, status, index }) => {
                     <p className="text-text-secondary text-sm leading-relaxed">{description}</p>
                 </div>
             </div>
-        </div>
+        </AnimatedSection>
     );
 };
 
@@ -126,12 +146,12 @@ const Roadmap = () => {
                 description="Follow Orbital Robotics' journey and future milestones as we build the infrastructure for the space economy."
             />
             <div className="container mx-auto px-6">
-                <div className="text-center mb-20">
+                <AnimatedSection className="text-center mb-20">
                     <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-6">Strategic Roadmap</h1>
                     <p className="text-xl text-text-secondary max-w-3xl mx-auto">
                         Our path to building the essential infrastructure for the orbital economy.
                     </p>
-                </div>
+                </AnimatedSection>
 
                 <div className="relative max-w-5xl mx-auto mb-24 space-y-0">
                     {milestones.map((milestone, index) => (
@@ -140,23 +160,25 @@ const Roadmap = () => {
                 </div>
 
                 {/* Investor CTA */}
-                <div className="max-w-4xl mx-auto bg-gradient-to-r from-surface to-background border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none"></div>
+                <AnimatedSection>
+                    <div className="max-w-4xl mx-auto bg-gradient-to-r from-surface to-background border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none" />
 
-                    <div className="relative z-10">
-                        <h2 className="text-3xl font-heading font-bold text-white mb-4">For Investors</h2>
-                        <p className="text-text-secondary text-lg mb-8 max-w-2xl mx-auto">
-                            Interested in fueling the future of space infrastructure? Request our investor deck and detailed technical roadmap.
-                        </p>
-                        <Link
-                            to="/contact"
-                            className="inline-flex items-center px-8 py-4 bg-white text-black hover:bg-gray-200 rounded-full text-lg font-medium transition-all transform hover:scale-105"
-                        >
-                            Request Investor Materials
-                        </Link>
+                        <div className="relative z-10">
+                            <h2 className="text-3xl font-heading font-bold text-white mb-4">For Investors</h2>
+                            <p className="text-text-secondary text-lg mb-8 max-w-2xl mx-auto">
+                                Interested in fueling the future of space infrastructure? Request our investor deck and detailed technical roadmap.
+                            </p>
+                            <Link
+                                to="/contact"
+                                className="inline-flex items-center px-8 py-4 bg-white text-black hover:bg-gray-200 rounded-full text-lg font-medium transition-all transform hover:scale-105"
+                            >
+                                Request Investor Materials
+                            </Link>
+                        </div>
                     </div>
-                </div>
+                </AnimatedSection>
             </div>
         </div>
     );

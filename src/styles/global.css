@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-text-primary font-sans antialiased;
   }
@@ -16,6 +20,19 @@
   h5,
   h6 {
     @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    background-image: linear-gradient(to right, #0EA5E9, #22D3EE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient {
+    border-image: linear-gradient(to right, #0EA5E9, #22D3EE) 1;
   }
 }
 
@@ -36,6 +53,7 @@
 }
 
 :root {
-  --primary-color: #3B82F6;
-  --secondary-color: #8B5CF6;
+  --primary-color: #0EA5E9;
+  --secondary-color: #6366F1;
+  --accent-color: #22D3EE;
 }

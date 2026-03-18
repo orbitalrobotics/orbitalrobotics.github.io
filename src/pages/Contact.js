@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { FaEnvelope, FaMapMarkerAlt, FaLinkedinIn } from 'react-icons/fa';
 import SEO from '../components/SEO';
+import AnimatedSection from '../components/motion/AnimatedSection';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,16 +22,12 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Create mailto link with form data
     const subject = encodeURIComponent(formData.subject || 'Contact Form Submission');
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
 
-    // Open user's email client
     window.location.href = `mailto:info@orbital-robots.com?subject=${subject}&body=${body}`;
-
-    // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
@@ -40,16 +38,16 @@ const Contact = () => {
         description="Get in touch with Orbital Robotics. Contact our team for sales inquiries, investor relations, or career opportunities."
       />
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
+        <AnimatedSection className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-6">Contact Us</h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
             Ready to start your mission? Get in touch with our team.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
-          <div className="lg:w-1/3 space-y-8">
+          <AnimatedSection direction="left" className="lg:w-1/3 space-y-8">
             <div className="bg-surface p-8 rounded-2xl border border-white/5">
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
 
@@ -82,10 +80,10 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Contact Form */}
-          <div className="lg:w-2/3">
+          <AnimatedSection direction="right" className="lg:w-2/3">
             <form onSubmit={handleSubmit} className="bg-surface p-8 md:p-10 rounded-2xl border border-white/5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -97,7 +95,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:shadow-[0_0_0_1px_rgba(14,165,233,0.3)] transition-all"
                     placeholder="Your Name"
                   />
                 </div>
@@ -110,7 +108,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                    className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:shadow-[0_0_0_1px_rgba(14,165,233,0.3)] transition-all"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -123,7 +121,7 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                  className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:shadow-[0_0_0_1px_rgba(14,165,233,0.3)] transition-all"
                 >
                   <option value="">Select a topic</option>
                   <option value="Sales">Sales Inquiry</option>
@@ -142,19 +140,20 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="6"
-                  className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none"
+                  className="w-full bg-background border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:shadow-[0_0_0_1px_rgba(14,165,233,0.3)] transition-all resize-none"
                   placeholder="How can we help you?"
-                ></textarea>
+                />
               </div>
 
-              <button
+              <motion.button
                 type="submit"
+                whileTap={{ scale: 0.98 }}
                 className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-primary/25"
               >
                 Send Message
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </div>

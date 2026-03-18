@@ -16,17 +16,15 @@ const TechCrunchAnnouncement = () => {
                     <p className="text-text-secondary">November 24, 2025</p>
                 </div>
 
-                <div className="aspect-w-16 aspect-h-9 mb-12">
+                <div className="relative w-full mb-12" style={{ paddingBottom: '56.25%' }}>
                     <iframe
-                        width="560"
-                        height="315"
                         src="https://www.youtube.com/embed/B2yQrUy0n5s?si=kS0TDwIRv5lw6uSK&amp;start=2146"
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen
-                        className="w-full h-full rounded-2xl border border-white/10 shadow-2xl"
+                        className="absolute inset-0 w-full h-full rounded-2xl border border-white/10 shadow-2xl"
                     ></iframe>
                 </div>
 
