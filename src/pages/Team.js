@@ -15,6 +15,7 @@ import EricFeltImg from '../assets/images/headshots/EricFelt.jpg';
 import ChrisImg from '../assets/images/headshots/Christopher_Sembroski.jpg';
 import TolgaImg from '../assets/images/headshots/Tolga_Ors.jpeg';
 import TaylorImg from '../assets/images/headshots/TaylorBanks.jpeg';
+import WillImg from '../assets/images/headshots/will.jpg';
 
 const TeamMember = ({ name, role, image, bio, linkedin, email }) => (
   <motion.div
@@ -79,6 +80,14 @@ const Team = () => {
       bio: "Builds the autonomous software stack (ASTRA-P, NavIQ). Sohil has experience integrating AI/ML with real world rocket engines hotfires.",
       linkedin: "https://www.linkedin.com/in/sohil-pokharna/",
       email: "spokharna@orbital-robots.com"
+    },
+    {
+      name: "William Liu",
+      role: "Chief of Staff",
+      image: WillImg,
+      bio: "Experienced in operations and strategy across fintech and small team startups. William has launched multiple products and automated workflows with a data-heavy, people-first approach.",
+      linkedin: "https://www.linkedin.com/in/liu-william/",
+      email: "wliu@orbital-robots.com"
     }
   ];
 

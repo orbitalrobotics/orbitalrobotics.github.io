@@ -111,14 +111,14 @@ const News = () => {
         description="Latest updates, press releases, and media coverage for Orbital Robotics."
       />
       <div className="container mx-auto px-6">
-        <AnimatedSection className="text-center mb-20">
+        <AnimatedSection className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-6">News & Updates</h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
             Stay up to date with our latest milestones and media appearances.
           </p>
         </AnimatedSection>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <StaggerContainer amount={0.05} className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {newsItems.map((item, index) => (
             <motion.a
               key={index}
