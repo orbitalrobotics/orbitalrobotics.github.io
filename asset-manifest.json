@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.ddf76c1a.css",
-    "main.js": "/static/js/main.34473e9a.js",
+    "main.js": "/static/js/main.a718a25d.js",
     "static/media/pose_estimation_fast.mp4": "/static/media/pose_estimation_fast.74c7d186b40b4eda0d8b.mp4",
     "static/media/Home_Page.mp4": "/static/media/Home_Page.0a819c24f84bf8f43a77.mp4",
     "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.9d4ac8885111319449fd.mp4",
     "static/media/ar3_catch.mp4": "/static/media/ar3_catch.31d49ba1a6e46ac96d52.mp4",
     "static/media/point_control.gif": "/static/media/point_control.8c629b2615ea1649279a.gif",
+    "static/media/sohil.png": "/static/media/sohil.01c80abd2deda629f997.png",
     "static/media/in_space_segmentation_compressed.mp4": "/static/media/in_space_segmentation_compressed.c4bf4fabeb000c7b4177.mp4",
     "static/media/multi-agent-inspection (1).gif": "/static/media/multi-agent-inspection (1).2f155b9f2d1721dacaa1.gif",
     "static/media/hubble_capture_compressed.mp4": "/static/media/hubble_capture_compressed.651e4c24d5549d1712c1.mp4",
@@ -37,7 +38,6 @@
     "static/media/save_hubble_servicing.png": "/static/media/save_hubble_servicing.ec1e0546ce268736ff51.png",
     "static/media/save_hubble_robotic_arm.png": "/static/media/save_hubble_robotic_arm.0090c00820794dc1daa6.png",
     "static/media/save_hubble_preview.png": "/static/media/save_hubble_preview.4c641330a7ee40b81ce6.png",
-    "static/media/sohil.jpeg": "/static/media/sohil.26da4753de5b277bc37f.jpeg",
     "static/media/orbitalcomposites.png": "/static/media/orbitalcomposites.95d04d81777a9d5f1685.png",
     "static/media/Wilson Sonsini.png": "/static/media/Wilson Sonsini.56b5efdc9af118ccd71e.png",
     "static/media/logo_white.png": "/static/media/logo_white.60a8ecfca744f903bb53.png",
@@ -51,10 +51,10 @@
     "static/media/Matrix.avif": "/static/media/Matrix.666a271bdf1adbc49a04.avif",
     "index.html": "/index.html",
     "main.ddf76c1a.css.map": "/static/css/main.ddf76c1a.css.map",
-    "main.34473e9a.js.map": "/static/js/main.34473e9a.js.map"
+    "main.a718a25d.js.map": "/static/js/main.a718a25d.js.map"
   },
   "entrypoints": [
     "static/css/main.ddf76c1a.css",
-    "static/js/main.34473e9a.js"
+    "static/js/main.a718a25d.js"
   ]
 }
