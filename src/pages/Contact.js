@@ -85,7 +85,7 @@ const Contact = () => {
               <div className="border-t border-white/10 pt-6">
                 <p className="text-text-muted text-sm mb-4">Follow Us</p>
                 <div className="flex space-x-4">
-                  <a href="https://www.linkedin.com/company/orbital-robotics-corp/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white hover:bg-primary transition-all">
+                  <a href="https://www.linkedin.com/company/orbital-robotics-corp/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white hover:bg-primary transition-all">
                     <FaLinkedinIn />
                   </a>
                 </div>

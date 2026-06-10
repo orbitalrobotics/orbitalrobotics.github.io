@@ -51,7 +51,7 @@ const Footer = () => {
               <p className="text-text-secondary text-sm mb-6">Seattle, Washington</p>
               <div className="flex space-x-4">
                 <a
-                  href="https://www.linkedin.com/company/orbital-robotics-corp/posts/?feedView=all"
+                  href="https://www.linkedin.com/company/orbital-robotics-corp/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Orbital Robotics on LinkedIn"
