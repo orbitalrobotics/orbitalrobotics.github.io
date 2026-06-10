@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import useInView from './useInView';
+import { ease, duration as dur } from '../../utils/motionTokens';
 
 const directionOffsets = {
   up: { y: 40 },
@@ -13,7 +14,7 @@ const AnimatedSection = ({
   children,
   direction = 'up',
   delay = 0,
-  duration = 0.6,
+  duration = dur.base,
   className = '',
   once = true,
   amount = 0.3,
@@ -31,7 +32,7 @@ const AnimatedSection = ({
       transition={{
         duration,
         delay,
-        ease: [0.25, 0.1, 0.25, 1],
+        ease: ease.standard,
       }}
       className={className}
     >

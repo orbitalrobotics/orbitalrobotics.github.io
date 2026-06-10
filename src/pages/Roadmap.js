@@ -99,7 +99,7 @@ const Roadmap = () => {
             year: "2025",
             quarter: "Q4",
             title: "Pre-Seed Funding",
-            description: "Secured initial capital to accelerate R&D of core robotic arm technology and SatelliteOS.",
+            description: "Secured initial capital to accelerate R&D of core robotic arm technology and OrbitOS.",
             status: "completed"
         },
         {
@@ -112,7 +112,7 @@ const Roadmap = () => {
         {
             year: "2026",
             quarter: "Q3",
-            title: "Satellite OS & First Mission",
+            title: "OrbitOS & First Mission",
             description: "First in-space mission using our robotic arm and AI-powered software to perform autonomous operations on a customer satellite.",
             status: "upcoming"
         },
@@ -146,39 +146,44 @@ const Roadmap = () => {
                 description="Follow Orbital Robotics' journey and future milestones as we build the infrastructure for the space economy."
             />
             <div className="container mx-auto px-6">
-                <AnimatedSection className="text-center mb-20">
+                <AnimatedSection className="text-center mb-12">
                     <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-6">Strategic Roadmap</h1>
                     <p className="text-xl text-text-secondary max-w-3xl mx-auto">
                         Our path to building the essential infrastructure for the orbital economy.
                     </p>
                 </AnimatedSection>
 
-                <div className="relative max-w-5xl mx-auto mb-24 space-y-0">
+                {/* Compact horizontal milestone strip: scannable summary above the detailed timeline */}
+                <AnimatedSection className="max-w-5xl mx-auto mb-20">
+                    <div className="bg-surface/40 border border-white/5 rounded-2xl px-6 py-6">
+                        <div className="text-xs uppercase tracking-widest text-text-secondary text-center mb-6">At a Glance</div>
+                        <div className="relative">
+                            <div className="absolute top-[7px] left-2 right-2 h-px bg-gradient-to-r from-primary/40 via-white/10 to-white/5" />
+                            <div className="relative flex items-start justify-between gap-3 overflow-x-auto pb-2">
+                                {milestones.map((m, i) => {
+                                    const dot = m.status === 'completed'
+                                        ? 'bg-primary shadow-[0_0_8px_rgba(14,165,233,0.6)]'
+                                        : m.status === 'current'
+                                            ? 'bg-white animate-pulse'
+                                            : 'bg-white/30';
+                                    return (
+                                        <div key={i} className="flex flex-col items-center text-center min-w-[88px] flex-shrink-0">
+                                            <div className={`w-3 h-3 rounded-full border border-white/20 ${dot}`} />
+                                            <div className="text-[10px] font-bold tracking-wider text-text-muted uppercase mt-3 whitespace-nowrap">{m.year} {m.quarter}</div>
+                                            <div className="text-xs text-white mt-1 max-w-[100px] leading-tight">{m.title}</div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </AnimatedSection>
+
+                <div className="relative max-w-5xl mx-auto space-y-0">
                     {milestones.map((milestone, index) => (
                         <RoadmapItem key={index} {...milestone} index={index} />
                     ))}
                 </div>
-
-                {/* Investor CTA */}
-                <AnimatedSection>
-                    <div className="max-w-4xl mx-auto bg-gradient-to-r from-surface to-background border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
-                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none" />
-
-                        <div className="relative z-10">
-                            <h2 className="text-3xl font-heading font-bold text-white mb-4">For Investors</h2>
-                            <p className="text-text-secondary text-lg mb-8 max-w-2xl mx-auto">
-                                Interested in fueling the future of space infrastructure? Request our investor deck and detailed technical roadmap.
-                            </p>
-                            <Link
-                                to="/contact"
-                                className="inline-flex items-center px-8 py-4 bg-white text-black hover:bg-gray-200 rounded-full text-lg font-medium transition-all transform hover:scale-105"
-                            >
-                                Request Investor Materials
-                            </Link>
-                        </div>
-                    </div>
-                </AnimatedSection>
             </div>
         </div>
     );

@@ -1,17 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ease, duration } from '../../utils/motionTokens';
 
 const pageVariants = {
-  initial: { opacity: 0, y: 20 },
+  initial: { opacity: 0, y: 16 },
   animate: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] },
+    transition: { duration: duration.base, ease: ease.standard },
   },
   exit: {
     opacity: 0,
     y: -10,
-    transition: { duration: 0.2 },
+    transition: { duration: duration.fast, ease: ease.exit },
   },
 };
 

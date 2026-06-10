@@ -45,7 +45,8 @@ const Partners = () => {
                             <img
                                 src={partner.logo}
                                 alt={partner.name}
-                                className={`max-h-16 max-w-full object-contain opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500 ${partner.name === 'Sophia Space' ? 'scale-150' : ''}`}
+                                loading="lazy"
+                                className="max-h-16 max-w-full object-contain opacity-60 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 hover:brightness-110"
                             />
                         </div>
                     ))}
@@ -55,7 +56,8 @@ const Partners = () => {
                             <img
                                 src={partner.logo}
                                 alt={partner.name}
-                                className={`max-h-16 max-w-full object-contain opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500 ${partner.name === 'Sophia Space' ? 'scale-150' : ''}`}
+                                loading="lazy"
+                                className="max-h-16 max-w-full object-contain opacity-60 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 hover:brightness-110"
                             />
                         </div>
                     ))}

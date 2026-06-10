@@ -1,57 +1,68 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from "../assets/images/logo_white.png";
+import { FaBars, FaTimes } from 'react-icons/fa';
+import Logo from '../assets/images/logo_white.png';
+import ProductDropdown from './ProductDropdown';
+import Button from './ui/Button';
+import { ease } from '../utils/motionTokens';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close on route change.
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
 
-  const navLinks = [
-    { name: 'Products', path: '/products' },
-    { name: 'Roadmap', path: '/roadmap' },
+  // Escape closes the mobile menu.
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const onKey = (e) => e.key === 'Escape' && setIsOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isOpen]);
+
+  const simpleLinks = [
     { name: 'Team', path: '/team' },
     { name: 'News', path: '/news' },
   ];
+  const mobileLinks = [{ name: 'Products', path: '/products' }, ...simpleLinks];
+  const productsActive = location.pathname.startsWith('/products');
 
   return (
     <>
       <motion.header
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-        className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/80 backdrop-blur-xl py-4 shadow-lg shadow-black/20' : 'bg-transparent py-6'}`}
+        transition={{ duration: 0.6, ease: ease.standard }}
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          scrolled ? 'bg-background/80 backdrop-blur-xl py-4 shadow-lg shadow-black/20' : 'bg-transparent py-6'
+        }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <Link to="/" className="z-50">
+          <Link to="/" className="z-50" aria-label="Orbital Robotics home">
             <img src={Logo} alt="Orbital Robotics" className="h-10 md:h-12" />
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            <ProductDropdown active={productsActive} />
+            {simpleLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`relative ${location.pathname === link.path ? 'text-primary' : 'text-text-secondary'} hover:text-primary transition-colors font-medium`}
+                className={`relative ${
+                  location.pathname === link.path ? 'text-primary' : 'text-text-secondary'
+                } hover:text-primary transition-colors font-medium`}
               >
                 {link.name}
                 {location.pathname === link.path && (
@@ -63,18 +74,17 @@ function Header() {
                 )}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="px-6 py-2 bg-primary hover:bg-primary-hover text-white rounded-full transition-all transform hover:scale-105 font-medium hover:shadow-lg hover:shadow-primary/25"
-            >
+            <Button to="/contact" size="sm" className="px-6">
               Get in Touch
-            </Link>
+            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white text-2xl z-50 focus:outline-none"
-            onClick={toggleDropdown}
+            className="lg:hidden text-white text-2xl z-50"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isOpen}
           >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -85,13 +95,16 @@ function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site navigation"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 lg:hidden pt-24 pb-10 overflow-y-auto"
           >
-            {navLinks.map((link, index) => (
+            {mobileLinks.map((link, index) => (
               <motion.div
                 key={link.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -100,7 +113,9 @@ function Header() {
               >
                 <Link
                   to={link.path}
-                  className={`text-2xl font-medium hover:text-primary transition-colors ${location.pathname === link.path ? 'text-primary' : 'text-white'}`}
+                  className={`text-2xl font-medium hover:text-primary transition-colors ${
+                    location.pathname === link.path ? 'text-primary' : 'text-white'
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -110,15 +125,11 @@ function Header() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + navLinks.length * 0.05, duration: 0.3 }}
+              transition={{ delay: 0.1 + mobileLinks.length * 0.05, duration: 0.3 }}
             >
-              <Link
-                to="/contact"
-                className="px-8 py-3 bg-primary hover:bg-primary-hover text-white rounded-full text-xl font-medium transition-all transform hover:scale-105"
-                onClick={() => setIsOpen(false)}
-              >
+              <Button to="/contact" size="lg" onClick={() => setIsOpen(false)}>
                 Get in Touch
-              </Link>
+              </Button>
             </motion.div>
           </motion.div>
         )}

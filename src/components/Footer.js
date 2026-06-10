@@ -25,10 +25,11 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Products</h4>
               <ul className="space-y-3">
-                <li><Link to="/products" className="text-text-secondary hover:text-primary transition-colors text-sm">Robotic Arms</Link></li>
-                <li><Link to="/products" className="text-text-secondary hover:text-primary transition-colors text-sm">SatelliteOS</Link></li>
-                <li><Link to="/products" className="text-text-secondary hover:text-primary transition-colors text-sm">NavIQ</Link></li>
-                <li><Link to="/products" className="text-text-secondary hover:text-primary transition-colors text-sm">AstroBot</Link></li>
+                <li><Link to="/products/robotic-arms" className="text-text-secondary hover:text-primary transition-colors text-sm">Robotic Arms</Link></li>
+                <li><Link to="/products/astrobot" className="text-text-secondary hover:text-primary transition-colors text-sm">AstroBot</Link></li>
+                <li><Link to="/products/astrap" className="text-text-secondary hover:text-primary transition-colors text-sm">ASTRA-P</Link></li>
+                <li><Link to="/products/naviq" className="text-text-secondary hover:text-primary transition-colors text-sm">NavIQ</Link></li>
+                <li><Link to="/products/satellite-os" className="text-text-secondary hover:text-primary transition-colors text-sm">OrbitOS</Link></li>
               </ul>
             </div>
 
@@ -37,7 +38,7 @@ const Footer = () => {
               <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Company</h4>
               <ul className="space-y-3">
                 <li><Link to="/team" className="text-text-secondary hover:text-primary transition-colors text-sm">Team</Link></li>
-                <li><Link to="/roadmap" className="text-text-secondary hover:text-primary transition-colors text-sm">Roadmap</Link></li>
+                {/* <li><Link to="/roadmap" className="text-text-secondary hover:text-primary transition-colors text-sm">Roadmap</Link></li> */}
                 <li><Link to="/news" className="text-text-secondary hover:text-primary transition-colors text-sm">News</Link></li>
                 <li><Link to="/contact" className="text-text-secondary hover:text-primary transition-colors text-sm">Contact</Link></li>
               </ul>
@@ -47,12 +48,13 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Get in Touch</h4>
               <p className="text-text-secondary text-sm mb-2">info@orbital-robots.com</p>
-              <p className="text-text-secondary text-sm mb-6">Puyallup, Washington</p>
+              <p className="text-text-secondary text-sm mb-6">Seattle, Washington</p>
               <div className="flex space-x-4">
                 <a
                   href="https://www.linkedin.com/company/orbital-robotics-corp/posts/?feedView=all"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Orbital Robotics on LinkedIn"
                   className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-text-secondary hover:bg-primary hover:text-white transition-all"
                 >
                   <FaLinkedinIn />

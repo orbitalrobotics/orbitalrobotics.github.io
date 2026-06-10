@@ -1,14 +1,15 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import useInView from './useInView';
+import { ease, duration as dur, stagger } from '../../utils/motionTokens';
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
+      staggerChildren: stagger.children,
+      delayChildren: stagger.delay,
     },
   },
 };
@@ -19,8 +20,8 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
-      ease: [0.25, 0.1, 0.25, 1],
+      duration: dur.base,
+      ease: ease.standard,
     },
   },
 };

@@ -230,7 +230,7 @@ const Home = () => {
               <img
                 src={RoboticArmBlackImg}
                 alt="Robotic Arm"
-                className="rounded-2xl shadow-2xl border border-white/10 hover:shadow-primary/20 transition-shadow duration-500"
+                className="rounded-2xl shadow-2xl border border-white/10 hover:shadow-[#0EA5E9]/20 transition-shadow duration-500"
               />
             </div>
             <div className="md:w-1/2 md:pl-10">
@@ -241,21 +241,21 @@ const Home = () => {
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-text-primary">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3" />
+                  <div className="w-2 h-2 bg-[#0EA5E9] rounded-full mr-3" />
                   7 Degrees of Freedom
                 </li>
                 <li className="flex items-center text-text-primary">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3" />
+                  <div className="w-2 h-2 bg-[#0EA5E9] rounded-full mr-3" />
                   Autonomous Grappling
                 </li>
                 <li className="flex items-center text-text-primary">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3" />
+                  <div className="w-2 h-2 bg-[#0EA5E9] rounded-full mr-3" />
                   Modular Interface
                 </li>
               </ul>
               <Link
                 to="/products"
-                className="text-primary font-medium hover:text-primary-hover flex items-center group"
+                className="text-[#0EA5E9] font-medium hover:text-[#0284C7] flex items-center group"
               >
                 Learn more about Hardware
                 <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
@@ -269,7 +269,7 @@ const Home = () => {
               <img
                 src={SatelliteOSImg}
                 alt="SatelliteOS"
-                className="rounded-2xl shadow-2xl border border-white/10 hover:shadow-secondary/20 transition-shadow duration-500"
+                className="rounded-2xl shadow-2xl border border-white/10 hover:shadow-[#6366F1]/20 transition-shadow duration-500"
               />
             </div>
             <div className="md:w-1/2 md:pr-10">
@@ -280,21 +280,21 @@ const Home = () => {
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-text-primary">
-                  <div className="w-2 h-2 bg-secondary rounded-full mr-3" />
+                  <div className="w-2 h-2 bg-[#6366F1] rounded-full mr-3" />
                   Real-time Telemetry
                 </li>
                 <li className="flex items-center text-text-primary">
-                  <div className="w-2 h-2 bg-secondary rounded-full mr-3" />
+                  <div className="w-2 h-2 bg-[#6366F1] rounded-full mr-3" />
                   AI-driven Navigation
                 </li>
                 <li className="flex items-center text-text-primary">
-                  <div className="w-2 h-2 bg-secondary rounded-full mr-3" />
+                  <div className="w-2 h-2 bg-[#6366F1] rounded-full mr-3" />
                   Secure Communications
                 </li>
               </ul>
               <Link
                 to="/products"
-                className="text-secondary font-medium hover:text-secondary-glow flex items-center group"
+                className="text-[#6366F1] font-medium hover:text-[#818CF8] flex items-center group"
               >
                 Learn more about Software
                 <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
