@@ -364,25 +364,6 @@ const ProductDetailTemplate = ({ product }) => {
         </DetailSection>
       )}
 
-      {/* Why Us */}
-      {whyUs && whyUs.length > 0 && (
-        <section className="py-12 bg-background border-y border-white/5">
-          <div className="container mx-auto px-6">
-            <AnimatedSection className="text-center mb-8">
-              <h3 className="text-2xl font-heading font-bold text-white">Why Orbital Robotics</h3>
-            </AnimatedSection>
-            <div className={`grid grid-cols-1 ${whyUs.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'} gap-6 max-w-5xl mx-auto`}>
-              {whyUs.map((item, index) => (
-                <div key={index} className="bg-surface/50 border border-white/[0.06] rounded-xl p-6">
-                  <h4 className="text-base font-bold text-white mb-2">{item.title}</h4>
-                  <p className="text-text-secondary text-sm leading-relaxed">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* CTA */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">

@@ -112,7 +112,7 @@ const Products = () => {
     <div className="min-h-screen bg-background pt-[var(--header-height)] pb-20">
       <SEO
         title="Products"
-        description="Explore Orbital Robotics' hardware and software: the ORA robotic arm family, AstroBot refueling vehicle, ASTRA-P autonomous GNC, NavIQ computer vision, and OrbitOS flight software."
+        description="Explore Orbital Robotics' hardware and software: the ORA robotic arm family, AstroBot refueling vehicle, ASTRA-P autonomous GNC, NavIQ computer vision, and ORBtos flight software."
       />
       <div className="container mx-auto px-6">
         <AnimatedSection className="text-center mb-20 pt-10">

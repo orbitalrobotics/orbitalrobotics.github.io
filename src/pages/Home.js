@@ -268,12 +268,12 @@ const Home = () => {
             <div className="md:w-1/2 mb-10 md:mb-0 md:pl-10">
               <img
                 src={SatelliteOSImg}
-                alt="SatelliteOS"
+                alt="ORBtos"
                 className="rounded-2xl shadow-2xl border border-white/10 hover:shadow-[#6366F1]/20 transition-shadow duration-500"
               />
             </div>
             <div className="md:w-1/2 md:pr-10">
-              <h3 className="text-3xl font-bold text-white mb-4">SatelliteOS</h3>
+              <h3 className="text-3xl font-bold text-white mb-4">ORBtos</h3>
               <p className="text-text-secondary text-lg mb-6">
                 The intelligent operating system for next-generation spacecraft.
                 Enabling autonomous navigation, constellation management, and real-time data processing.
