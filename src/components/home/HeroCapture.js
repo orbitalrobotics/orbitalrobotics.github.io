@@ -146,8 +146,7 @@ const HeroCapture = ({ onSeeSystem }) => {
             className="text-lg md:text-xl text-text-secondary max-w-2xl mb-8"
           >
             Autonomous robotic arms that rendezvous with, capture, and service spacecraft in
-            orbit. Every maneuver you're watching was computed by our flight software — nothing
-            is animated by hand.
+            orbit. Every maneuver you're watching was computed by our flight software.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
