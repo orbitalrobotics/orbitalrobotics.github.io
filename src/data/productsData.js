@@ -91,7 +91,7 @@ export const hardwareProducts = [
         title: "Robotic Arms",
         category: "Hardware",
         featured: true,
-        highlights: ["7-DOF", "Radiation-tolerant", "Flight-proven ×6"],
+        highlights: ["7-DOF", "Radiation-tolerant", "Mission-customizable"],
         tagline: "Our 7-DOF flight arm family: ORA-Astrosfera (flagship), ORA-Mini, and ORA-Giga.",
         description: "Our robotic arms perform the physical work in orbit: capture, manipulation, and servicing. Paired with NavIQ for perception and ASTRA-P for autonomous guidance and control, they form a complete autonomous capture and servicing system.",
         image: OraAstrosferaImg,
@@ -102,7 +102,7 @@ export const hardwareProducts = [
                 name: "ORA-Astrosfera",
                 badge: "Flagship",
                 image: OraAstrosferaImg,
-                description: "The 7-DOF flight arm. Radiation-tolerant, mission-customizable, and flight-proven across six NASA-affiliated programs."
+                description: "The 7-DOF flight arm. Radiation-tolerant and mission-customizable."
             },
             {
                 name: "ORA-Mini",
@@ -153,7 +153,7 @@ export const softwareProducts = [
         ],
         whyUs: [
             { title: "Modular by design", description: "Compose mission logic from reusable components instead of building a flight stack from scratch." },
-            { title: "Stack-native", description: "Hosts our flight-proven ASTRA-P and NavIQ modules out of the box." },
+            { title: "Stack-native", description: "Hosts our ASTRA-P and NavIQ modules out of the box." },
             { title: "Bus-agnostic", description: "Designed to run on any spacecraft bus with limited on-site integration." }
         ]
     },
