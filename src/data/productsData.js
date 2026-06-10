@@ -147,6 +147,15 @@ export const softwareProducts = [
         tagline: "Our flight operating system. Hosts NavIQ and ASTRA-P natively on any spacecraft bus.",
         description: "ORBtos is our flight software platform. It runs NavIQ (perception) and ASTRA-P (autonomous guidance and control) as native modules, letting any spacecraft bus run the full Orbital Robotics autonomous stack with minimal integration.",
         image: SatelliteOSImg,
+        features: [
+            { title: "Real-time scheduling & message passing", description: "Comparable to ROS2, SpaceROS, FPrime, and cFS." },
+            { title: "Orbit determination and control", description: "On-board orbit determination and control loops." },
+            { title: "Command handling", description: "Spacecraft command receipt, validation, and execution." },
+            { title: "Telemetry handling", description: "Collection, packing, and downlink of spacecraft telemetry." },
+            { title: "Ground communications", description: "Communication links between the spacecraft and ground stations." },
+            { title: "ADCS software", description: "Attitude determination and control software." },
+            { title: "Simulator integration", description: "Integrates with our high-fidelity simulator for software-in-the-loop testing." }
+        ],
         relatedProducts: [
             { id: 'astrap', label: 'Hosts ASTRA-P', context: 'Autonomous GNC runs natively as an ORBtos module.' },
             { id: 'naviq', label: 'Hosts NavIQ', context: 'Computer vision runs natively as an ORBtos module.' }
