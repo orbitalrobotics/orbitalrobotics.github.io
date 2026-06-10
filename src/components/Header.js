@@ -31,9 +31,9 @@ function Header() {
   }, [isOpen]);
 
   const navLinks = [
-    { name: 'Products', path: '/products' },
-    { name: 'Team', path: '/team' },
-    { name: 'News', path: '/news' },
+    { name: 'SYSTEMS', path: '/products' },
+    { name: 'CREW', path: '/team' },
+    { name: 'MISSION LOG', path: '/news' },
   ];
   const isActive = (path) =>
     path === '/products' ? location.pathname.startsWith('/products') : location.pathname === path;
@@ -44,8 +44,10 @@ function Header() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: ease.standard }}
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          scrolled ? 'bg-background/80 backdrop-blur-xl py-4 shadow-lg shadow-black/20' : 'bg-transparent py-6'
+        className={`fixed w-full z-50 transition-all duration-300 border-b ${
+          scrolled
+            ? 'bg-background/85 backdrop-blur-xl py-4 border-white/[0.08]'
+            : 'bg-transparent py-6 border-transparent'
         }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
@@ -55,21 +57,21 @@ function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center">
-            <div className="flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-xl p-1.5">
+            <div className="flex items-center gap-1 border hairline bg-black/40 backdrop-blur-xl p-1">
               {navLinks.map((link) => {
                 const active = isActive(link.path);
                 return (
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`relative px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                    className={`relative px-5 py-2 font-mono text-xs uppercase tracking-[0.12em] transition-colors ${
                       active ? 'text-white' : 'text-text-secondary hover:text-white'
                     }`}
                   >
                     {active && (
                       <motion.div
                         layoutId="nav-pill"
-                        className="absolute inset-0 rounded-full bg-white/10 border border-white/10"
+                        className="absolute inset-0 bg-white/10 border border-white/10"
                         transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                       />
                     )}
@@ -79,9 +81,9 @@ function Header() {
               })}
               <Link
                 to="/contact"
-                className="ml-1 px-5 py-2 rounded-full text-sm font-semibold bg-primary text-white hover:bg-primary-hover transition-colors shadow-lg shadow-primary/20"
+                className="ml-1 px-5 py-2 font-mono text-xs uppercase tracking-[0.12em] bg-primary text-white hover:bg-primary-hover transition-colors"
               >
-                Get in Touch
+                First Contact
               </Link>
             </div>
           </nav>
@@ -120,8 +122,8 @@ function Header() {
               >
                 <Link
                   to={link.path}
-                  className={`text-2xl font-medium hover:text-primary transition-colors ${
-                    location.pathname === link.path ? 'text-primary' : 'text-white'
+                  className={`font-mono text-xl uppercase tracking-[0.14em] hover:text-accent transition-colors ${
+                    location.pathname === link.path ? 'text-accent' : 'text-white'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -135,7 +137,7 @@ function Header() {
               transition={{ delay: 0.1 + navLinks.length * 0.05, duration: 0.3 }}
             >
               <Button to="/contact" size="lg" onClick={() => setIsOpen(false)}>
-                Get in Touch
+                First Contact
               </Button>
             </motion.div>
           </motion.div>

@@ -39,7 +39,7 @@ const FeaturedCard = ({ item }) => (
   <AnimatedSection className="mb-12">
     <CardShell
       link={item.link}
-      className="group grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden border border-white/10 bg-surface hover:border-primary/40 hover:shadow-elev-2 transition-all"
+      className="group grid grid-cols-1 md:grid-cols-2 rounded-panel overflow-hidden border hairline bg-surface hover:border-white/[0.16] hover:shadow-elev-2 transition-all"
     >
       <div className="relative h-64 md:h-full min-h-[18rem] overflow-hidden">
         <img
@@ -53,9 +53,9 @@ const FeaturedCard = ({ item }) => (
       <div className="p-8 md:p-10 flex flex-col justify-center">
         <div className="flex items-center gap-3 mb-3">
           <Eyebrow tone="ember">Featured</Eyebrow>
-          <span className="text-text-muted text-xs uppercase tracking-wider">{item.source}</span>
+          <span className="type-mono-label text-text-muted">{item.source}</span>
         </div>
-        <h2 className="text-h3 font-heading text-white mb-4 group-hover:text-primary transition-colors">{item.title}</h2>
+        <h2 className="text-h3 font-heading text-white mb-4 group-hover:text-accent transition-colors">{item.title}</h2>
         <p className="text-text-secondary mb-6 line-clamp-4">{item.summary}</p>
         <span className="text-white font-medium group-hover:text-primary transition-colors inline-flex items-center gap-2">
           Read article <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -69,7 +69,7 @@ const NewsCard = ({ item }) => (
   <motion.div variants={itemVariants} whileHover={{ y: -4 }} className="h-full">
     <CardShell
       link={item.link}
-      className="group h-full bg-surface rounded-xl overflow-hidden border border-white/10 hover:border-primary/40 hover:shadow-elev-2 transition-all flex flex-col"
+      className="group h-full bg-surface rounded-panel overflow-hidden border hairline hover:border-white/[0.16] hover:shadow-elev-2 transition-all flex flex-col"
     >
       <div className="h-44 overflow-hidden relative">
         <img
@@ -82,7 +82,7 @@ const NewsCard = ({ item }) => (
       </div>
       <div className="p-6 flex-1 flex flex-col">
         <Eyebrow className="mb-2">{item.source}</Eyebrow>
-        <h2 className="text-lg font-heading font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-3">
+        <h2 className="text-lg font-heading font-bold text-white mb-3 group-hover:text-accent transition-colors line-clamp-3">
           {item.title}
         </h2>
         <p className="text-text-secondary text-sm mb-5 flex-1 line-clamp-3">{item.summary}</p>
@@ -206,14 +206,14 @@ const News = () => {
   const [featured, ...rest] = newsItems;
 
   return (
-    <div className="min-h-screen bg-background pt-[var(--header-height)] pb-20">
-      <SEO title="News" description="Latest updates, press releases, and media coverage for Orbital Robotics." />
+    <div className="min-h-screen bg-background pb-20">
+      <SEO title="Mission Log" description="Latest updates, press releases, and media coverage for Orbital Robotics." />
       <div className="container mx-auto px-6">
         <AnimatedSection className="max-w-3xl mb-12 pt-10">
-          <Eyebrow className="mb-4">News &amp; Press</Eyebrow>
-          <h1 className="text-h1 font-heading text-white mb-5">Latest milestones and media coverage</h1>
+          <Eyebrow className="mb-4">MISSION LOG</Eyebrow>
+          <h1 className="type-display text-h1 text-white mb-5">Mission log</h1>
           <p className="text-xl text-text-secondary">
-            Stay up to date with our latest milestones, partnerships, and media appearances.
+            Milestones, partnerships, and media coverage — dated and on the record.
           </p>
         </AnimatedSection>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Section kicker: uppercase, tracked label. Defaults to the signal accent.
+// Section kicker: mono uppercase tracked label. Defaults to the signal accent.
 const tones = {
   signal: 'text-primary',
   ember: 'text-ember',
@@ -8,7 +8,7 @@ const tones = {
 };
 
 const Eyebrow = ({ as: Tag = 'div', tone = 'signal', className = '', children }) => (
-  <Tag className={`text-eyebrow font-semibold uppercase ${tones[tone] || tones.signal} ${className}`}>
+  <Tag className={`font-mono text-eyebrow uppercase ${tones[tone] || tones.signal} ${className}`}>
     {children}
   </Tag>
 );

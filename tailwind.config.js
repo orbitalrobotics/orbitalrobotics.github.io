@@ -6,17 +6,19 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Outfit', 'sans-serif'],
+        sans: ['"Inter"', 'sans-serif'],
+        heading: ['"Archivo Variable"', '"Archivo"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
-      // Fluid type scale (clamp) with a real weight hierarchy.
+      // Instrument type scale: huge expanded-uppercase display, locked body,
+      // mono micro-labels. Hierarchy comes from scale jumps, never color.
       fontSize: {
-        display: ['clamp(2.75rem, 6vw, 5rem)', { lineHeight: '1.04', letterSpacing: '-0.03em', fontWeight: '700' }],
-        h1: ['clamp(2.25rem, 5vw, 3.75rem)', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
-        h2: ['clamp(1.75rem, 4vw, 2.75rem)', { lineHeight: '1.15', letterSpacing: '-0.01em', fontWeight: '600' }],
-        h3: ['clamp(1.25rem, 3vw, 1.75rem)', { lineHeight: '1.3', fontWeight: '500' }],
+        display: ['clamp(3.25rem, 8vw, 7.5rem)', { lineHeight: '0.95', letterSpacing: '-0.01em', fontWeight: '800' }],
+        h1: ['clamp(2.5rem, 6vw, 5rem)', { lineHeight: '1.0', letterSpacing: '-0.01em', fontWeight: '800' }],
+        h2: ['clamp(2rem, 4.5vw, 3.5rem)', { lineHeight: '1.05', letterSpacing: '-0.01em', fontWeight: '800' }],
+        h3: ['clamp(1.25rem, 3vw, 1.75rem)', { lineHeight: '1.25', fontWeight: '700' }],
         eyebrow: ['0.8125rem', { lineHeight: '1', letterSpacing: '0.16em' }],
+        micro: ['0.6875rem', { lineHeight: '1.4', letterSpacing: '0.14em' }],
       },
       colors: {
         // Near-black foundation + neutral surface tiers (industrial, no purple tint).
@@ -25,25 +27,22 @@ module.exports = {
           DEFAULT: '#0A0B0F',
           light: '#15171D',
         },
-        // ONE confident blue signal accent (refined, less neon than the old #0EA5E9).
+        // ONE signal accent: interactive + HUD only. Hover BRIGHTENS (instruments
+        // brighten, they don't darken).
         primary: {
           DEFAULT: '#2E8BE6',
-          hover: '#1F6FBF',
-          glow: 'rgba(46, 165, 233, 0.35)',
+          hover: '#56A8EE',
         },
-        // Lighter blue used only for gradient sheen (keeps gradients monochromatic).
         accent: '#56A8EE',
-        'accent-glow': 'rgba(86, 168, 238, 0.30)',
-        // Indigo retired -> muted steel-blue so legacy `secondary` usages stay coherent.
+        // Steel-blue kept for legacy `secondary` usages.
         secondary: {
           DEFAULT: '#3B6FA0',
-          glow: 'rgba(59, 111, 160, 0.35)',
         },
-        // ONE warm instrument accent, reserved for status / flight-heritage / data callouts.
+        // ONE warm instrument accent — sacred: heritage, COMPLETE, CAPTURE
+        // CONFIRMED, availability. Nothing else.
         ember: {
           DEFAULT: '#E0701A',
-          hover: '#C25E12',
-          glow: 'rgba(224, 112, 26, 0.30)',
+          hover: '#F08A35',
           subtle: 'rgba(224, 112, 26, 0.12)',
         },
         // 8-step technical-neutral ramp.
@@ -60,7 +59,7 @@ module.exports = {
           900: '#101216',
           950: '#070809',
         },
-        // Semantic status colors.
+        // Status as literal mono words: NOMINAL / CAUTION / FAULT.
         success: '#3FB27F',
         warning: '#E0A91A',
         danger: '#E0533F',
@@ -70,6 +69,10 @@ module.exports = {
           muted: '#7E8590',
           faint: '#5B616B',
         },
+        hairline: {
+          DEFAULT: 'rgba(255, 255, 255, 0.08)',
+          active: 'rgba(255, 255, 255, 0.16)',
+        },
       },
       spacing: {
         18: '4.5rem',
@@ -77,34 +80,30 @@ module.exports = {
         30: '7.5rem',
         38: '9.5rem',
       },
+      borderRadius: {
+        // Instruments are rectangular: 2-4px max for chrome; media frames flat.
+        instrument: '2px',
+        panel: '4px',
+      },
       boxShadow: {
         'elev-1': '0 1px 2px rgba(0, 0, 0, 0.4)',
         'elev-2': '0 8px 24px -8px rgba(0, 0, 0, 0.6)',
-        'signal': '0 0 0 1px rgba(46, 139, 230, 0.25)',
       },
       backgroundImage: {
         'hero-pattern': "radial-gradient(circle at center, #0B0D12 0%, #030308 100%)",
-        'glow-gradient': "linear-gradient(to right, #2E8BE6, #56A8EE)",
-        'mesh-gradient': "radial-gradient(ellipse at 20% 50%, rgba(46, 139, 230, 0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(224, 112, 26, 0.05) 0%, transparent 50%)",
-        'section-fade': "linear-gradient(to bottom, transparent, rgba(10, 11, 15, 0.8), transparent)",
       },
       animation: {
-        marquee: 'marquee 40s linear infinite',
-        float: 'float 6s ease-in-out infinite',
-        'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+        'radar-sweep': 'radar-sweep 6s linear infinite',
+        'cursor-blink': 'cursor-blink 1.1s steps(1) infinite',
       },
       keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
+        'radar-sweep': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-        'glow-pulse': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(46, 139, 230, 0.3)' },
-          '50%': { boxShadow: '0 0 40px rgba(46, 139, 230, 0.6)' },
+        'cursor-blink': {
+          '0%, 49%': { opacity: '1' },
+          '50%, 100%': { opacity: '0' },
         },
       },
     },

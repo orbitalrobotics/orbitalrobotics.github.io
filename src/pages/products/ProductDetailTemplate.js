@@ -5,7 +5,8 @@ import SEO from '../../components/SEO';
 import JsonLd from '../../components/JsonLd';
 import AnimatedSection from '../../components/motion/AnimatedSection';
 import StaggerContainer, { itemVariants } from '../../components/motion/StaggerContainer';
-import { Eyebrow, Badge, Button, Breadcrumb } from '../../components/ui';
+import { Eyebrow, Badge, Button, Breadcrumb, CornerBrackets } from '../../components/ui';
+import OrbtosConsole from '../../components/OrbtosConsole';
 
 // Renders image / single video / cycling video array into a fixed media frame.
 const ProductMedia = ({ image, video, videos, imageFit = 'contain', imageBg = '', videoFit = 'contain', videoBg = '', videoPosition = 'center', controls = false, title, className = '' }) => {
@@ -29,7 +30,7 @@ const ProductMedia = ({ image, video, videos, imageFit = 'contain', imageBg = ''
   if (!activeVideo && !image) return null;
 
   return (
-    <div className={`rounded-xl overflow-hidden border border-white/10 shadow-elev-2 bg-black ${className}`}>
+    <div className={`relative overflow-hidden border hairline bg-black ${className}`}>
       {activeVideo ? (
         <video
           ref={videoRef}
@@ -46,6 +47,10 @@ const ProductMedia = ({ image, video, videos, imageFit = 'contain', imageBg = ''
       ) : (
         <img src={image} alt={title} className={`w-full h-[320px] md:h-[460px] object-${imageFit} ${imageBg}`} />
       )}
+      <span className="absolute bottom-2 left-2 type-mono-label text-text-faint bg-black/60 px-2 py-1 pointer-events-none">
+        {activeVideo ? 'SIMULATION' : 'RENDER'}
+      </span>
+      <CornerBrackets />
     </div>
   );
 };
@@ -57,7 +62,7 @@ const DetailSection = ({ id, bg = 'background', eyebrow, title, subtitle, center
       {(eyebrow || title) && (
         <AnimatedSection className={`mb-10 ${center ? 'text-center max-w-2xl mx-auto' : 'max-w-2xl'}`}>
           {eyebrow && <Eyebrow className="mb-3">{eyebrow}</Eyebrow>}
-          {title && <h2 className="text-h2 font-heading text-white">{title}</h2>}
+          {title && <h2 className="type-display text-h3 text-white">{title}</h2>}
           {subtitle && <p className="text-text-secondary mt-3">{subtitle}</p>}
         </AnimatedSection>
       )}
@@ -74,7 +79,7 @@ const CardGrid = ({ items }) => {
         <motion.div
           key={index}
           variants={itemVariants}
-          className="p-8 rounded-xl bg-surface border border-white/[0.06] hover:border-primary/40 transition-all"
+          className="p-8 rounded-panel bg-surface border hairline hover:border-white/[0.16] transition-all"
         >
           <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
           <p className="text-text-secondary leading-relaxed">{item.description}</p>
@@ -86,24 +91,24 @@ const CardGrid = ({ items }) => {
 
 // Key-figures band: single-value spec pairs rendered as instrument-style stats.
 const KeyFigures = ({ specs }) => (
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-xl overflow-hidden border border-white/10">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.08] overflow-hidden border hairline">
     {specs.map((spec, index) => (
       <div key={index} className="bg-surface px-6 py-6 text-center">
         <div className="text-2xl font-heading font-bold text-white mb-1">{spec.value}</div>
-        <div className="text-xs uppercase tracking-wider text-text-muted">{spec.label}</div>
+        <div className="type-mono-label text-text-muted">{spec.label}</div>
       </div>
     ))}
   </div>
 );
 
 const SpecTable = ({ table }) => (
-  <div className="max-w-3xl mx-auto overflow-x-auto rounded-xl border border-white/10">
+  <div className="max-w-3xl mx-auto overflow-x-auto border hairline">
     <table className="w-full text-left">
       <thead>
         <tr className="bg-background/60">
-          <th className="py-4 px-6 text-sm font-semibold text-text-secondary uppercase tracking-wider">Specification</th>
+          <th className="py-4 px-6 type-mono-label text-text-secondary">Specification</th>
           {table.columns.map((col, index) => (
-            <th key={index} className="py-4 px-6 text-sm font-semibold text-white">{col}</th>
+            <th key={index} className="py-4 px-6 type-mono-label text-white">{col}</th>
           ))}
         </tr>
       </thead>
@@ -114,10 +119,10 @@ const SpecTable = ({ table }) => (
             <tr key={index} className="border-t border-white/5">
               <td className="py-4 px-6 text-text-secondary">{row.label}</td>
               {spans ? (
-                <td colSpan={table.columns.length} className="py-4 px-6 text-text-primary font-medium">{row.values[0]}</td>
+                <td colSpan={table.columns.length} className="py-4 px-6 text-text-primary font-mono text-sm">{row.values[0]}</td>
               ) : (
                 row.values.map((value, valueIndex) => (
-                  <td key={valueIndex} className="py-4 px-6 text-text-primary font-medium">{value}</td>
+                  <td key={valueIndex} className="py-4 px-6 text-text-primary font-mono text-sm">{value}</td>
                 ))
               )}
             </tr>
@@ -136,7 +141,7 @@ const RelatedProductsGrid = ({ items }) => {
         <motion.div key={index} variants={itemVariants}>
           <Link
             to={`/products/${item.id}`}
-            className="group block h-full bg-background/50 border border-white/[0.06] hover:border-primary/40 rounded-xl p-6 transition-all"
+            className="group block h-full bg-background/50 border hairline hover:border-white/[0.16] rounded-panel p-6 transition-all"
           >
             <Eyebrow className="mb-2">In the stack</Eyebrow>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">{item.label}</h3>
@@ -156,13 +161,14 @@ const ProductDetailTemplate = ({ product }) => {
   const {
     title, category, tagline, description, availability,
     variants, features, applications, useCases, specs, specsTable, demos,
-    relatedProducts, whyUs,
+    relatedProducts,
     image, video, videos, heroMedia,
     imageFit = 'contain', imageBg = '', videoFit = 'contain', videoBg = '', videoPosition = 'center',
   } = product;
 
   // heroMedia: false keeps card media (image/video) out of the detail hero.
-  const hasMedia = heroMedia !== false && Boolean(image || video || (videos && videos.length));
+  // console: true renders the live ORBtos instrument panel as the hero media.
+  const hasMedia = heroMedia !== false && Boolean(product.console || image || video || (videos && videos.length));
   const hasKeyFigures = Boolean(specs && specs.length > 0);
   const hasSpecTable = Boolean(specsTable);
 
@@ -212,7 +218,7 @@ const ProductDetailTemplate = ({ product }) => {
                 <Eyebrow>{category}</Eyebrow>
                 {availability && <Badge variant="ember">Available {availability}</Badge>}
               </div>
-              <h1 className="text-h1 font-heading text-white mb-5">{title}</h1>
+              <h1 className="type-display text-h2 text-white mb-5">{title}</h1>
               <p className="text-xl text-text-secondary mb-8 leading-relaxed">{tagline || description}</p>
               <div className="flex flex-wrap gap-4">
                 <Button to="/contact" size="lg">Get in Touch</Button>
@@ -225,11 +231,15 @@ const ProductDetailTemplate = ({ product }) => {
             </AnimatedSection>
             {hasMedia && (
               <AnimatedSection direction="right">
-                <ProductMedia
-                  image={image} video={video} videos={videos}
-                  imageFit={imageFit} imageBg={imageBg} videoFit={videoFit} videoBg={videoBg} videoPosition={videoPosition}
-                  title={title}
-                />
+                {product.console ? (
+                  <OrbtosConsole />
+                ) : (
+                  <ProductMedia
+                    image={image} video={video} videos={videos}
+                    imageFit={imageFit} imageBg={imageBg} videoFit={videoFit} videoBg={videoBg} videoPosition={videoPosition}
+                    title={title}
+                  />
+                )}
               </AnimatedSection>
             )}
           </div>
@@ -254,7 +264,7 @@ const ProductDetailTemplate = ({ product }) => {
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className="whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium text-text-secondary hover:text-white hover:bg-white/5 transition-colors"
+                  className="whitespace-nowrap px-4 py-1.5 type-mono-label text-text-secondary hover:text-white hover:bg-white/5 transition-colors"
                 >
                   {item.label}
                 </button>
@@ -284,7 +294,7 @@ const ProductDetailTemplate = ({ product }) => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group bg-background/50 border border-white/[0.06] rounded-xl overflow-hidden hover:border-primary/40 transition-all flex flex-col"
+                className="group bg-background/50 border hairline rounded-panel overflow-hidden hover:border-white/[0.16] transition-all flex flex-col"
               >
                 {variant.image && (
                   <div className="aspect-[4/3] bg-[#010101] overflow-hidden">

@@ -1,4 +1,3 @@
-import SatelliteOSImg from '../assets/images/satellite-os.png';
 import AstroBotImg from '../assets/images/astrobot.png';
 import OraAstrosferaImg from '../assets/images/arms/ora-astrosfera.png';
 import OraMiniImg from '../assets/images/arms/ora-mini.png';
@@ -146,7 +145,7 @@ export const softwareProducts = [
         highlights: ["Bus-agnostic", "Hosts NavIQ + ASTRA-P", "Modular"],
         tagline: "Our flight operating system. Hosts NavIQ and ASTRA-P natively on any spacecraft bus.",
         description: "ORBtos is our flight software platform. It runs NavIQ (perception) and ASTRA-P (autonomous guidance and control) as native modules, letting any spacecraft bus run the full Orbital Robotics autonomous stack with minimal integration.",
-        image: SatelliteOSImg,
+        console: true,
         relatedProducts: [
             { id: 'astrap', label: 'Hosts ASTRA-P', context: 'Autonomous GNC runs natively as an ORBtos module.' },
             { id: 'naviq', label: 'Hosts NavIQ', context: 'Computer vision runs natively as an ORBtos module.' }

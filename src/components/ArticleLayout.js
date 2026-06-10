@@ -20,7 +20,7 @@ const ShareRow = ({ title }) => {
   };
 
   const btn =
-    'inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 text-text-secondary hover:bg-primary hover:text-white transition-all';
+    'inline-flex items-center justify-center w-10 h-10 border hairline text-text-secondary hover:text-white hover:border-white/[0.16] transition-all';
 
   return (
     <div className="flex items-center gap-3 mt-12 pt-8 border-t border-white/10">
@@ -94,7 +94,7 @@ const ArticleLayout = ({ title, description, source, date, dateTime, heroImage, 
           src={heroImage}
           alt={title}
           loading="lazy"
-          className="w-full rounded-xl border border-white/10 mb-10 shadow-elev-2"
+          className="w-full rounded-panel border hairline mb-10 shadow-elev-2"
         />
       )}
 

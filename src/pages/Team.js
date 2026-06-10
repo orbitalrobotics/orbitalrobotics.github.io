@@ -25,7 +25,7 @@ const SocialLinks = ({ name, linkedin, email }) => (
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`${name} on LinkedIn`}
-      className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/5 hover:bg-primary hover:text-white text-text-secondary transition-all"
+      className="inline-flex items-center justify-center w-9 h-9 border hairline hover:border-white/[0.16] hover:text-white text-text-secondary transition-all"
     >
       <FaLinkedinIn />
     </a>
@@ -33,7 +33,7 @@ const SocialLinks = ({ name, linkedin, email }) => (
       <a
         href={`mailto:${email}`}
         aria-label={`Email ${name}`}
-        className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/5 hover:bg-primary hover:text-white text-text-secondary transition-all"
+        className="inline-flex items-center justify-center w-9 h-9 border hairline hover:border-white/[0.16] hover:text-white text-text-secondary transition-all"
       >
         <FaEnvelope />
       </a>
@@ -58,7 +58,7 @@ const CredentialChips = ({ items }) =>
 const FounderCard = ({ name, role, image, bio, credentials, linkedin, email }) => (
   <motion.div
     variants={itemVariants}
-    className="group bg-surface rounded-xl border border-white/[0.06] hover:border-primary/40 transition-all overflow-hidden flex flex-col sm:flex-row"
+    className="group bg-surface rounded-panel border hairline hover:border-white/[0.16] transition-all overflow-hidden flex flex-col sm:flex-row"
   >
     <div className="sm:w-44 shrink-0 aspect-[4/5] sm:aspect-auto bg-neutral-900 overflow-hidden">
       <img
@@ -70,7 +70,7 @@ const FounderCard = ({ name, role, image, bio, credentials, linkedin, email }) =
     </div>
     <div className="p-6 flex flex-col flex-1">
       <h3 className="text-xl font-bold text-white">{name}</h3>
-      <p className="text-primary text-sm font-medium mb-3">{role}</p>
+      <p className="type-mono-label text-primary mt-1 mb-3">{role}</p>
       <CredentialChips items={credentials} />
       <p className="text-text-secondary text-sm leading-relaxed mb-5 flex-1">{bio}</p>
       <SocialLinks name={name} linkedin={linkedin} email={email} />
@@ -81,10 +81,10 @@ const FounderCard = ({ name, role, image, bio, credentials, linkedin, email }) =
 const AdvisorCard = ({ name, role, image, bio, credentials, linkedin, email }) => (
   <motion.div
     variants={itemVariants}
-    className="group bg-surface rounded-xl border border-white/[0.06] hover:border-primary/40 transition-all p-6 flex flex-col"
+    className="group bg-surface rounded-panel border hairline hover:border-white/[0.16] transition-all p-6 flex flex-col"
   >
     <div className="flex items-center gap-4 mb-4">
-      <div className="w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-neutral-900">
+      <div className="w-16 h-16 shrink-0 rounded-instrument overflow-hidden bg-neutral-900">
         <img
           src={image}
           alt={`${name}, ${role}`}
@@ -94,7 +94,7 @@ const AdvisorCard = ({ name, role, image, bio, credentials, linkedin, email }) =
       </div>
       <div>
         <h3 className="text-base font-bold text-white leading-tight">{name}</h3>
-        <p className="text-primary text-xs font-medium">{role}</p>
+        <p className="type-mono-label text-primary mt-1">{role}</p>
       </div>
     </div>
     <CredentialChips items={credentials} />
@@ -195,15 +195,15 @@ const Team = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-[var(--header-height)] pb-20">
+    <div className="min-h-screen bg-background pb-20">
       <SEO
-        title="Team"
+        title="Crew"
         description="Meet the Orbital Robotics team — engineers from Blue Origin and SpaceX building the future of autonomous in-space servicing, alongside an advisory board of astronauts and space-systems leaders."
       />
       <div className="container mx-auto px-6">
         <AnimatedSection className="max-w-3xl mb-16 pt-10">
-          <Eyebrow className="mb-4">Our team</Eyebrow>
-          <h1 className="text-h1 font-heading text-white mb-5">The people building autonomous orbital robotics</h1>
+          <Eyebrow className="mb-4">CREW</Eyebrow>
+          <h1 className="type-display text-h1 text-white mb-5">Built by people who've flown hardware.</h1>
           <p className="text-xl text-text-secondary">
             Founded by Blue Origin and SpaceX engineers who have flown robotic-capture payloads and built flight
             software for lunar landers — advised by astronauts and space-systems leaders.
@@ -213,7 +213,7 @@ const Team = () => {
         {/* Founders & Leadership */}
         <div className="mb-24">
           <AnimatedSection>
-            <h2 className="text-h3 font-heading text-white mb-8 pb-4 border-b border-white/10">Founders &amp; Leadership</h2>
+            <h2 className="type-display text-h3 text-white mb-8 pb-4 border-b hairline">Founders &amp; Leadership</h2>
           </AnimatedSection>
           <StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {team.map((member, index) => (
@@ -225,7 +225,7 @@ const Team = () => {
         {/* Advisors & Board */}
         <div>
           <AnimatedSection>
-            <h2 className="text-h3 font-heading text-white mb-8 pb-4 border-b border-white/10">Advisors &amp; Board</h2>
+            <h2 className="type-display text-h3 text-white mb-8 pb-4 border-b hairline">Advisors &amp; Board</h2>
           </AnimatedSection>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {advisors.map((advisor, index) => (
