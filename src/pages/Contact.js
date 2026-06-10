@@ -167,7 +167,7 @@ const Contact = () => {
 
               {status === 'sent' && (
                 <p className="mt-4 text-center text-sm text-emerald-400" role="status">
-                  Message sent — we'll get back to you soon.
+                  Message sent. We'll get back to you soon.
                 </p>
               )}
               {status === 'error' && (

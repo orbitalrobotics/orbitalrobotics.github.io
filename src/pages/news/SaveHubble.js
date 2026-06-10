@@ -8,7 +8,7 @@ import SaveHubbleServicing from '../../assets/images/news/save_hubble_servicing.
 const SaveHubble = () => (
   <ArticleLayout
     title="Save Hubble Coalition"
-    description="Join the Save Hubble Coalition — a collaborative effort to preserve one of humanity's greatest scientific achievements through innovative on-orbit servicing."
+    description="Join the Save Hubble Coalition, a collaborative effort to preserve one of humanity's greatest scientific achievements through innovative on-orbit servicing."
     source="Orbital Robotics"
     date="January 2026"
     dateTime="2026-01-01"

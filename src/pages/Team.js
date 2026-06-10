@@ -198,7 +198,7 @@ const Team = () => {
     <div className="min-h-screen bg-background pt-[var(--header-height)] pb-20">
       <SEO
         title="Team"
-        description="Meet the Orbital Robotics team — engineers from Blue Origin and SpaceX building the future of autonomous in-space servicing, alongside an advisory board of astronauts and space-systems leaders."
+        description="Meet the Orbital Robotics team: engineers from Blue Origin and SpaceX building the future of autonomous in-space servicing, alongside an advisory board of astronauts and space-systems leaders."
       />
       <div className="container mx-auto px-6">
         <AnimatedSection className="max-w-3xl mb-16 pt-10">
@@ -206,7 +206,7 @@ const Team = () => {
           <h1 className="text-h1 font-heading text-white mb-5">The people building autonomous orbital robotics</h1>
           <p className="text-xl text-text-secondary">
             Founded by Blue Origin and SpaceX engineers who have flown robotic-capture payloads and built flight
-            software for lunar landers — advised by astronauts and space-systems leaders.
+            software for lunar landers, advised by astronauts and space-systems leaders.
           </p>
         </AnimatedSection>
 

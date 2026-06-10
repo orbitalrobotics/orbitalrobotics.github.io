@@ -40,7 +40,7 @@ const StarcloudAnnouncement = () => (
     <h3>About Starcloud</h3>
     <p>
       Starcloud is building data centers in space to address energy constraints for AI data centers on Earth. Starcloud
-      recently launched the first high-powered GPU to space — 100x more powerful AI compute than has been in space
+      recently launched the first high-powered GPU to space, 100x more powerful AI compute than has been in space
       before.
     </p>
 
