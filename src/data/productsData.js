@@ -1,6 +1,8 @@
 import SatelliteOSImg from '../assets/images/satellite-os.png';
 import AstroBotImg from '../assets/images/astrobot.png';
-import RoboticArmBlackImg from '../assets/images/robotic-arm-black-fairings.png';
+import OraAstrosferaImg from '../assets/images/arms/ora-astrosfera.png';
+import OraMiniImg from '../assets/images/arms/ora-mini.png';
+import OraGigaImg from '../assets/images/arms/ora-giga.png';
 import NavIQImg from '../assets/images/point_control.gif';
 
 // Import Videos
@@ -90,35 +92,29 @@ export const hardwareProducts = [
         category: "Hardware",
         featured: true,
         highlights: ["7-DOF", "Radiation-tolerant", "Flight-proven ×6"],
-        tagline: "Our 7-DOF flight arm family: Astrosfera (flagship), ORA-mini, ORA-mega, and the ORA-T ground twin.",
+        tagline: "Our 7-DOF flight arm family: ORA-Astrosfera (flagship), ORA-Mini, and ORA-Giga.",
         description: "Our robotic arms perform the physical work in orbit: capture, manipulation, and servicing. Paired with NavIQ for perception and ASTRA-P for autonomous guidance and control, they form a complete autonomous capture and servicing system.",
-        image: RoboticArmBlackImg,
+        image: OraAstrosferaImg,
         imageFit: "contain",
-        imageBg: "bg-black",
+        imageBg: "bg-[#010101]",
         variants: [
             {
-                name: "Astrosfera",
+                name: "ORA-Astrosfera",
                 badge: "Flagship",
-                image: RoboticArmBlackImg,
+                image: OraAstrosferaImg,
                 description: "The 7-DOF flight arm. Radiation-tolerant, mission-customizable, and flight-proven across six NASA-affiliated programs."
             },
             {
-                name: "ORA-mini",
+                name: "ORA-Mini",
                 badge: "Compact",
-                image: RoboticArmBlackImg,
-                description: "Sized for CubeSat-class missions. Dual-arm configuration designed to fit a 27U CubeSat; single-arm configuration designed to fit a 24U CubeSat. Inherits the Astrosfera architecture and control software."
+                image: OraMiniImg,
+                description: "Sized for CubeSat-class missions. Dual-arm configuration designed to fit a 27U CubeSat; single-arm configuration designed to fit a 24U CubeSat. Inherits the ORA-Astrosfera architecture and control software."
             },
             {
-                name: "ORA-mega",
+                name: "ORA-Giga",
                 badge: "Heavy-lift",
-                image: RoboticArmBlackImg,
-                description: "Sized for large-structure assembly, station servicing, and high-mass capture operations. Inherits the Astrosfera architecture and control software."
-            },
-            {
-                name: "ORA-T",
-                badge: "Ground / HIL",
-                image: RoboticArmBlackImg,
-                description: "Terrestrial twin of Astrosfera. Same arm, ground-rated. Sold to customers for hardware-in-the-loop testing and pre-flight validation. Includes on-site integration support."
+                image: OraGigaImg,
+                description: "Sized for large-structure assembly, station servicing, and high-mass capture operations. Inherits the ORA-Astrosfera architecture and control software."
             }
         ],
         relatedProducts: [
@@ -171,11 +167,9 @@ export const softwareProducts = [
         video: InSpaceSegmentationVideo,
         videoFit: "cover",
         videoPosition: "bottom",
-        specs: [
-            { label: "Current Maturity", value: "TRL 6" },
-            { label: "Projected Maturity", value: "TRL 9 by Q4 2026" }
-        ],
+        heroMedia: false,
         demos: [
+            { video: InSpaceSegmentationVideo, videoPosition: "bottom", caption: "NavIQ segmenting an unprepared target in orbit." },
             { video: SegmentationDemoVideo, controls: true, caption: "Real-time segmentation of a non-cooperative target." }
         ],
         relatedProducts: [
@@ -188,14 +182,10 @@ export const softwareProducts = [
         id: 'astrap',
         title: "ASTRA-P",
         category: "Software",
-        highlights: ["TRL 6 → 9", "Lyapunov-verified", "Monte Carlo tested"],
+        highlights: ["Autonomous GNC", "Lyapunov-verified", "Monte Carlo tested"],
         tagline: "Our autonomous guidance and control software. Takes NavIQ's state estimate and plans the capture maneuver.",
         description: "ASTRA-P is our guidance and control layer. Given a state estimate from NavIQ, it plans and executes precise approach and capture maneuvers against unprepared satellites and debris. Stability is mathematically verified via Lyapunov analysis and validated across thousands of randomized Monte Carlo scenarios. Hosted natively on OrbitOS.",
         image: NavIQImg,
-        specs: [
-            { label: "Current Maturity", value: "TRL 6" },
-            { label: "Projected Maturity", value: "TRL 9 by Q4 2026" }
-        ],
         relatedProducts: [
             { id: 'naviq', label: 'Pairs with NavIQ', context: 'NavIQ provides closed-loop state estimation for the controller.' },
             { id: 'robotic-arms', label: 'Drives the arm family', context: 'ORA-native arm control for end-to-end autonomous manipulation.' },

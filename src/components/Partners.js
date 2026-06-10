@@ -46,7 +46,7 @@ const Partners = () => {
                                 src={partner.logo}
                                 alt={partner.name}
                                 loading="lazy"
-                                className="max-h-16 max-w-full object-contain opacity-60 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 hover:brightness-110"
+                                className="max-h-16 max-w-full object-contain transition-all duration-500 hover:brightness-110"
                             />
                         </div>
                     ))}
@@ -57,7 +57,7 @@ const Partners = () => {
                                 src={partner.logo}
                                 alt={partner.name}
                                 loading="lazy"
-                                className="max-h-16 max-w-full object-contain opacity-60 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 hover:brightness-110"
+                                className="max-h-16 max-w-full object-contain transition-all duration-500 hover:brightness-110"
                             />
                         </div>
                     ))}

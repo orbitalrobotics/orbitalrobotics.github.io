@@ -157,11 +157,12 @@ const ProductDetailTemplate = ({ product }) => {
     title, category, tagline, description, availability,
     variants, features, applications, useCases, specs, specsTable, demos,
     relatedProducts, whyUs,
-    image, video, videos,
+    image, video, videos, heroMedia,
     imageFit = 'contain', imageBg = '', videoFit = 'contain', videoBg = '', videoPosition = 'center',
   } = product;
 
-  const hasMedia = Boolean(image || video || (videos && videos.length));
+  // heroMedia: false keeps card media (image/video) out of the detail hero.
+  const hasMedia = heroMedia !== false && Boolean(image || video || (videos && videos.length));
   const hasKeyFigures = Boolean(specs && specs.length > 0);
   const hasSpecTable = Boolean(specsTable);
 
@@ -286,7 +287,7 @@ const ProductDetailTemplate = ({ product }) => {
                 className="group bg-background/50 border border-white/[0.06] rounded-xl overflow-hidden hover:border-primary/40 transition-all flex flex-col"
               >
                 {variant.image && (
-                  <div className="aspect-[4/3] bg-black overflow-hidden">
+                  <div className="aspect-[4/3] bg-[#010101] overflow-hidden">
                     <img src={variant.image} alt={variant.name} className="w-full h-full object-contain" />
                   </div>
                 )}

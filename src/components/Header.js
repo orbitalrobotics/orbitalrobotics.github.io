@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/images/logo_white.png';
-import ProductDropdown from './ProductDropdown';
 import Button from './ui/Button';
 import { ease } from '../utils/motionTokens';
 
@@ -31,12 +30,13 @@ function Header() {
     return () => window.removeEventListener('keydown', onKey);
   }, [isOpen]);
 
-  const simpleLinks = [
+  const navLinks = [
+    { name: 'Products', path: '/products' },
     { name: 'Team', path: '/team' },
     { name: 'News', path: '/news' },
   ];
-  const mobileLinks = [{ name: 'Products', path: '/products' }, ...simpleLinks];
-  const productsActive = location.pathname.startsWith('/products');
+  const isActive = (path) =>
+    path === '/products' ? location.pathname.startsWith('/products') : location.pathname === path;
 
   return (
     <>
@@ -54,29 +54,36 @@ function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            <ProductDropdown active={productsActive} />
-            {simpleLinks.map((link) => (
+          <nav className="hidden lg:flex items-center">
+            <div className="flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-xl p-1.5">
+              {navLinks.map((link) => {
+                const active = isActive(link.path);
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className={`relative px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                      active ? 'text-white' : 'text-text-secondary hover:text-white'
+                    }`}
+                  >
+                    {active && (
+                      <motion.div
+                        layoutId="nav-pill"
+                        className="absolute inset-0 rounded-full bg-white/10 border border-white/10"
+                        transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                      />
+                    )}
+                    <span className="relative z-10">{link.name}</span>
+                  </Link>
+                );
+              })}
               <Link
-                key={link.name}
-                to={link.path}
-                className={`relative ${
-                  location.pathname === link.path ? 'text-primary' : 'text-text-secondary'
-                } hover:text-primary transition-colors font-medium`}
+                to="/contact"
+                className="ml-1 px-5 py-2 rounded-full text-sm font-semibold bg-primary text-white hover:bg-primary-hover transition-colors shadow-lg shadow-primary/20"
               >
-                {link.name}
-                {location.pathname === link.path && (
-                  <motion.div
-                    layoutId="nav-indicator"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full"
-                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                  />
-                )}
+                Get in Touch
               </Link>
-            ))}
-            <Button to="/contact" size="sm" className="px-6">
-              Get in Touch
-            </Button>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -104,7 +111,7 @@ function Header() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 lg:hidden pt-24 pb-10 overflow-y-auto"
           >
-            {mobileLinks.map((link, index) => (
+            {navLinks.map((link, index) => (
               <motion.div
                 key={link.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -125,7 +132,7 @@ function Header() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + mobileLinks.length * 0.05, duration: 0.3 }}
+              transition={{ delay: 0.1 + navLinks.length * 0.05, duration: 0.3 }}
             >
               <Button to="/contact" size="lg" onClick={() => setIsOpen(false)}>
                 Get in Touch

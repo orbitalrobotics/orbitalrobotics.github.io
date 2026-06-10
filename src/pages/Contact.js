@@ -4,6 +4,9 @@ import { FaEnvelope, FaMapMarkerAlt, FaLinkedinIn } from 'react-icons/fa';
 import SEO from '../components/SEO';
 import AnimatedSection from '../components/motion/AnimatedSection';
 
+const FORM_ENDPOINT =
+  'https://script.google.com/macros/s/AKfycbzhFEpM8vBZvHhfyjgKBpfg0dPh8e6AXxdLDd2gteKkJUecdh7Ec6S-6754kumDietN/exec';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,6 +14,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [status, setStatus] = useState('idle'); // idle | sending | sent | error
 
   const handleChange = (e) => {
     setFormData({
@@ -19,16 +23,23 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus('sending');
 
-    const subject = encodeURIComponent(formData.subject || 'Contact Form Submission');
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-
-    window.location.href = `mailto:info@orbital-robots.com?subject=${subject}&body=${body}`;
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      // no-cors: the Apps Script endpoint can't return CORS headers, so the
+      // response is opaque — a resolved fetch means the request was delivered.
+      await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(formData)
+      });
+      setStatus('sent');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (err) {
+      setStatus('error');
+    }
   };
 
   return (
@@ -147,11 +158,24 @@ const Contact = () => {
 
               <motion.button
                 type="submit"
+                disabled={status === 'sending'}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-primary hover:bg-primary-hover text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-primary/25"
+                className="w-full bg-primary hover:bg-primary-hover disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg hover:shadow-primary/25"
               >
-                Send Message
+                {status === 'sending' ? 'Sending…' : 'Send Message'}
               </motion.button>
+
+              {status === 'sent' && (
+                <p className="mt-4 text-center text-sm text-emerald-400" role="status">
+                  Message sent — we'll get back to you soon.
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="mt-4 text-center text-sm text-red-400" role="alert">
+                  Something went wrong. Please email us directly at{' '}
+                  <a href="mailto:info@orbital-robots.com" className="underline">info@orbital-robots.com</a>.
+                </p>
+              )}
             </form>
           </AnimatedSection>
         </div>

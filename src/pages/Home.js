@@ -9,7 +9,7 @@ import AnimatedSection from '../components/motion/AnimatedSection';
 import StaggerContainer, { itemVariants } from '../components/motion/StaggerContainer';
 import HeroVideo from '../assets/video/Home_Page.mp4';
 import SatelliteOSImg from '../assets/images/satellite-os.png';
-import RoboticArmBlackImg from '../assets/images/robotic-arm-black-fairings.png';
+import OraAstrosferaImg from '../assets/images/arms/ora-astrosfera.png';
 
 // Animated counter for stats
 const AnimatedStat = ({ value, suffix = '', label, delay = 0 }) => {
@@ -228,9 +228,9 @@ const Home = () => {
           <AnimatedSection direction="left" className="flex flex-col md:flex-row items-center mb-20">
             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
               <img
-                src={RoboticArmBlackImg}
-                alt="Robotic Arm"
-                className="rounded-2xl shadow-2xl border border-white/10 hover:shadow-[#0EA5E9]/20 transition-shadow duration-500"
+                src={OraAstrosferaImg}
+                alt="ORA-Astrosfera robotic arm"
+                className="rounded-2xl shadow-2xl border border-white/10 hover:shadow-[#0EA5E9]/20 transition-shadow duration-500 w-full h-80 md:h-96 object-contain bg-[#010101] p-6"
               />
             </div>
             <div className="md:w-1/2 md:pl-10">
