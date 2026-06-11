@@ -11,7 +11,7 @@ import MissionLog from '../components/home/MissionLog';
 import FirstContact from '../components/home/FirstContact';
 
 // Numbered engineering-doc sections:
-// 000 HERO · 001 HERITAGE · 002 THE CATCH · 003 THE SYSTEM · 004 THE FAMILY ·
+// 000 HERO · 001 HERITAGE · 002 THE CATCH · 003 THE FAMILY · 004 THE SYSTEM ·
 // 005 MISSIONS MANIFEST · 006 TARGET: HUBBLE · 007 MISSION LOG · 008 FIRST CONTACT
 const Home = () => {
   const scrollToSystem = useCallback(() => {
@@ -27,8 +27,8 @@ const Home = () => {
       <HeroCapture onSeeSystem={scrollToSystem} />
       <HeritageStrip />
       <CatchComparator />
-      <SystemRows />
       <FamilyExplorer />
+      <SystemRows />
       <MissionsManifest />
       <HubbleSequence />
       <MissionLog />

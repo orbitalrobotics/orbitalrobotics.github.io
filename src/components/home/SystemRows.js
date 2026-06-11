@@ -99,7 +99,7 @@ const SystemRows = () => (
   <section id="system" className="py-24 bg-background">
     <div className="container mx-auto px-6">
       <SectionHeader
-        index="003"
+        index="004"
         label="THE SYSTEM"
         title="One closed loop."
         lede="Capture is a system problem. Each layer of the stack is a product; together they close the loop from photons to grasp."

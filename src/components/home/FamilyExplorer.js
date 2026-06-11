@@ -25,7 +25,7 @@ const FamilyExplorer = () => {
     <section className="py-24 bg-surface border-y hairline">
       <div className="container mx-auto px-6">
         <SectionHeader
-          index="004"
+          index="003"
           label="THE FAMILY"
           title="One architecture. Three arms."
           lede="Every ORA arm shares the same control software, perception stack, and joint architecture — sized for the mission."
