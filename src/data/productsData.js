@@ -108,7 +108,7 @@ export const hardwareProducts = [
                 name: "ORA-Mini",
                 badge: "Compact",
                 image: OraMiniImg,
-                description: "Sized for CubeSat-class missions. Dual-arm configuration designed to fit a 27U CubeSat; single-arm configuration designed to fit a 24U CubeSat. Inherits the ORA-Astrosfera architecture and control software."
+                description: "Sized for CubeSat-class missions. Dual-arm configuration designed to fit a 12U CubeSat; single-arm configuration designed to fit a 6U CubeSat. Inherits the ORA-Astrosfera architecture and control software."
             },
             {
                 name: "ORA-Giga",
