@@ -38,6 +38,7 @@ const Footer = () => {
               <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Company</h4>
               <ul className="space-y-3">
                 <li><Link to="/team" className="text-text-secondary hover:text-primary transition-colors text-sm">Team</Link></li>
+                <li><Link to="/careers" className="text-text-secondary hover:text-primary transition-colors text-sm">Careers</Link></li>
                 {/* <li><Link to="/roadmap" className="text-text-secondary hover:text-primary transition-colors text-sm">Roadmap</Link></li> */}
                 <li><Link to="/news" className="text-text-secondary hover:text-primary transition-colors text-sm">News</Link></li>
                 <li><Link to="/contact" className="text-text-secondary hover:text-primary transition-colors text-sm">Contact</Link></li>

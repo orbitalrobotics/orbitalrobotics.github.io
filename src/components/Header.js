@@ -33,10 +33,11 @@ function Header() {
   const navLinks = [
     { name: 'Products', path: '/products' },
     { name: 'Team', path: '/team' },
+    { name: 'Careers', path: '/careers' },
     { name: 'News', path: '/news' },
   ];
   const isActive = (path) =>
-    path === '/products' ? location.pathname.startsWith('/products') : location.pathname === path;
+    location.pathname.startsWith(path) && (path !== '/' || location.pathname === '/');
 
   return (
     <>
