@@ -2,10 +2,11 @@ const careersData = [
   {
     slug: 'hardware-engineer',
     title: 'Hardware Engineer',
+    category: 'Engineering',
     department: 'Hardware',
     location: 'Huntsville, AL',
     type: 'Full-Time',
-    salary: '$90,000 – $120,000',
+    salary: '$90,000 – $120,000 / year',
     tallyEmbedSrc: 'https://tally.so/embed/0QAZzZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
     overview:
       '[Placeholder] We are looking for a Hardware Engineer to join the Orbital Robotics team. In this role, you will design, build, and test flight hardware for our robotic arm and spacecraft systems — contributing directly to technology that will service satellites in orbit.',
@@ -27,10 +28,11 @@ const careersData = [
   {
     slug: 'gnc-engineer',
     title: 'Guidance, Navigation & Control Engineer',
+    category: 'Engineering',
     department: 'GNC',
     location: 'Seattle, WA',
     type: 'Full-Time',
-    salary: '$110,000 – $140,000',
+    salary: '$110,000 – $140,000 / year',
     tallyEmbedSrc: 'https://tally.so/embed/Gx7qE2?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
     overview:
       'Orbital Robotics is looking for engineers who have developed software for robots and/or satellites with backgrounds in orbital mechanics, state estimation, control theory, robot motion planning, computer vision, deep learning, free-flying/free-floating space robot dynamics, and flight software development. You will join a team of world class engineers with experience deploying neural networks on real-world space robot systems.',

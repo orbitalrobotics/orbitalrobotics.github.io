@@ -31,6 +31,18 @@ const RoleCard = ({ slug, title, department, location, type }) => (
   </motion.div>
 );
 
+const CATEGORY_ORDER = ['Engineering', 'Business & Operations'];
+
+const groupByCategory = (roles) => {
+  const map = {};
+  roles.forEach((role) => {
+    const cat = role.category || 'Other';
+    if (!map[cat]) map[cat] = [];
+    map[cat].push(role);
+  });
+  return CATEGORY_ORDER.map((c) => ({ category: c, roles: map[c] || [] }));
+};
+
 const Careers = () => (
   <div className="min-h-screen bg-background pt-[var(--header-height)] pb-20">
     <SEO
@@ -71,11 +83,32 @@ const Careers = () => (
         <AnimatedSection>
           <h2 className="text-h3 font-heading text-white mb-8 pb-4 border-b border-white/10">Open roles</h2>
         </AnimatedSection>
-        <StaggerContainer className="flex flex-col gap-4">
-          {careersData.map((role) => (
-            <RoleCard key={role.slug} {...role} />
-          ))}
-        </StaggerContainer>
+        {groupByCategory(careersData).map(({ category, roles }) => (
+          <div key={category} className="mb-12">
+            <AnimatedSection>
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-text-muted mb-4">{category}</h3>
+            </AnimatedSection>
+            {roles.length > 0 ? (
+              <StaggerContainer className="flex flex-col gap-4">
+                {roles.map((role) => (
+                  <RoleCard key={role.slug} {...role} />
+                ))}
+              </StaggerContainer>
+            ) : (
+              <AnimatedSection>
+                <p className="text-text-muted text-sm">No open roles at this time.</p>
+              </AnimatedSection>
+            )}
+          </div>
+        ))}
+
+        {/* Don't see your role */}
+        <AnimatedSection>
+          <h2 className="text-h3 font-heading text-white mb-4 pb-4 border-b border-white/10">Don't see your role?</h2>
+          <p className="text-text-secondary text-sm leading-relaxed">
+            We're growing fast and open roles change frequently. If you're passionate about space robotics and think you'd be a strong fit, check back often or reach out directly. We'd love to hear from you.
+          </p>
+        </AnimatedSection>
       </div>
 
 
