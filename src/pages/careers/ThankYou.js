@@ -13,7 +13,7 @@ const ThankYou = () => (
     <div className="container mx-auto px-6 max-w-2xl">
       <AnimatedSection>
         <Eyebrow className="mb-4">Application Received</Eyebrow>
-        <h1 className="text-h1 font-heading text-white mb-5">Thank you for applying.</h1>
+        <h1 className="text-h1 font-heading text-white mb-5">Thank you for applying!</h1>
         <p className="text-xl text-text-secondary mb-10">
           We've received your application and will review it as soon as possible. If your background is a strong fit, someone from our team will be in touch.
         </p>

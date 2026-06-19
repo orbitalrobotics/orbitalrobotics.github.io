@@ -42,7 +42,7 @@ const Careers = () => (
       {/* Hero */}
       <AnimatedSection className="max-w-3xl mb-16 pt-10">
         <Eyebrow className="mb-4">Careers</Eyebrow>
-        <h1 className="text-h1 font-heading text-white mb-5">Build the infrastructure of the space economy</h1>
+        <h1 className="text-h1 font-heading text-white mb-5">Build the Infrastructure of the Space Economy</h1>
         <p className="text-xl text-text-secondary">
           We're a small team building the foundation of space robotics with a strong belief that robots will lead humanity's expansion into the solar system.
         </p>
@@ -54,7 +54,7 @@ const Careers = () => (
           <div className="bg-surface rounded-xl border border-white/[0.06] p-8">
             <h2 className="text-h3 font-heading text-white mb-4">Our hiring philosophy</h2>
             <p className="text-text-secondary leading-relaxed">
-              We believe a strong fit for Orbital Robotics is more than just your resume. We look for candidates that are low-ego, work well in small teams, and obsessively passionate about the space industry. Also, you don't have to type out your experience.
+              We believe a strong fit for Orbital Robotics is more than just your resume. We look for candidates that are low-ego, work well in small teams, and obsessively passionate about the space industry. Also, we don't make you type out your experience.
             </p>
           </div>
           <div className="bg-surface rounded-xl border border-white/[0.06] p-8">

@@ -47,7 +47,7 @@ const JobDetail = () => {
 
   if (!job) return <Navigate to="/careers" replace />;
 
-  const { title, department, location, type, salary, overview, responsibilities, requirements, tallyEmbedSrc } = job;
+  const { title, department, location, type, salary, overview, responsibilities, requirements, preferredQualifications, tallyEmbedSrc } = job;
 
   return (
     <div className="min-h-screen bg-background pt-[var(--header-height)]">
@@ -73,7 +73,6 @@ const JobDetail = () => {
           <h1 className="text-h1 font-heading text-white mb-4">{title}</h1>
           <div className="flex flex-wrap items-center gap-3">
             <Badge variant="ember">{type}</Badge>
-            {salary && <span className="text-text-muted text-sm">{salary}</span>}
             <span className="text-text-muted text-sm">·</span>
             <span className="text-text-muted text-sm">{location}</span>
           </div>
@@ -99,7 +98,7 @@ const JobDetail = () => {
         </AnimatedSection>
 
         {/* Requirements */}
-        <AnimatedSection>
+        <AnimatedSection className="mb-10">
           <h2 className="text-h3 font-heading text-white mb-4 pb-4 border-b border-white/10">Requirements</h2>
           <ul className="space-y-3">
             {requirements.map((item, i) => (
@@ -109,6 +108,48 @@ const JobDetail = () => {
               </li>
             ))}
           </ul>
+        </AnimatedSection>
+
+        {/* Preferred Qualifications */}
+        {preferredQualifications && (
+          <AnimatedSection className="mb-10">
+            <h2 className="text-h3 font-heading text-white mb-4 pb-4 border-b border-white/10">Preferred Qualifications</h2>
+            <p className="text-text-secondary text-sm leading-relaxed mb-6">
+              We are looking for candidates who have deep experience in one or more of the following areas:
+            </p>
+            <div className="space-y-8">
+              {preferredQualifications.map((group) => (
+                <div key={group.category}>
+                  <h3 className="text-white font-heading font-semibold text-base mb-3">{group.category}</h3>
+                  <ul className="space-y-3">
+                    {group.items.map((item) => (
+                      <li key={item.title} className="flex items-start gap-3 text-text-secondary text-sm leading-relaxed">
+                        <span className="text-primary mt-0.5 shrink-0">—</span>
+                        <span><span className="text-white font-medium">{item.title}:</span> {item.description}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
+        )}
+
+        {/* Compensation */}
+        <AnimatedSection className="mb-10">
+          <h2 className="text-h3 font-heading text-white mb-4 pb-4 border-b border-white/10">Compensation</h2>
+          {salary && <p className="text-text-secondary text-sm leading-relaxed mb-3">{salary}</p>}
+          <p className="text-text-secondary text-sm leading-relaxed">
+            Compensation includes equity in the form of company stock / stock options, benefits, and paid time off.
+          </p>
+        </AnimatedSection>
+
+        {/* ITAR */}
+        <AnimatedSection>
+          <h2 className="text-h3 font-heading text-white mb-4 pb-4 border-b border-white/10">ITAR Requirements</h2>
+          <p className="text-text-secondary text-sm leading-relaxed">
+            To conform to U.S. Government export regulations, applicant must be a (i) U.S. citizen or national, (ii) U.S. lawful, permanent resident (aka green card holder), (iii) Refugee under 8 U.S.C. § 1157, or (iv) Asylee under 8 U.S.C. § 1158, or be eligible to obtain the required authorizations from the U.S. Department of State.
+          </p>
         </AnimatedSection>
 
       </div>

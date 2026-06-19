@@ -41,8 +41,35 @@ const careersData = [
       'Integrate and debug GNC and AI algorithms in simulation and on hardware.',
     ],
     requirements: [
-      'Bachelor’s Degree (or higher) in: Aerospace Engineering, Computer Science, Physics, Robotics, or a related engineering discipline.',
+      "Bachelor's Degree (or higher) in: Aerospace Engineering, Computer Science, Physics, Robotics, or a related engineering discipline.",
       'Software development experience in C, C++ and Python',
+    ],
+    preferredQualifications: [
+      {
+        category: 'Spacecraft Systems and GNC',
+        items: [
+          { title: 'Space Heritage', description: 'You have written code or built hardware that has flown and operated in space.' },
+          { title: 'Orbital Mechanics', description: 'You have a deep understanding of Orbit Determination and Control, and Rendezvous and Proximity Operations (RPO).' },
+          { title: 'Safety-Critical Software', description: 'Experience developing software under rigorous standards such as DO-178C or NPR-7150.2' },
+        ],
+      },
+      {
+        category: 'Robotics and Control',
+        items: [
+          { title: 'Robotic Manipulation', description: 'Experience leveraging robotic arm kinematics, dynamics, and motion planning to manipulate objects with robotic arms.' },
+          { title: 'Advanced Control Methods', description: 'Practical implementation model predictive control and force-based control strategies including impedance and admittance control.' },
+          { title: 'Optimization', description: 'Proficiency with sequential convex programming, Levenberg-Marquardt, Gauss-Newton, Newton-Raphson, and Gradient Descent algorithms.' },
+        ],
+      },
+      {
+        category: 'Autonomy, AI, and State Estimation',
+        items: [
+          { title: 'Estimation and Mapping', description: 'Experience deploying state estimation (EKF, UKF), visual odometry, simultaneous localization and mapping, structure from motion and 3D reconstruction algorithms on hardware systems.' },
+          { title: 'Computer Vision', description: 'Experience deploying and verifying video object detection, segmentation, and pose estimation algorithms on hardware systems.' },
+          { title: 'Deep Learning', description: 'Hands-on experience with Deep Reinforcement Learning using PyTorch or alternatives (e.g. Tensorflow) and a proven track record of deploying neural networks to real-world, edge-compute systems.' },
+          { title: 'AI System Verification', description: 'Experience verifying AI controlled hardware systems such as robots or autonomous vehicles.' },
+        ],
+      },
     ],
   },
 ];
