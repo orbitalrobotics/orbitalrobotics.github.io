@@ -113,28 +113,22 @@ const JobDetail = () => {
 
       </div>
 
-      {/* Gradient bridge from dark → light */}
-      <div className="h-48 bg-gradient-to-b from-background to-neutral-200" />
-
-      {/* Full-bleed light section for the Tally form */}
-      <div className="bg-neutral-200">
+      {/* Apply / Tally Form */}
+      <div className="container mx-auto px-6 max-w-3xl pb-20">
         <AnimatedSection>
-          <div className="container mx-auto px-6 max-w-3xl pt-32 pb-24">
-            <h2 className="text-h3 font-heading text-gray-900 mb-2">Apply for this role</h2>
-            <p className="text-gray-500 text-sm mb-8">{title} · {location} · {type}</p>
-            <iframe
-              data-tally-src={tallyEmbedSrc}
-              loading="lazy"
-              width="100%"
-              height="1200"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-              scrolling="no"
-              title={title}
-              style={{ display: 'block', overflow: 'hidden' }}
-            />
-          </div>
+          <h2 className="text-h3 font-heading text-white mb-8 pb-4 border-b border-white/10">Apply for this role</h2>
+          <iframe
+            data-tally-src={tallyEmbedSrc}
+            loading="lazy"
+            width="100%"
+            height="1175"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
+            scrolling="no"
+            title={title}
+            style={{ display: 'block', overflow: 'hidden' }}
+          />
         </AnimatedSection>
       </div>
 
