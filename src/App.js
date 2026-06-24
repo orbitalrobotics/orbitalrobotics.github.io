@@ -10,6 +10,9 @@ import Products from './pages/Products';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 import News from './pages/News';
+import Careers from './pages/Careers';
+import JobDetail from './pages/careers/JobDetail';
+import ThankYou from './pages/careers/ThankYou';
 import ProductDetail from './pages/ProductDetail';
 import StarcloudAnnouncement from './pages/news/StarcloudAnnouncement';
 import TechCrunchAnnouncement from './pages/news/TechCrunchAnnouncement';
@@ -27,6 +30,9 @@ const AnimatedRoutes = () => {
         <Route path="/products/:id" element={<PageTransition><ProductDetail /></PageTransition>} />
         {/* <Route path="/roadmap" element={<PageTransition><Roadmap /></PageTransition>} /> */}
         <Route path="/team" element={<PageTransition><Team /></PageTransition>} />
+        <Route path="/careers" element={<PageTransition><Careers /></PageTransition>} />
+        <Route path="/careers/thankyou" element={<PageTransition><ThankYou /></PageTransition>} />
+        <Route path="/careers/:role" element={<PageTransition><JobDetail /></PageTransition>} />
         <Route path="/news" element={<PageTransition><News /></PageTransition>} />
         <Route path="/news/starcloud-partnership" element={<PageTransition><StarcloudAnnouncement /></PageTransition>} />
         <Route path="/news/techcrunch-disrupt" element={<PageTransition><TechCrunchAnnouncement /></PageTransition>} />
