@@ -131,7 +131,7 @@ const Home = () => {
               Orbital Robotics: Seattle based company producing AI and robots for aerospace.
             </p>
             <p className="text-lg text-secondary font-medium max-w-3xl mx-auto">
-              Backed by former Blue Origin and SpaceX engineers.
+              Backed by AI House, and former Blue Origin & SpaceX engineers.
             </p>
           </AnimatedSection>
 
