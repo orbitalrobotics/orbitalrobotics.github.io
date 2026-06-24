@@ -64,7 +64,7 @@ const Careers = () => (
       <AnimatedSection className="mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-surface rounded-xl border border-white/[0.06] p-8">
-            <h2 className="text-h3 font-heading text-white mb-4">Our hiring philosophy</h2>
+            <h2 className="text-h3 font-heading text-white mb-4">Our Hiring Philosophy</h2>
             <p className="text-text-secondary leading-relaxed">
               We believe a strong fit for Orbital Robotics is more than just your resume. We look for candidates that are low-ego, work well in small teams, and obsessively passionate about the space industry. Also, we don't make you type out your experience.
             </p>
