@@ -1,30 +1,30 @@
 const careersData = [
-  {
-    slug: 'hardware-engineer',
-    title: 'Hardware Engineer',
-    category: 'Engineering',
-    department: 'Hardware',
-    location: 'Huntsville, AL',
-    type: 'Full-Time',
-    salary: '$90,000 – $120,000 / year',
-    tallyEmbedSrc: 'https://tally.so/embed/0QAZzZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
-    overview:
-      '[Placeholder] We are looking for a Hardware Engineer to join the Orbital Robotics team. In this role, you will design, build, and test flight hardware for our robotic arm and spacecraft systems — contributing directly to technology that will service satellites in orbit.',
-    responsibilities: [
-      '[Placeholder] Design and develop mechanical and electrical hardware for robotic systems and spacecraft payloads',
-      '[Placeholder] Own the full hardware lifecycle from concept through fabrication, assembly, and test',
-      '[Placeholder] Work cross-functionally with software and GNC teams to integrate hardware with flight software and control systems',
-      '[Placeholder] Write and maintain engineering documentation including drawings, test procedures, and design review materials',
-      '[Placeholder] Participate in environmental testing (vibration, thermal vacuum) and anomaly resolution',
-    ],
-    requirements: [
-      '[Placeholder] B.S. or higher in Mechanical Engineering, Electrical Engineering, Aerospace Engineering, or related field',
-      '[Placeholder] Experience designing hardware that has been built and tested (prior flight hardware experience a strong plus)',
-      '[Placeholder] Proficiency with CAD tools (SolidWorks, CATIA, or similar) and/or PCB design tools',
-      '[Placeholder] Strong first-principles engineering intuition and attention to detail',
-      '[Placeholder] Ability to work in a fast-paced startup environment and wear many hats',
-    ],
-  },
+  // {
+  //   slug: 'hardware-engineer',
+  //   title: 'Hardware Engineer',
+  //   category: 'Engineering',
+  //   department: 'Hardware',
+  //   location: 'Huntsville, AL',
+  //   type: 'Full-Time',
+  //   salary: '$90,000 – $120,000 / year',
+  //   tallyEmbedSrc: 'https://tally.so/embed/0QAZzZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
+  //   overview:
+  //     '[Placeholder] We are looking for a Hardware Engineer to join the Orbital Robotics team. In this role, you will design, build, and test flight hardware for our robotic arm and spacecraft systems — contributing directly to technology that will service satellites in orbit.',
+  //   responsibilities: [
+  //     '[Placeholder] Design and develop mechanical and electrical hardware for robotic systems and spacecraft payloads',
+  //     '[Placeholder] Own the full hardware lifecycle from concept through fabrication, assembly, and test',
+  //     '[Placeholder] Work cross-functionally with software and GNC teams to integrate hardware with flight software and control systems',
+  //     '[Placeholder] Write and maintain engineering documentation including drawings, test procedures, and design review materials',
+  //     '[Placeholder] Participate in environmental testing (vibration, thermal vacuum) and anomaly resolution',
+  //   ],
+  //   requirements: [
+  //     '[Placeholder] B.S. or higher in Mechanical Engineering, Electrical Engineering, Aerospace Engineering, or related field',
+  //     '[Placeholder] Experience designing hardware that has been built and tested (prior flight hardware experience a strong plus)',
+  //     '[Placeholder] Proficiency with CAD tools (SolidWorks, CATIA, or similar) and/or PCB design tools',
+  //     '[Placeholder] Strong first-principles engineering intuition and attention to detail',
+  //     '[Placeholder] Ability to work in a fast-paced startup environment and wear many hats',
+  //   ],
+  // },
   {
     slug: 'gnc-engineer',
     title: 'Guidance, Navigation & Control Engineer',
