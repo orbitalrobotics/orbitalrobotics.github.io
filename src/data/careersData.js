@@ -32,7 +32,7 @@ const careersData = [
     department: 'GNC',
     location: 'Seattle, WA',
     type: 'Full-Time',
-    salary: '$110,000 – $140,000 / year',
+    salary: '$110,000 – $180,000 / year',
     tallyEmbedSrc: 'https://tally.so/embed/Gx7qE2?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
     overview:
       'Orbital Robotics is looking for engineers who have developed software for robots and/or satellites with backgrounds in orbital mechanics, state estimation, control theory, robot motion planning, computer vision, deep learning, free-flying/free-floating space robot dynamics, and flight software development. You will join a team of world class engineers with experience deploying neural networks on real-world space robot systems.',
