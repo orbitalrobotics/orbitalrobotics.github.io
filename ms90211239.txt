@@ -1,0 +1,5 @@
+{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "orbital-robots.com",
+  "Id": "5e461780-7e60-4d79-94bd-42dcddf43eff"
+}
