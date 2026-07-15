@@ -166,9 +166,9 @@ const JobDetail = () => {
             frameBorder="0"
             marginHeight="0"
             marginWidth="0"
-            scrolling="no"
+            scrolling="auto"
             title={title}
-            style={{ display: 'block', overflow: 'hidden' }}
+            style={{ display: 'block', overflow: 'auto' }}
           />
         </AnimatedSection>
       </div>
