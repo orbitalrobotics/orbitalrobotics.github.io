@@ -94,6 +94,45 @@ const careersData = [
       },
     ],
   },
+  {
+    slug: 'embedded-software-engineer',
+    title: 'Embedded Software Engineer',
+    category: 'Engineering',
+    department: 'Software',
+    location: 'Seattle, WA or Huntsville, AL · Hybrid',
+    type: 'Full-Time',
+    salary: '$110,000 – $140,000 / year',
+    tallyEmbedSrc: 'https://tally.so/embed/5BDDQE?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
+    overview:
+      'Orbital Robotics is looking for engineers who have deployed embedded software for safety critical systems at scale. While we are deploying spacecraft with robotic arms to space, any engineer experienced with robotic systems, autonomous vehicles, or avionics will be a great fit.',
+    responsibilities: [
+      'Architect, implement, test, and deploy real-time embedded C/C++ software from bare-metal bring-up to production hardware.',
+      'Develop device drivers and high-speed communication protocols to tightly integrate actuators, motor controllers, and complex sensor payloads.',
+      'Optimize low-level firmware and RTOS to guarantee the strict timing and latencies required for high-bandwidth robotic control, dynamic movement, and manipulation.',
+      'Design fault-tolerant software architectures and safety systems that gracefully handle hardware degradation, thermal limits, and unexpected physical disturbances.',
+      'Integrate and debug embedded systems directly on full-scale robots and hardware-in-the-loop test frameworks.',
+    ],
+    requirements: [
+      'Bachelor’s degree in electrical engineering, computer science, physics, robotics, or related engineering discipline.',
+      'Software development experience in C, C++ and Linux',
+    ],
+    preferredQualifications: [
+      {
+        category: 'Firmware & Embedded Systems',
+        items: [
+          { title: 'Bare-Metal & RTOS', description: 'Experience implementing low-level software on bare-metal systems and RTOS.' },
+          { title: 'Motor Control', description: 'Experience with brushless motor controllers and FOC algorithm implementation.' },
+        ],
+      },
+      {
+        category: 'Safety-Critical & Real-Time Systems',
+        items: [
+          { title: 'Safety-Critical Software', description: 'Experience deploying for safety critical systems including aircraft avionics or autonomous vehicles.' },
+          { title: 'Real-Time Processors', description: 'Experience targeting high-reliability, real-time processors used in automotive powertrain, aerospace avionics, or robotic actuation.' },
+        ],
+      },
+    ],
+  },
 ];
 
 export default careersData;
