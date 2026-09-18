@@ -12,7 +12,7 @@ const variants = {
 
 const Badge = ({ variant = 'neutral', className = '', children }) => (
   <span
-    className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border text-xs font-semibold tracking-wide ${
+    className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-instrument border font-mono text-micro uppercase ${
       variants[variant] || variants.neutral
     } ${className}`}
   >

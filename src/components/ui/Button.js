@@ -2,22 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Polymorphic button: renders a router <Link> (to), an <a> (href), or a <button>.
+// Instrument register: rectangular (2px radius), mono uppercase label, hover
+// BRIGHTENS (instruments brighten, they don't darken).
 const base =
-  'inline-flex items-center justify-center gap-2 font-medium rounded-full transition-all duration-300 ' +
+  'inline-flex items-center justify-center gap-2 font-mono uppercase tracking-[0.12em] rounded-instrument transition-colors duration-200 ' +
   'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4C9DF0] ' +
   'disabled:opacity-60 disabled:cursor-not-allowed';
 
 const variants = {
-  primary: 'bg-primary text-white hover:bg-primary-hover shadow-lg hover:shadow-primary/40 hover:-translate-y-0.5',
-  secondary: 'bg-white/10 text-white border border-white/15 backdrop-blur-md hover:bg-white/20 hover:-translate-y-0.5',
-  outline: 'border border-primary/50 text-primary hover:bg-primary/10',
-  ghost: 'text-text-secondary hover:text-primary',
+  primary: 'bg-primary text-white hover:bg-primary-hover',
+  secondary: 'bg-white/[0.06] text-white border hairline hover:border-white/[0.16] hover:bg-white/[0.1]',
+  outline: 'border border-primary/50 text-primary hover:border-primary hover:text-accent',
+  ghost: 'text-text-secondary hover:text-accent',
 };
 
 const sizes = {
-  sm: 'px-4 py-2 text-sm',
-  md: 'px-6 py-3',
-  lg: 'px-8 py-4 text-lg',
+  sm: 'px-4 py-2 text-xs',
+  md: 'px-6 py-3 text-sm',
+  lg: 'px-8 py-4 text-sm',
 };
 
 const Spinner = () => (
