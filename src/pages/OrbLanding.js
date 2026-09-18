@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { OrbNav, OrbFooter, OrbCtaBand, DividerGlow } from '../components/orb';
 import Hero from '../components/orb/landing/Hero';
-import PartnerStrip from '../components/orb/landing/PartnerStrip';
+// import PartnerStrip from '../components/orb/landing/PartnerStrip';
 import StatStrip from '../components/orb/landing/StatStrip';
 import OrbitDiagram from '../components/orb/landing/OrbitDiagram';
 import RobotsInSpace from '../components/orb/landing/RobotsInSpace';
@@ -27,7 +27,7 @@ const OrbLanding = () => {
       <OrbNav />
       <Hero />
       <DividerGlow />
-      <PartnerStrip />
+      {/* <PartnerStrip /> */}
       <RobotsInSpace />
       <OrbitDiagram />
       <Pilots />

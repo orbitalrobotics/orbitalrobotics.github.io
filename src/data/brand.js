@@ -121,7 +121,7 @@ export const CREW = [
     photoScale: 1.22,
     credentials: ['Ex–Blue Origin', 'BE-7 Lead'],
     bio:
-      "Leads AI and robotics for autonomous satellite servicing. Formerly lead software engineer for Blue Origin's BE-7 lunar lander engine, where he managed 25 engineers. PhD researcher in aerospace dynamics & controls for the Space Force's SSTI-2 satellite servicing program, with a provisional patent in autonomous satellite servicing.",
+      "Leads AI and robotics for autonomous satellite servicing. Formerly lead software engineer for Blue Origin's BE-7 lunar lander engine, where he led 25 engineers. PhD researcher in aerospace dynamics & controls for the Space Force's SSTI-2 satellite servicing program, with a provisional patent in autonomous satellite servicing.",
     linkedin: 'https://www.linkedin.com/in/aaron-borger/',
     email: 'aborger@orbital-robots.com',
   },
