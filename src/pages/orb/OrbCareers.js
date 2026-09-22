@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import OrbPage from '../../components/orb/OrbPage';
 import OrbButton from '../../components/orb/OrbButton';
 import DividerGlow from '../../components/orb/DividerGlow';
-import { OPEN_ROLES } from '../../data/brand';
+import { OPEN_ROLES, ROLE_CATEGORIES } from '../../data/brand';
 import HiringPhilosophy from '../../assets/orb/careers/team-in-seattle.jpg';
 import LifeAtOrbital from '../../assets/orb/careers/life-at-orbital.jpg';
 
@@ -98,44 +98,51 @@ const OrbCareers = () => (
       <div className="mx-auto max-w-[1372px]">
         <h2 className="font-sohne font-normal text-orb-h2 text-orb-text">Open Roles</h2>
 
-        <p className="mt-12 border-t border-white/10 pt-10 font-sohne text-[24px] tracking-[-0.02em] text-orb-text">
-          Engineering
-        </p>
+        {ROLE_CATEGORIES.map((cat) => {
+          const roles = OPEN_ROLES.filter((r) => r.category === cat);
+          if (!roles.length) return null;
+          return (
+            <div key={cat}>
+            <div className="mt-12 border-t border-white/10 pt-10">
+              <span className="inline-block bg-orb-accent p-2.5 font-sohne text-orb-caption text-orb-text">
+                {cat}
+              </span>
+            </div>
 
-        <ul className="mt-8 flex flex-col gap-4">
-          {OPEN_ROLES.map((r) => (
-            <li key={r.id}>
-              <Link
-                to={`/careers/${r.id}`}
-                className="group flex flex-col gap-6 bg-orb-card px-6 py-10 transition-colors
-                           hover:bg-[#262626] sm:flex-row sm:items-center sm:justify-between"
-              >
-                <div className="flex flex-col gap-4">
-                  <p className="font-sohne text-orb-lg text-orb-text">{r.title}</p>
-                  <div className="flex flex-wrap items-center gap-4">
-                    <span className="bg-orb-accent p-2.5 font-sohne text-orb-caption text-orb-text">
-                      {r.department}
-                    </span>
-                    <p className="font-sohne text-orb-caption text-orb-text">
-                      {r.location} &nbsp;•&nbsp; {r.type}
-                    </p>
-                    <p className="font-sohne text-orb-caption text-orb-text-2">{r.salary}</p>
-                  </div>
-                </div>
-
-                <span className="flex shrink-0 items-center gap-4 font-sohne text-orb-caption text-orb-text">
-                  View Role
-                  <span
-                    aria-hidden
-                    className="text-orb-accent transition-transform group-hover:translate-x-1"
+            <ul className="mt-8 flex flex-col gap-4">
+              {roles.map((r) => (
+                <li key={r.id}>
+                  <Link
+                    to={`/careers/${r.id}`}
+                    className="group flex flex-col gap-6 bg-orb-card px-6 py-[18px] transition-all duration-200
+                               hover:bg-[#333333] hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)] sm:flex-row sm:items-center sm:justify-between"
                   >
-                    &rarr;
-                  </span>
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+                    <div className="flex flex-col gap-4">
+                      <p className="font-sohne text-orb-lg text-orb-text">{r.title}</p>
+                      <div className="flex flex-wrap items-center gap-4">
+                        <p className="font-sohne text-orb-caption text-orb-text">
+                          {r.location} &nbsp;•&nbsp; {r.type}
+                        </p>
+                        <p className="font-sohne text-orb-caption text-orb-text-2">{r.salary}</p>
+                      </div>
+                    </div>
+
+                    <span className="flex shrink-0 items-center gap-4 font-sohne text-orb-caption text-orb-text">
+                      View Role
+                      <span
+                        aria-hidden
+                        className="text-orb-accent transition-transform group-hover:translate-x-1"
+                      >
+                        &rarr;
+                      </span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            </div>
+          );
+        })}
       </div>
     </section>
   </OrbPage>

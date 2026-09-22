@@ -24,9 +24,20 @@ const ITAR_NOTICE =
   'To conform to U.S. Government export regulations, applicant must be a (i) U.S. citizen or national, (ii) U.S. lawful, permanent resident (aka green card holder), (iii) Refugee under 8 U.S.C. § 1157, or (iv) Asylee under 8 U.S.C. § 1158, or be eligible to obtain the required authorizations from the U.S. Department of State.';
 
 const SectionHeading = ({ children }) => (
-  <h2 className="border-b border-white/10 pb-4 font-sohne font-normal text-orb-h2 text-orb-text">
+  <h2 className="border-b border-white/10 pb-4 font-sohne font-normal text-[clamp(1.45rem,3.27vw,2.95rem)] leading-[1.1] tracking-[-0.031em] text-orb-text">
     {children}
   </h2>
+);
+
+const BulletList = ({ items }) => (
+  <ul className="flex flex-col gap-3">
+    {items.map((item) => (
+      <li key={item} className="flex items-start gap-3 font-sohne text-orb-body leading-[1.6] text-orb-text opacity-70">
+        <Dash />
+        {item}
+      </li>
+    ))}
+  </ul>
 );
 
 const Dash = () => (
@@ -82,14 +93,26 @@ const OrbJobDetail = () => {
 
   if (!job) return <Navigate to="/careers" replace />;
 
-  const { title, department, location, type, salary, overview, responsibilities, requirements, preferredQualifications, tallyEmbedSrc } = job;
+  const {
+    title,
+    department,
+    location,
+    type,
+    salary,
+    overview,
+    responsibilities,
+    requirements,
+    preferredQualifications,
+    compensationNote,
+    tallyEmbedSrc,
+  } = job;
 
   return (
     <OrbPage>
       <section className="px-6 pb-16 pt-44 md:px-10 md:pt-52">
-        <div className="mx-auto max-w-[762px]">
+        <div className="mx-auto max-w-[1100px]">
           <p className="font-plex text-orb-eyebrow uppercase text-orb-accent">{department}</p>
-          <h1 className="mt-6 font-sohne font-normal text-orb-display text-orb-text">{title}</h1>
+          <h1 className="mt-6 font-sohne font-normal text-[clamp(2.1rem,6.1vw,5.6rem)] leading-[0.878] tracking-[-0.02em] text-orb-text">{title}</h1>
 
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <span className="bg-orb-accent p-2.5 font-sohne text-orb-caption text-orb-text">{type}</span>
@@ -101,7 +124,7 @@ const OrbJobDetail = () => {
       <DividerGlow />
 
       <section className="px-6 py-20 md:px-10 md:py-28">
-        <div className="mx-auto flex max-w-[762px] flex-col gap-14">
+        <div className="mx-auto flex max-w-[1100px] flex-col gap-14">
           <div className="flex flex-col gap-5">
             <SectionHeading>Overview</SectionHeading>
             <p className="font-sohne text-orb-body leading-[1.6] text-orb-text opacity-70">{overview}</p>
@@ -109,14 +132,21 @@ const OrbJobDetail = () => {
 
           <div className="flex flex-col gap-5">
             <SectionHeading>Responsibilities</SectionHeading>
-            <ul className="flex flex-col gap-3">
-              {responsibilities.map((item) => (
-                <li key={item} className="flex items-start gap-3 font-sohne text-orb-body leading-[1.6] text-orb-text opacity-70">
-                  <Dash />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            {/* Entries are plain strings, or { category, items } groups. */}
+            {typeof responsibilities[0] === 'string' ? (
+              <BulletList items={responsibilities} />
+            ) : (
+              <div className="flex flex-col gap-8">
+                {responsibilities.map((group) => (
+                  <div key={group.category}>
+                    <h3 className="font-sohne text-orb-lg text-orb-text">{group.category}</h3>
+                    <div className="mt-4">
+                      <BulletList items={group.items} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col gap-5">
@@ -134,6 +164,10 @@ const OrbJobDetail = () => {
           {preferredQualifications && (
             <div className="flex flex-col gap-5">
               <SectionHeading>Preferred Qualifications</SectionHeading>
+              {typeof preferredQualifications[0] === 'string' ? (
+                <BulletList items={preferredQualifications} />
+              ) : (
+              <>
               <p className="font-sohne text-orb-body leading-[1.6] text-orb-text opacity-70">
                 We are looking for candidates who have deep experience in one or more of the following areas:
               </p>
@@ -158,6 +192,8 @@ const OrbJobDetail = () => {
                   </div>
                 ))}
               </div>
+              </>
+              )}
             </div>
           )}
 
@@ -165,6 +201,9 @@ const OrbJobDetail = () => {
             <SectionHeading>Compensation</SectionHeading>
             {salary && <p className="font-sohne text-orb-body leading-[1.6] text-orb-text opacity-70">{salary}</p>}
             <p className="font-sohne text-orb-body leading-[1.6] text-orb-text opacity-70">{COMPENSATION_NOTE}</p>
+            {compensationNote && (
+              <p className="font-sohne text-orb-body leading-[1.6] text-orb-text opacity-70">{compensationNote}</p>
+            )}
           </div>
 
           <div className="flex flex-col gap-5">
@@ -175,8 +214,9 @@ const OrbJobDetail = () => {
       </section>
 
       <section className="px-6 pb-20 md:px-10">
-        <div className="mx-auto max-w-[762px]">
+        <div className="mx-auto max-w-[1100px]">
           <SectionHeading>Apply for this role</SectionHeading>
+          {tallyEmbedSrc ? (
           <iframe
             data-tally-src={tallyEmbedSrc}
             loading="lazy"
@@ -186,6 +226,11 @@ const OrbJobDetail = () => {
             title={title}
             style={{ display: 'block', overflow: 'auto', marginTop: '2rem' }}
           />
+          ) : (
+            <p className="mt-8 font-sohne text-orb-body leading-[1.6] text-orb-text opacity-70">
+              Applications for this role are not open yet. Check back soon.
+            </p>
+          )}
 
           {/* A closing action, not an opening one — this used to sit above the
               job title, which put "leave this page" before the reader even knew
