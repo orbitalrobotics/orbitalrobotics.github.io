@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c004fdf1.css",
-    "main.js": "/static/js/main.e277d368.js",
+    "main.css": "/static/css/main.2f0fe543.css",
+    "main.js": "/static/js/main.e5051c0e.js",
     "static/media/astrobot.png": "/static/media/astrobot.bd375b9a57dcd33931f1.png",
     "static/media/space-plate.png": "/static/media/space-plate.223fe2db6ce4d3007a89.png",
     "static/media/ora-giga.png": "/static/media/ora-giga.749332d9118585590277.png",
@@ -261,11 +261,11 @@
     "static/media/ai_view_ar3_catch.mp4": "/static/media/ai_view_ar3_catch.dee05a18263249a7de38.mp4",
     "static/media/hubble_capture_compressed.mp4": "/static/media/hubble_capture_compressed.7c1124a0c3a8f975c4e6.mp4",
     "static/media/in_space_segmentation_compressed.mp4": "/static/media/in_space_segmentation_compressed.ba0084374da5ac73d48c.mp4",
-    "main.c004fdf1.css.map": "/static/css/main.c004fdf1.css.map",
-    "main.e277d368.js.map": "/static/js/main.e277d368.js.map"
+    "main.2f0fe543.css.map": "/static/css/main.2f0fe543.css.map",
+    "main.e5051c0e.js.map": "/static/js/main.e5051c0e.js.map"
   },
   "entrypoints": [
-    "static/css/main.c004fdf1.css",
-    "static/js/main.e277d368.js"
+    "static/css/main.2f0fe543.css",
+    "static/js/main.e5051c0e.js"
   ]
 }
