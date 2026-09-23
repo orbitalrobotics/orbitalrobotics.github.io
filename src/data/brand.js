@@ -226,15 +226,17 @@ export const ADVISORS = [
 // are ported verbatim from the pre-redesign repo's src/data/careersData.js —
 // the "View Role" click-through never existed on this site until now, so this
 // content has no Figma equivalent to reconcile against.
+export const ROLE_CATEGORIES = ['Software', 'Hardware', 'Operations'];
+
 export const OPEN_ROLES = [
   {
     id: 'founding-mechanical-engineer',
-    title: 'Founding Mechanical Engineer',
-    category: 'Engineering',
+    title: 'Mechanical Engineer',
+    category: 'Hardware',
     department: 'Hardware',
     location: 'Huntsville, AL',
     type: 'Full-Time',
-    salary: '$95,000 – $145,000 / year',
+    salary: '$90,000 – $150,000 / year',
     overview:
       "Orbital Robotics is seeking a Founding Mechanical Engineer to help pioneer the future of in-orbit infrastructure. You'll join a team of world-class engineers building the robotic systems necessary to transition the satellite industry from an expendable paradigm into a sustainable, reusable ecosystem. The ideal candidate will bring hands-on experience in the design, development, and integration of complex hardware systems for space, robotics, or high-reliability applications, with a passion to build the infrastructure enabling satellite servicing, refueling, and debris mitigation in support of human expansion into the solar system.",
     responsibilities: [
@@ -290,7 +292,7 @@ export const OPEN_ROLES = [
   {
     id: 'founding-gnc-engineer',
     title: 'Founding GNC Engineer',
-    category: 'Engineering',
+    category: 'Software',
     department: 'GNC',
     location: 'Seattle, WA',
     type: 'Full-Time',
@@ -369,7 +371,7 @@ export const OPEN_ROLES = [
   {
     id: 'founding-embedded-software-engineer',
     title: 'Founding Embedded Software Engineer',
-    category: 'Engineering',
+    category: 'Software',
     department: 'Software',
     location: 'Seattle, WA or Huntsville, AL · Hybrid',
     type: 'Full-Time',
@@ -410,6 +412,152 @@ export const OPEN_ROLES = [
       },
     ],
     tallyEmbedSrc: 'https://tally.so/embed/5BDDQE?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
+  },
+  {
+    id: 'assembly-integration-technician-huntsville',
+    title: 'Assembly & Integration Technician',
+    category: 'Hardware',
+    department: 'Hardware',
+    location: 'Huntsville, AL',
+    type: 'Full-Time',
+    salary: '$28.00 – $45.00 / hour',
+    overview:
+      "Orbital Robotics is an early-stage aerospace company building AI-powered autonomous robotic arms for in-orbit servicing, lunar surface operations, and Mars missions. Our flagship product, ORA (Orbital Robotics Arm), is a precision electro-mechanical system, not a large-scale structure, so the work here looks more like fine assembly and integration than heavy manufacturing. We are looking for an Assembly and Integration Technician to build, test, and integrate ORA units and their subsystems. You will work closely with our engineering team to assemble robotic arm components, wire and test electro-mechanical subassemblies, and support integration of ORA with spacecraft and ground test hardware. Given our size, you will likely work across the full build process rather than a single station, and your role may grow to include process documentation as our build procedures mature. Space flight hardware experience is a plus but not required. What matters most is precision, discipline with process and documentation, and comfort working to aerospace-grade tolerances on small, high-value assemblies.",
+    responsibilities: [
+      'Assemble robotic arm subsystems, including joints, actuators, sensors, and wiring harnesses, following detailed blueprints, schematics, and work instructions.',
+      'Use hand tools, precision torque tools, and test equipment appropriate to small electro-mechanical assemblies (calipers, dial indicators, multimeters, and similar).',
+      'Integrate ORA subsystems into complete units, and support integration of ORA with spacecraft or ground test fixtures, ensuring mechanical and electrical compatibility between components.',
+      'Perform functional checkouts and diagnostic testing on assembled units, and troubleshoot issues found during test.',
+      'Maintain detailed, traceable records of assembly steps, test results, and nonconformances, to the standard expected for flight hardware.',
+      'Follow ESD, cleanliness, and handling protocols appropriate for sensitive electro-mechanical and avionics components.',
+      'Follow safety protocols in the workplace.',
+      'Communicate clearly with engineering on build issues, deviations, and design feedback from the bench.',
+    ],
+    requirements: [
+      '2 to 4+ years of experience in a hands-on assembly role, ideally in aerospace, robotics, electronics, or another precision manufacturing environment.',
+      'Proficient with hand tools and precision instruments used in small electro-mechanical assembly, such as calipers, torque drivers, dial indicators, and multimeters.',
+      'Working knowledge of common electrical components and the ability to read wiring diagrams and follow detailed assembly instructions.',
+      'Comfortable working to tight tolerances on small, high-value assemblies rather than large structures.',
+      'Able to communicate effectively, in writing and verbally, with engineering and other technicians.',
+      'Able to shift between tasks in a fast-moving, small-team environment.',
+      'Must be a U.S. Person due to required access to ITAR and other export-controlled information.',
+    ],
+    preferredQualifications: [
+      'Experience with flight hardware, satellite components, or other space-grade assemblies.',
+      'Experience with electro-mechanical assemblies, wire harness fabrication and hand soldering, or PCBA integration and troubleshooting.',
+      'Experience running functional test and diagnosing failures on integrated electronic or electro-mechanical systems.',
+      'Familiarity with cleanroom procedures and ESD-safe handling.',
+      "Associate's or bachelor's degree in a technical field (engineering, physics, or similar).",
+      'Familiarity with basic LEAN manufacturing principles.',
+    ],
+    compensationNote: 'Possibility for overtime and weekend shifts as needed.',
+    tallyEmbedSrc: null,
+  },
+  {
+    id: 'assembly-integration-technician-seattle',
+    title: 'Assembly & Integration Technician',
+    category: 'Hardware',
+    department: 'Hardware',
+    location: 'Seattle, WA',
+    type: 'Full-Time',
+    salary: '$28.00 – $45.00 / hour',
+    overview:
+      "Orbital Robotics is looking for an Assembly and Integration Technician to build, test, and integrate ORA units and their subsystems. You will work closely with our engineering team to assemble robotic arm components, wire and test electro-mechanical subassemblies, and support integration of ORA with spacecraft and ground test hardware. Given our size, you will likely work across the full build process rather than a single station, and your role may grow to include process documentation as our build procedures mature. Space flight hardware experience is a plus but not required. What matters most is precision, discipline with process and documentation, and comfort working to aerospace-grade tolerances on small, high-value assemblies.",
+    responsibilities: [
+      'Assemble robotic arm subsystems, including joints, actuators, sensors, and wiring harnesses, following detailed blueprints, schematics, and work instructions.',
+      'Use hand tools, precision torque tools, and test equipment appropriate to small electro-mechanical assemblies (calipers, dial indicators, multimeters, and similar).',
+      'Integrate ORA subsystems into complete units, and support integration of ORA with spacecraft or ground test fixtures, ensuring mechanical and electrical compatibility between components.',
+      'Perform functional checkouts and diagnostic testing on assembled units, and troubleshoot issues found during test.',
+      'Maintain detailed, traceable records of assembly steps, test results, and nonconformances, to the standard expected for flight hardware.',
+      'Follow ESD, cleanliness, and handling protocols appropriate for sensitive electro-mechanical and avionics components.',
+      'Follow safety protocols in the workplace.',
+      'Communicate clearly with engineering on build issues, deviations, and design feedback from the bench.',
+    ],
+    requirements: [
+      '2 to 4+ years of experience in a hands-on assembly role, ideally in aerospace, robotics, electronics, or another precision manufacturing environment.',
+      'Proficient with hand tools and precision instruments used in small electro-mechanical assembly, such as calipers, torque drivers, dial indicators, and multimeters.',
+      'Working knowledge of common electrical components and the ability to read wiring diagrams and follow detailed assembly instructions.',
+      'Comfortable working to tight tolerances on small, high-value assemblies rather than large structures.',
+      'Able to communicate effectively, in writing and verbally, with engineering and other technicians.',
+      'Able to shift between tasks in a fast-moving, small-team environment.',
+      'Must be a U.S. Person due to required access to ITAR and other export-controlled information.',
+    ],
+    preferredQualifications: [
+      'Experience with flight hardware, satellite components, or other space-grade assemblies.',
+      'Experience with electro-mechanical assemblies, wire harness fabrication and hand soldering, or PCBA integration and troubleshooting.',
+      'Experience running functional test and diagnosing failures on integrated electronic or electro-mechanical systems.',
+      'Familiarity with cleanroom procedures and ESD-safe handling.',
+      "Associate's or bachelor's degree in a technical field (engineering, physics, or similar).",
+      'Familiarity with basic LEAN manufacturing principles.',
+    ],
+    compensationNote: 'Possibility for overtime and weekend shifts as needed.',
+    tallyEmbedSrc: null,
+  },
+  {
+    id: 'technical-recruiter',
+    title: 'Technical Recruiter',
+    category: 'Operations',
+    department: 'Operations',
+    location: 'Seattle, WA or Huntsville, AL',
+    type: 'Full-Time',
+    salary: '$90,000 – $140,000 / year',
+    overview:
+      "Orbital Robotics is looking for a Technical Recruiter to own hiring for our engineering and technical roles as the team grows. You will work directly with leadership to define roles, build candidate pipelines, and close hires. You will also help shape the hiring process itself. The role suits someone who enjoys recruiting across several engineering disciplines in a given week and wants to build a function while doing the work. As a small team, this role is not limited to recruiting. Once a pipeline is running well, you'll pick up broader HR work, such as onboarding, benefits administration, policy documentation, or compliance tasks.",
+    responsibilities: [
+      {
+        category: 'Full-Cycle Recruiting',
+        items: [
+          'Own end-to-end recruiting for technical roles, including robotics and controls, embedded and flight software, machine learning and perception, mechanical, avionics and electrical, and systems and test engineering.',
+          'Conduct phone screens that assess technical depth, project experience, and interest in early-stage, mission-driven work.',
+          'Manage the interview process from first contact through offer: schedule panels, brief interviewers, collect feedback, run debriefs, and drive offers to signature.',
+        ],
+      },
+      {
+        category: 'Partnership with Leadership',
+        items: [
+          'Advise on market conditions, compensation benchmarks, candidate availability, and realistic timelines.',
+          'Provide regular pipeline updates and recommend changes to sourcing or role scope when a search is not producing candidates.',
+          'Contribute to role design and leveling using external market data.',
+        ],
+      },
+      {
+        category: 'Compliance and Process',
+        items: [
+          'Run ITAR-compliant application screening and confirm U.S. Person eligibility for each candidate at the appropriate stage.',
+          'Own the candidate experience from first outreach through onboarding handoff.',
+          'Maintain the applicant tracking process and pipeline data, and recommend and implement tooling changes as hiring volume increases.',
+          'Track metrics such as source effectiveness, stage conversion, and time to hire.',
+          'Support recruiting presence at industry events and conferences.',
+        ],
+      },
+      {
+        category: 'Broader HR Support',
+        items: [
+          'Take on general HR tasks as recruiting volume allows, such as new hire onboarding, benefits administration, and policy documentation.',
+          'Help maintain compliance infrastructure as the company scales, including tasks related to CMMC and other regulatory requirements.',
+          'Support day-to-day People operations where needed, given the small team size.',
+        ],
+      },
+    ],
+    requirements: [
+      '2 to 4+ years of full-cycle technical recruiting experience, preferably at a startup or high-growth company.',
+      'Direct experience recruiting engineers in areas such as robotics, embedded systems, software, mechanical, or aerospace.',
+      'Enough technical fluency to run credible screens, understand what hiring managers are asking for, and explain the role to candidates.',
+      'Strong sourcing skills, including Boolean search and outbound outreach to passive candidates.',
+      'Ability to manage several concurrent searches across different disciplines while keeping the candidate experience high.',
+      'Clear communication with candidates, executives, and engineers, and the ability to build trust with each.',
+      'Comfort working in a small team where processes are still being defined, and willingness to build them.',
+      'Working knowledge of pipeline metrics and the ability to use them to assess search health.',
+      'Willingness to take on HR responsibilities beyond recruiting as needed.',
+    ],
+    preferredQualifications: [
+      'Experience recruiting in space, aerospace, defense, or robotics.',
+      'Familiarity with cleared talent and the constraints of export-controlled hiring.',
+      'Prior experience as an early or first recruiter at a startup, including selecting or setting up an ATS.',
+      'Existing network in the Seattle area or aerospace community.',
+      'Prior HR generalist experience, particularly benefits, onboarding, or compliance.',
+    ],
+    tallyEmbedSrc: null,
   },
 ];
 
