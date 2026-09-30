@@ -114,20 +114,37 @@ const OrbCareers = () => (
                 <li key={r.id}>
                   <Link
                     to={`/careers/${r.id}`}
-                    className="group flex flex-col gap-6 bg-orb-card px-6 py-[18px] transition-all duration-200
-                               hover:bg-[#333333] hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)] sm:flex-row sm:items-center sm:justify-between"
+                    className="group flex flex-col gap-3 bg-orb-card px-6 py-[18px] transition-all duration-200
+                               hover:bg-[#333333] hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)] sm:flex-row sm:items-center sm:justify-between sm:gap-6"
                   >
-                    <div className="flex flex-col gap-4">
-                      <p className="font-sohne text-orb-lg text-orb-text">{r.title}</p>
+                    <div className="flex flex-col gap-2 sm:gap-4">
+                      <p className="font-sohne text-orb-lg text-orb-text">
+                        {/* Stacked (mobile) cards drop the "View Role" label and
+                            carry just its arrow inline after the title instead,
+                            glued to the last word so it never wraps onto a line
+                            by itself. */}
+                        {r.title.slice(0, r.title.lastIndexOf(' ') + 1)}
+                        <span className="whitespace-nowrap">
+                          {r.title.slice(r.title.lastIndexOf(' ') + 1)}
+                          <span
+                            aria-hidden
+                            className="ml-3 inline-block text-orb-accent transition-transform group-hover:translate-x-1 sm:hidden"
+                          >
+                            &rarr;
+                          </span>
+                        </span>
+                      </p>
                       <div className="flex flex-wrap items-center gap-4">
                         <p className="font-sohne text-orb-caption text-orb-text">
                           {r.location} &nbsp;•&nbsp; {r.type}
                         </p>
-                        <p className="font-sohne text-orb-caption text-orb-text-2">{r.salary}</p>
+                        {/* Stacked (mobile) cards leave the salary to the role's
+                            detail page, which still shows it, to keep each card short. */}
+                        <p className="hidden font-sohne text-orb-caption text-orb-text-2 sm:block">{r.salary}</p>
                       </div>
                     </div>
 
-                    <span className="flex shrink-0 items-center gap-4 font-sohne text-orb-caption text-orb-text">
+                    <span className="hidden shrink-0 items-center gap-4 font-sohne text-orb-caption text-orb-text sm:flex">
                       View Role
                       <span
                         aria-hidden

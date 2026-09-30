@@ -34,6 +34,7 @@ import ToggleRing from '../../assets/orb/nav-toggle-ring.svg';
 // three columns that do not need it.
 
 const SCROLL_THRESHOLD = 24;
+const SCROLL_CLOSE_SLACK = 8;
 
 // Hover-driven open/close for the toggle: a short delay before opening so a
 // passing cursor doesn't trigger it, and a longer delay before closing so
@@ -103,6 +104,20 @@ const OrbNav = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Mobile only: scrolling the page closes the open panel. Measured from where
+  // the page sat when the menu opened, with a few px of slack so iOS's
+  // toolbar/rubber-band jitter doesn't dismiss it on its own. Desktop (md and
+  // up) keeps its hover-driven behavior untouched.
+  useEffect(() => {
+    if (!open || !window.matchMedia('(max-width: 767px)').matches) return undefined;
+    const startY = window.scrollY;
+    const onScroll = () => {
+      if (Math.abs(window.scrollY - startY) > SCROLL_CLOSE_SLACK) setOpen(false);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [open]);
+
   // Escape closes the panel, matching the close affordance in the design.
   useEffect(() => {
     if (!open) return undefined;
@@ -161,6 +176,14 @@ const OrbNav = () => {
         </div>
       </div>
 
+      {/* Mobile only: a transparent layer over the page beneath the open
+          panel, so tapping anywhere outside it closes the menu — and swallows
+          that tap rather than letting it land on a link underneath. Hidden at
+          md and up, where the menu is hover-driven and clicks pass through. */}
+      {open && (
+        <div aria-hidden className="fixed inset-0 -z-10 md:hidden" onClick={() => setOpen(false)} />
+      )}
+
       <div className="mx-auto max-w-[1362px]">
         <AnimatePresence>
           {open && (
@@ -173,13 +196,13 @@ const OrbNav = () => {
               transition={{ duration: 0.25, ease: 'easeOut' }}
               onMouseEnter={handleHoverEnter}
               onMouseLeave={handleHoverLeave}
-              className="mt-6 grid gap-10 rounded-2xl border border-orb-glass-border bg-orb-glass
-                         p-8 backdrop-blur-orb-nav md:grid-cols-3 md:gap-0 md:p-10"
+              className="mt-4 grid gap-6 rounded-2xl border border-orb-glass-border bg-orb-glass
+                         p-6 backdrop-blur-orb-nav md:mt-6 md:grid-cols-3 md:gap-0 md:p-10"
             >
               {NAV_COLUMNS.map((col, i) => (
                 <div
                   key={col.heading}
-                  className={`flex flex-col gap-6 md:px-10 ${
+                  className={`flex flex-col gap-3 md:gap-6 md:px-10 ${
                     i > 0 ? 'md:border-l md:border-white/15' : ''
                   }`}
                 >
@@ -209,7 +232,7 @@ const OrbNav = () => {
                       ))}
                     </div>
                   ) : (
-                    <ul className="flex flex-col gap-5">
+                    <ul className="flex flex-col gap-3 md:gap-5">
                       {col.items.map((item) => (
                         <li key={item.label}>
                           <Link
@@ -220,7 +243,7 @@ const OrbNav = () => {
                             {item.label}
                           </Link>
                           {item.blurb && (
-                            <p className="mt-2 max-w-[292px] font-sohne text-orb-caption text-orb-text-2">
+                            <p className="mt-2 hidden max-w-[292px] font-sohne text-orb-caption text-orb-text-2 md:block">
                               {item.blurb}
                             </p>
                           )}
