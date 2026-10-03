@@ -1,7 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.85c2af20.css",
-    "main.js": "/static/js/main.e725ff76.js",
+    "main.js": "/static/js/main.fed66ede.js",
+    "static/media/free-float-cube-grasp.mp4": "/static/media/free-float-cube-grasp.de7edf13ee586a3d401b.mp4",
+    "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.9d4ac8885111319449fd.mp4",
+    "static/media/ar3_catch.mp4": "/static/media/ar3_catch.31d49ba1a6e46ac96d52.mp4",
+    "static/media/point_control.gif": "/static/media/point_control.8c629b2615ea1649279a.gif",
+    "static/media/in_space_segmentation_compressed.mp4": "/static/media/in_space_segmentation_compressed.c4bf4fabeb000c7b4177.mp4",
+    "static/media/hubble_capture_compressed.mp4": "/static/media/hubble_capture_compressed.651e4c24d5549d1712c1.mp4",
+    "static/media/monte_carlo_satellite_control.gif": "/static/media/monte_carlo_satellite_control.d689153a5d26f12100e4.gif",
+    "static/media/ai_view_ar3_catch.mp4": "/static/media/ai_view_ar3_catch.e7aa48ff9725b053fe3d.mp4",
     "static/media/astrobot.png": "/static/media/astrobot.bd375b9a57dcd33931f1.png",
     "static/media/space-plate.png": "/static/media/space-plate.223fe2db6ce4d3007a89.png",
     "static/media/ora-giga.png": "/static/media/ora-giga.749332d9118585590277.png",
@@ -254,17 +262,11 @@
     "static/media/nav-toggle-ring.svg": "/static/media/nav-toggle-ring.f3a10d78c8d701cd86ccbd4ef6c9ba62.svg",
     "static/media/bracket-rule.svg": "/static/media/bracket-rule.a93758a77ad5575cdfc6e39cb71ee5d9.svg",
     "static/media/ora-ellipse.svg": "/static/media/ora-ellipse.05b76736833d33f633e7bf41025880f0.svg",
-    "static/media/ar3_catch.mp4": "/static/media/ar3_catch.94a7b285a2ce62840696.mp4",
-    "static/media/free-float-cube-grasp.mp4": "/static/media/free-float-cube-grasp.b9301cf22203d926f788.mp4",
-    "static/media/segmentation_demo2.mp4": "/static/media/segmentation_demo2.b63c8def5fcd9020a031.mp4",
-    "static/media/ai_view_ar3_catch.mp4": "/static/media/ai_view_ar3_catch.dee05a18263249a7de38.mp4",
-    "static/media/hubble_capture_compressed.mp4": "/static/media/hubble_capture_compressed.7c1124a0c3a8f975c4e6.mp4",
-    "static/media/in_space_segmentation_compressed.mp4": "/static/media/in_space_segmentation_compressed.ba0084374da5ac73d48c.mp4",
     "main.85c2af20.css.map": "/static/css/main.85c2af20.css.map",
-    "main.e725ff76.js.map": "/static/js/main.e725ff76.js.map"
+    "main.fed66ede.js.map": "/static/js/main.fed66ede.js.map"
   },
   "entrypoints": [
     "static/css/main.85c2af20.css",
-    "static/js/main.e725ff76.js"
+    "static/js/main.fed66ede.js"
   ]
 }
