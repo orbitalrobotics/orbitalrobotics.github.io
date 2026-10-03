@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2f0fe543.css",
-    "main.js": "/static/js/main.e5051c0e.js",
+    "main.css": "/static/css/main.85c2af20.css",
+    "main.js": "/static/js/main.e725ff76.js",
     "static/media/astrobot.png": "/static/media/astrobot.bd375b9a57dcd33931f1.png",
     "static/media/space-plate.png": "/static/media/space-plate.223fe2db6ce4d3007a89.png",
     "static/media/ora-giga.png": "/static/media/ora-giga.749332d9118585590277.png",
@@ -10,7 +10,6 @@
     "static/media/ora-astrosfera.png": "/static/media/ora-astrosfera.e770d70224c59a0fe6fb.png",
     "static/media/ora-mini.png": "/static/media/ora-mini.4eb735e020efd7dc9d38.png",
     "static/media/coming_soon.png": "/static/media/coming_soon.2b86c750928919151705.png",
-    "static/media/team-in-seattle.jpg": "/static/media/team-in-seattle.1d6a5cf9f4a0cb004005.jpg",
     "static/media/cupola-earth-limb.png": "/static/media/cupola-earth-limb.7ca5253df0f9a9a62360.png",
     "static/media/hero-particles.png": "/static/media/hero-particles.819f037b97ffa5fc8445.png",
     "static/media/ora-giga.webp": "/static/media/ora-giga.4dcaa6c3b046aa10b164.webp",
@@ -261,11 +260,11 @@
     "static/media/ai_view_ar3_catch.mp4": "/static/media/ai_view_ar3_catch.dee05a18263249a7de38.mp4",
     "static/media/hubble_capture_compressed.mp4": "/static/media/hubble_capture_compressed.7c1124a0c3a8f975c4e6.mp4",
     "static/media/in_space_segmentation_compressed.mp4": "/static/media/in_space_segmentation_compressed.ba0084374da5ac73d48c.mp4",
-    "main.2f0fe543.css.map": "/static/css/main.2f0fe543.css.map",
-    "main.e5051c0e.js.map": "/static/js/main.e5051c0e.js.map"
+    "main.85c2af20.css.map": "/static/css/main.85c2af20.css.map",
+    "main.e725ff76.js.map": "/static/js/main.e725ff76.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f0fe543.css",
-    "static/js/main.e5051c0e.js"
+    "static/css/main.85c2af20.css",
+    "static/js/main.e725ff76.js"
   ]
 }
