@@ -4,7 +4,6 @@ import OrbPage from '../../components/orb/OrbPage';
 import OrbButton from '../../components/orb/OrbButton';
 import DividerGlow from '../../components/orb/DividerGlow';
 import { OPEN_ROLES, ROLE_CATEGORIES } from '../../data/brand';
-import HiringPhilosophy from '../../assets/orb/careers/team-in-seattle.jpg';
 import LifeAtOrbital from '../../assets/orb/careers/life-at-orbital.jpg';
 
 // Figma "Careers" (369:1234). Display headline, accent divider, two alternating
@@ -55,12 +54,14 @@ const Block = ({ title, body, image, alt, flip = false }) => (
       <h2 className="font-sohne font-normal text-orb-h2 text-orb-text">{title}</h2>
       <p className="mt-7 max-w-[631px] font-sohne text-orb-body text-orb-text opacity-70">{body}</p>
     </div>
-    <img
-      src={image}
-      alt={alt}
-      loading="lazy"
-      className="mx-auto aspect-square w-full max-w-[528px] rounded-full object-cover"
-    />
+    {image && (
+      <img
+        src={image}
+        alt={alt}
+        loading="lazy"
+        className="mx-auto aspect-square w-full max-w-[528px] rounded-full object-cover"
+      />
+    )}
   </div>
 );
 
@@ -81,8 +82,6 @@ const OrbCareers = () => (
         <Block
           title="Our Hiring Philosophy"
           body="We believe a strong fit for Orbital Robotics is more than just your resume. We look for obsessive, low-ego candidates that work well in small teams and are deeply passionate about the space industry. Also, we don't make you type out your experience."
-          image={HiringPhilosophy}
-          alt=""
         />
         <Block
           title="Life at Orbital Robotics"
