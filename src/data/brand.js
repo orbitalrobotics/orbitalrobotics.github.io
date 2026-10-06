@@ -22,6 +22,20 @@ import TaylorImg from '../assets/headshots/TaylorBanks.jpeg';
 import AstrosferaArm from '../assets/orb/arms/ora-astrosfera.webp';
 import MiniArm from '../assets/orb/arms/ora-mini.webp';
 import GigaArm from '../assets/orb/arms/ora-giga.webp';
+import GeekWireISSPreview from '../assets/images/news/geekwire_iss_preview.jpg';
+import BlackFlag100Preview from '../assets/images/news/blackflag_100_preview.jpg';
+import SophiaSpacePreview from '../assets/images/news/sophia_orbital_robotics_announcement.png';
+import UWTalkPreview from '../assets/images/news/uw_talk_preview.png';
+import SaveHubblePreview from '../assets/images/news/save_hubble_preview.png';
+import GeekWire2026Preview from '../assets/images/news/geekwire_2026_preview.png';
+import AerospaceCorpPreview from '../assets/images/news/aerospace_corp_preview.png';
+import CompanyLaunchTrackerPreview from '../assets/images/news/company_launch_tracker_preview.png';
+import StarcloudPreview from '../assets/images/partners/StarCloud_White.png';
+import TechCrunchPreview from '../assets/images/news/techcrunch_original.jpg';
+import GeekWirePreview from '../assets/images/news/geekwire_preview.png';
+import SpaceOceanPreview from '../assets/images/news/space_ocean_preview.png';
+import BeyondMaxQPreview from '../assets/images/news/youtube_preview.png';
+import SpaceDirtPreview from '../assets/images/news/space_dirt_preview.png';
 
 // --- Company -----------------------------------------------------------------
 
@@ -642,111 +656,139 @@ export const MISSION_LOG = [
 // write-ups (still pre-redesign pages at /news/*); the rest are external
 // coverage and open in a new tab — OrbNews tells them apart the same way the
 // page it replaces did, by whether href starts with a scheme.
+//
+// featured: 1-3 pins an article to the Featured block at the top of the News
+// page, in that order (lowest first). Only the top three are shown; featured
+// articles are left out of the grid below so nothing appears twice.
 export const ARTICLES = [
   {
     index: '01',
+    title: "Orbital Robotics gets set to send up a pair of arms for International Space Station's robots",
+    summary:
+      "A free-flying NASA Astrobee aboard the ISS will demonstrate satellite capture and servicing using a pair of autonomous robotic arms built by Orbital Robotics. Astronauts will install the arms in orbit, and the equipped Astrobee will capture a second Astrobee and swap out its compute module — three demonstrations, about a month apart, targeted for Q3 2027.",
+    source: 'GEEKWIRE',
+    href: 'https://www.geekwire.com/2026/orbital-robotics-arms-international-space-station/',
+    image: GeekWireISSPreview,
+    featured: 1,
+  },
+  {
+    index: '02',
     title: 'Orbital Robotics named to the Black Flag 100 (2026)',
     summary:
       'Black Flag\'s annual ranking of the 100 early-stage deep tech companies founders are most excited about: "Orbital Robotics builds AI-powered robotic arms that autonomously capture and service spacecraft in orbit. Its deep reinforcement learning engine solves the dynamic coupling problem, positioning it at the intersection of commercial satellite growth and rising government demand for autonomous on-orbit servicing." Compiled from over 500 founder nominations across 1,500+ companies.',
     source: 'BLACK FLAG VC',
     href: 'https://www.blackflag.vc/100-2#company-orbital-robotics',
+    image: BlackFlag100Preview,
   },
   {
-    index: '02',
+    index: '03',
     title:
       'Sophia Space and Orbital Robotics announce exploratory collaboration on on-orbit AI compute and robotic manufacturing concepts',
     summary:
       'Sophia Space and Orbital Robotics announce an exploratory collaboration to combine on-orbit AI compute capabilities with robotic manufacturing, advancing the future of autonomous space infrastructure.',
     source: 'SOPHIA SPACE',
     href: 'https://sophia.space/news/sophia-space-and-orbital-robotics-announce-exploratory-collaboration-on-on-orbit-ai-compute-and-robotic-manufacturing-concepts',
+    image: SophiaSpacePreview,
   },
   {
-    index: '03',
+    index: '04',
     title: '2026 Winter Robotics Colloquium: Aaron Borger (Orbital Robotics)',
     summary:
       "Aaron Borger presents 'Orbital Robotics: AI, Robotics, and Autonomy for Orbital Logistics' at the UW Paul G. Allen School of Computer Science & Engineering's Winter 2026 Robotics Colloquium.",
     source: 'UW ALLEN SCHOOL (YOUTUBE)',
     href: 'https://www.youtube.com/watch?v=6QD3XKtB4xE',
+    image: UWTalkPreview,
   },
   {
-    index: '04',
+    index: '05',
     title: 'Save Hubble Coalition',
     summary:
       "Join the Save Hubble Coalition — a collaborative effort to preserve one of humanity's greatest scientific achievements through innovative on-orbit servicing technology.",
     source: 'ORBITAL ROBOTICS',
     href: '/news/save-hubble',
+    image: SaveHubblePreview,
   },
   {
-    index: '05',
+    index: '06',
     title: 'Orbital Robotics reaches out with a plan for robotic arms that use AI',
     summary:
       "GeekWire covers Orbital Robotics' mission to develop AI-powered robotic arms for space. CEO Aaron Borger discusses partnerships with the U.S. Space Force and plans to service the Hubble Space Telescope.",
     source: 'GEEKWIRE',
     href: 'https://www.geekwire.com/2026/orbital-robotics-space-robotic-arms-ai/',
+    image: GeekWire2026Preview,
   },
   {
-    index: '06',
+    index: '07',
     title: 'Startup Showcase: Orbital Robotics',
     summary:
       "The Aerospace Corporation features Orbital Robotics in their startup showcase, highlighting the company's autonomous robotic arm and perception system for on-orbit refueling and repair, powered by their deep reinforcement learning algorithm.",
     source: 'THE AEROSPACE CORPORATION',
     href: 'https://aerospace.org/kickstage/startup-showcase-orbital-robotics',
+    image: AerospaceCorpPreview,
   },
   {
-    index: '07',
+    index: '08',
     title: 'Company Launch Tracker: Orbital Robotics',
     summary:
       'Company Launch Tracker profiles Orbital Robotics, featuring CEO Aaron Borger and our mission to build AI-controlled space robots for national security, space construction, and off-world resource gathering.',
     source: 'COMPANY LAUNCH TRACKER',
     href: 'https://companylaunchtracker.substack.com/p/company-launch-tracker-37',
+    image: CompanyLaunchTrackerPreview,
   },
   {
-    index: '08',
+    index: '09',
     title: 'Orbital Robotics partners with Starcloud on space-based AI',
     summary:
       'Orbital Robotics signs an LOI with Starcloud to partner on space-based AI. The partnership aims to provide AI-controlled robotic arms to aid with assembling, docking, maintaining, and upgrading datacenter modules.',
     source: 'ORBITAL ROBOTICS',
     href: '/news/starcloud-partnership',
+    image: StarcloudPreview,
+    imageFit: 'contain',
   },
   {
-    index: '09',
+    index: '10',
     title: 'Orbital Robotics at TechCrunch Disrupt 2025',
     summary:
       'Orbital Robotics pitches at TechCrunch Disrupt 2025, showcasing AI solutions for space infrastructure. Watch the full pitch and learn more about our vision for the future of space.',
     source: 'ORBITAL ROBOTICS',
     href: '/news/techcrunch-disrupt',
+    image: TechCrunchPreview,
   },
   {
-    index: '10',
+    index: '11',
     title: "Startup Radar: it's all about AI for early-stage Seattle companies",
     summary:
       "GeekWire highlights our work in AI for space robotics and how we're shaping the future of autonomous servicing in orbit.",
     source: 'GEEKWIRE',
     href: 'https://www.geekwire.com/2025/startup-radar-its-all-about-ai-for-early-stage-seattle-companies-in-space-storytelling-supply-chain/',
+    image: GeekWirePreview,
   },
   {
-    index: '11',
+    index: '12',
     title: 'Space Ocean and Orbital Robotics team up on in-space robotics',
     summary:
       'Space Ocean signs an LOI with Orbital Robotics to explore integration of robotic arms and autonomous docking systems for future orbital servicing and infrastructure missions.',
     source: 'SPACE OCEAN',
     href: 'https://spaceoceancorp.com/news/space-ocean-orbital-robotics-loi-robotic-integration',
+    image: SpaceOceanPreview,
   },
   {
-    index: '12',
+    index: '13',
     title: 'Beyond Max Q: AI and space robotics with Orbital Robotics',
     summary:
       'Host Mollie Jahner and co-host Anne Bly interview Aaron Borger, CEO of Orbital Robotics, on AI in space robotics, safety challenges, startup funding strategies, and demonstrating technology in orbit before securing customer contracts.',
     source: 'BEYOND MAX Q (YOUTUBE)',
     href: 'https://www.youtube.com/watch?v=G3wcdS66wgU',
+    image: BeyondMaxQPreview,
   },
   {
-    index: '13',
+    index: '14',
     title: 'Space Dirt: Orbital Robotics builds the next generation of autonomous rendezvous tech',
     summary:
       "Space Dirt highlights Orbital Robotics for its work in developing autonomous rendezvous, proximity operations, and capture (RPOC) systems, key for on-orbit servicing, refueling, relocation, and debris removal. CEO Aaron Borger notes the company's mission to enable high mobility and sustainable orbital operations.",
     source: 'SPACE DIRT NEWSLETTER',
     href: 'https://spacedirt.beehiiv.com/p/october-s-space-dirt-month-end',
+    image: SpaceDirtPreview,
   },
 ];
 
