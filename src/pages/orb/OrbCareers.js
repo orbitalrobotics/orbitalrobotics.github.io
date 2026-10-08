@@ -6,7 +6,7 @@ import AshbyJobBoard, { useAshbyOpenJob } from '../../components/orb/AshbyJobBoa
 import LifeAtOrbital from '../../assets/orb/careers/life-at-orbital.jpg';
 
 // Figma "Careers" (369:1234). Display headline, accent divider, two alternating
-// copy/circular-image blocks, then Open Roles.
+// copy/circular-image blocks, then the open roles board.
 //
 // The circular images are the design's own: node 369:1541 ("Ellipse 18", the
 // mask sitting beside the "Our Hiring Philosophy" text frame 369:1297) and node
@@ -14,7 +14,7 @@ import LifeAtOrbital from '../../assets/orb/careers/life-at-orbital.jpg';
 // prior pass used generic Earth-limb/nebula stock photos here as stand-ins
 // while the real assets were unconfirmed; these are the real ones.
 //
-// Open Roles is Ashby's hosted job board (AshbyJobBoard) rather than rows
+// The open roles list is Ashby's hosted job board (AshbyJobBoard) rather than rows
 // built from local data — listings, role pages, and applications are all
 // managed in Ashby, so posting or closing a role needs no site change.
 
@@ -57,9 +57,9 @@ const Block = ({ title, body, image, alt, flip = false }) => (
 );
 
 const OrbCareers = () => {
-  // While a role is open inside the board, the "Open Roles" heading steps
-  // aside so Ashby's own role title is the page's title. Every move inside the
-  // board (open, back to all jobs, apply) brings the column back into view.
+  // The board carries its own headings ("Open Positions" on the listing, the
+  // role title inside a role), so this section adds none. Every move inside
+  // the board (open, back to all jobs, apply) brings it back into view.
   const columnRef = useRef(null);
   const scrollToBoard = useCallback(() => {
     const el = columnRef.current;
@@ -68,7 +68,7 @@ const OrbCareers = () => {
     if (window.lenis) window.lenis.scrollTo(el, { offset: -128, immediate: true });
     else el.scrollIntoView({ block: 'start' });
   }, []);
-  const openJobId = useAshbyOpenJob(scrollToBoard);
+  useAshbyOpenJob(scrollToBoard);
 
   return (
     <OrbPage cta={<CtaBlock />}>
@@ -101,13 +101,9 @@ const OrbCareers = () => {
       <section className="px-6 pb-28 md:px-10">
         {/* A narrower centered column than the sections above: the board
             stretches its filters to the iframe's full width, which read too
-            wide at 1362px. Heading and board share the column so they stay
-            aligned. No frame of our own — Ashby's custom CSS styles the inside. */}
+            wide at 1362px. No frame of our own — Ashby's custom CSS styles the
+            inside. */}
         <div ref={columnRef} className="mx-auto max-w-[1000px] scroll-mt-32">
-          {!openJobId && (
-            <h2 className="mb-12 font-sohne font-normal text-orb-h2 text-orb-text">Open Roles</h2>
-          )}
-
           <AshbyJobBoard />
         </div>
       </section>
