@@ -78,3 +78,13 @@ html.lenis body {
 .lenis [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
+/* Ashby job board (AshbyJobBoard.js). Ashby's embed script owns the iframe's
+   height (it resizes to fit the content), so nothing here sets one; this only
+   makes the frame sit flush in the page flow. */
+#ashby_embed_iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+}

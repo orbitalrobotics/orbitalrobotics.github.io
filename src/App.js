@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence, MotionConfig } from 'framer-motion';
 import ScrollToTop from './components/ScrollToTop';
 import SmoothScroll from './components/SmoothScroll';
@@ -11,8 +11,6 @@ import ProductDetail from './pages/ProductDetail';
 import OrbLanding from './pages/OrbLanding';
 import OrbTeam from './pages/orb/OrbTeam';
 import OrbCareers from './pages/orb/OrbCareers';
-import OrbJobDetail from './pages/orb/OrbJobDetail';
-import OrbThankYou from './pages/orb/OrbThankYou';
 import OrbSoftware from './pages/orb/OrbSoftware';
 import OrbArmDetail from './pages/orb/OrbArmDetail';
 import OrbNews from './pages/orb/OrbNews';
@@ -62,8 +60,9 @@ function App() {
           <Route path="/orb-tokens" element={<OrbPreview />} />
           <Route path="/team" element={<OrbTeam />} />
           <Route path="/careers" element={<OrbCareers />} />
-          <Route path="/careers/thankyou" element={<OrbThankYou />} />
-          <Route path="/careers/:role" element={<OrbJobDetail />} />
+          {/* Role pages now live in the Ashby board on /careers; old
+              /careers/:role links land there instead of on a blank page. */}
+          <Route path="/careers/*" element={<Navigate to="/careers" replace />} />
           <Route path="/products/satellite-os" element={<OrbSoftware />} />
           <Route path="/products/robotic-arms" element={<OrbArmDetail />} />
           <Route path="/news" element={<OrbNews />} />

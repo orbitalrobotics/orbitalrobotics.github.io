@@ -1,6 +1,6 @@
 import React from 'react';
 import { OrbNav, OrbFooter, OrbCtaBand, OrbButton, DividerGlow } from '../components/orb';
-import { STATS, CREW, ADVISORS, ARMS, OPEN_ROLES } from '../data/brand';
+import { STATS, CREW, ADVISORS, ARMS } from '../data/brand';
 
 // Review surface for the redesign chrome and tokens before the real pages are
 // built on them. Not linked from the nav — reachable at /#/orb-preview.
@@ -145,36 +145,6 @@ const OrbPreview = () => (
       </div>
     </section>
 
-    {/* Open roles — three distinct roles, with the salary the design drops */}
-    <section className="px-6 py-20 md:px-10">
-      <div className="mx-auto max-w-[1362px]">
-        <h2 className="font-sohne text-orb-h2 text-orb-text">Open Roles</h2>
-        <p className="mt-10 border-t border-white/10 pt-10 font-sohne text-orb-text">Engineering</p>
-
-        <div className="mt-6 flex flex-col gap-4">
-          {OPEN_ROLES.map((r) => (
-            <div
-              key={r.id}
-              className="flex flex-col gap-6 bg-orb-card px-6 py-10 sm:flex-row sm:items-center sm:justify-between"
-            >
-              <div className="flex flex-col gap-4">
-                <p className="font-sohne text-orb-lg text-orb-text">{r.title}</p>
-                <div className="flex flex-wrap items-center gap-4">
-                  <span className="bg-orb-accent p-2.5 font-sohne text-orb-caption text-orb-text">
-                    {r.department}
-                  </span>
-                  <p className="font-sohne text-orb-caption text-orb-text">
-                    {r.location} &nbsp;•&nbsp; {r.type}
-                  </p>
-                  <p className="font-sohne text-orb-caption text-orb-text-2">{r.salary}</p>
-                </div>
-              </div>
-              <p className="font-sohne text-orb-caption text-orb-text">View Role →</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
 
     <OrbCtaBand />
     <OrbFooter />

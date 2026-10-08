@@ -1,13 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback, useRef } from 'react';
 import OrbPage from '../../components/orb/OrbPage';
 import OrbButton from '../../components/orb/OrbButton';
 import DividerGlow from '../../components/orb/DividerGlow';
-import { OPEN_ROLES, ROLE_CATEGORIES } from '../../data/brand';
+import AshbyJobBoard, { useAshbyOpenJob } from '../../components/orb/AshbyJobBoard';
 import LifeAtOrbital from '../../assets/orb/careers/life-at-orbital.jpg';
 
 // Figma "Careers" (369:1234). Display headline, accent divider, two alternating
-// copy/circular-image blocks, then Open Roles as #202020 rows.
+// copy/circular-image blocks, then Open Roles.
 //
 // The circular images are the design's own: node 369:1541 ("Ellipse 18", the
 // mask sitting beside the "Our Hiring Philosophy" text frame 369:1297) and node
@@ -15,17 +14,9 @@ import LifeAtOrbital from '../../assets/orb/careers/life-at-orbital.jpg';
 // prior pass used generic Earth-limb/nebula stock photos here as stand-ins
 // while the real assets were unconfirmed; these are the real ones.
 //
-// Two deliberate departures from the design, both because the design is wrong or
-// incomplete rather than because this is easier:
-//   - The design repeats one "Mechanical Engineer / Huntsville, AL" row three
-//     times; OPEN_ROLES carries the three real roles.
-//   - The design has no salary field, but the live site publishes a range on
-//     every role, so dropping it would lose real information.
-//
-// "View Role" now goes somewhere: the pre-redesign site had a whole detail page
-// per role (/careers/:role, Tally application form and all) that this repo
-// never carried over — OrbJobDetail ports it. Each row is the Link, same as the
-// old Careers.js card, not just the trailing label.
+// Open Roles is Ashby's hosted job board (AshbyJobBoard) rather than rows
+// built from local data — listings, role pages, and applications are all
+// managed in Ashby, so posting or closing a role needs no site change.
 
 const CtaBlock = () => (
   <section className="relative overflow-hidden bg-orb-cta px-6 py-28 md:px-10 md:py-36">
@@ -65,103 +56,63 @@ const Block = ({ title, body, image, alt, flip = false }) => (
   </div>
 );
 
-const OrbCareers = () => (
-  <OrbPage cta={<CtaBlock />}>
-    <section className="px-6 pb-20 pt-44 md:px-10 md:pt-52">
-      <div className="mx-auto max-w-[1362px]">
-        <h1 className="max-w-[1140px] font-sohne font-normal text-orb-display text-orb-text">
-          Build the Infrastructure of the Space Economy
-        </h1>
-      </div>
-    </section>
+const OrbCareers = () => {
+  // While a role is open inside the board, the "Open Roles" heading steps
+  // aside so Ashby's own role title is the page's title. Every move inside the
+  // board (open, back to all jobs, apply) brings the column back into view.
+  const columnRef = useRef(null);
+  const scrollToBoard = useCallback(() => {
+    const el = columnRef.current;
+    if (!el) return;
+    // Lenis (SmoothScroll.js) owns window scrolling when it's running.
+    if (window.lenis) window.lenis.scrollTo(el, { offset: -128, immediate: true });
+    else el.scrollIntoView({ block: 'start' });
+  }, []);
+  const openJobId = useAshbyOpenJob(scrollToBoard);
 
-    <DividerGlow />
+  return (
+    <OrbPage cta={<CtaBlock />}>
+      <section className="px-6 pb-20 pt-44 md:px-10 md:pt-52">
+        <div className="mx-auto max-w-[1362px]">
+          <h1 className="max-w-[1140px] font-sohne font-normal text-orb-display text-orb-text">
+            Build the Infrastructure of the Space Economy
+          </h1>
+        </div>
+      </section>
 
-    <section className="px-6 py-24 md:px-10 md:py-32">
-      <div className="mx-auto flex max-w-[1362px] flex-col gap-28">
-        <Block
-          title="Our Hiring Philosophy"
-          body="We believe a strong fit for Orbital Robotics is more than just your resume. We look for obsessive, low-ego candidates that work well in small teams and are deeply passionate about the space industry. Also, we don't make you type out your experience."
-        />
-        <Block
-          title="Life at Orbital Robotics"
-          body="We celebrate our wins and failures together as a team while ruthlessly pursuing the greater objective. We recognize the individual value of each team member and welcome the opportunity to celebrate you as well."
-          image={LifeAtOrbital}
-          alt=""
-          flip
-        />
-      </div>
-    </section>
+      <DividerGlow />
 
-    <section className="px-6 pb-28 md:px-10">
-      <div className="mx-auto max-w-[1372px]">
-        <h2 className="font-sohne font-normal text-orb-h2 text-orb-text">Open Roles</h2>
+      <section className="px-6 py-24 md:px-10 md:py-32">
+        <div className="mx-auto flex max-w-[1362px] flex-col gap-28">
+          <Block
+            title="Our Hiring Philosophy"
+            body="We believe a strong fit for Orbital Robotics is more than just your resume. We look for obsessive, low-ego candidates that work well in small teams and are deeply passionate about the space industry. Also, we don't make you type out your experience."
+          />
+          <Block
+            title="Life at Orbital Robotics"
+            body="We celebrate our wins and failures together as a team while ruthlessly pursuing the greater objective. We recognize the individual value of each team member and welcome the opportunity to celebrate you as well."
+            image={LifeAtOrbital}
+            alt=""
+            flip
+          />
+        </div>
+      </section>
 
-        {ROLE_CATEGORIES.map((cat) => {
-          const roles = OPEN_ROLES.filter((r) => r.category === cat);
-          if (!roles.length) return null;
-          return (
-            <div key={cat}>
-            <div className="mt-12 border-t border-white/10 pt-10">
-              <span className="inline-block bg-orb-accent p-2.5 font-sohne text-orb-caption text-orb-text">
-                {cat}
-              </span>
-            </div>
+      <section className="px-6 pb-28 md:px-10">
+        {/* A narrower centered column than the sections above: the board
+            stretches its filters to the iframe's full width, which read too
+            wide at 1362px. Heading and board share the column so they stay
+            aligned. No frame of our own — Ashby's custom CSS styles the inside. */}
+        <div ref={columnRef} className="mx-auto max-w-[1000px] scroll-mt-32">
+          {!openJobId && (
+            <h2 className="mb-12 font-sohne font-normal text-orb-h2 text-orb-text">Open Roles</h2>
+          )}
 
-            <ul className="mt-8 flex flex-col gap-4">
-              {roles.map((r) => (
-                <li key={r.id}>
-                  <Link
-                    to={`/careers/${r.id}`}
-                    className="group flex flex-col gap-3 bg-orb-card px-6 py-[18px] transition-all duration-200
-                               hover:bg-[#333333] hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)] sm:flex-row sm:items-center sm:justify-between sm:gap-6"
-                  >
-                    <div className="flex flex-col gap-2 sm:gap-4">
-                      <p className="font-sohne text-orb-lg text-orb-text">
-                        {/* Stacked (mobile) cards drop the "View Role" label and
-                            carry just its arrow inline after the title instead,
-                            glued to the last word so it never wraps onto a line
-                            by itself. */}
-                        {r.title.slice(0, r.title.lastIndexOf(' ') + 1)}
-                        <span className="whitespace-nowrap">
-                          {r.title.slice(r.title.lastIndexOf(' ') + 1)}
-                          <span
-                            aria-hidden
-                            className="ml-3 inline-block text-orb-accent transition-transform group-hover:translate-x-1 sm:hidden"
-                          >
-                            &rarr;
-                          </span>
-                        </span>
-                      </p>
-                      <div className="flex flex-wrap items-center gap-4">
-                        <p className="font-sohne text-orb-caption text-orb-text">
-                          {r.location} &nbsp;•&nbsp; {r.type}
-                        </p>
-                        {/* Stacked (mobile) cards leave the salary to the role's
-                            detail page, which still shows it, to keep each card short. */}
-                        <p className="hidden font-sohne text-orb-caption text-orb-text-2 sm:block">{r.salary}</p>
-                      </div>
-                    </div>
-
-                    <span className="hidden shrink-0 items-center gap-4 font-sohne text-orb-caption text-orb-text sm:flex">
-                      View Role
-                      <span
-                        aria-hidden
-                        className="text-orb-accent transition-transform group-hover:translate-x-1"
-                      >
-                        &rarr;
-                      </span>
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  </OrbPage>
-);
+          <AshbyJobBoard />
+        </div>
+      </section>
+    </OrbPage>
+  );
+};
 
 export default OrbCareers;
